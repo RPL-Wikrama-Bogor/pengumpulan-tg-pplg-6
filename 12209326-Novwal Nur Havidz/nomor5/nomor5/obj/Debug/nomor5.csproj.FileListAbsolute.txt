@@ -1,0 +1,8 @@
+C:\Users\NOVWAL\source\repos\nomor5\nomor5\obj\Debug\nomor5.csproj.AssemblyReference.cache
+C:\Users\NOVWAL\source\repos\nomor5\nomor5\obj\Debug\nomor5.csproj.SuggestedBindingRedirects.cache
+C:\Users\NOVWAL\source\repos\nomor5\nomor5\obj\Debug\nomor5.csproj.CoreCompileInputs.cache
+C:\Users\NOVWAL\source\repos\nomor5\nomor5\bin\Debug\nomor5.exe.config
+C:\Users\NOVWAL\source\repos\nomor5\nomor5\bin\Debug\nomor5.exe
+C:\Users\NOVWAL\source\repos\nomor5\nomor5\bin\Debug\nomor5.pdb
+C:\Users\NOVWAL\source\repos\nomor5\nomor5\obj\Debug\nomor5.exe
+C:\Users\NOVWAL\source\repos\nomor5\nomor5\obj\Debug\nomor5.pdb

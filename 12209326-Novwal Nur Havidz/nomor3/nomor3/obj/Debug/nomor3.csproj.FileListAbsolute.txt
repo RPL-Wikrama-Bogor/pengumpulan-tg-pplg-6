@@ -1,0 +1,8 @@
+C:\Users\NOVWAL\source\repos\nomor3\nomor3\obj\Debug\nomor3.csproj.AssemblyReference.cache
+C:\Users\NOVWAL\source\repos\nomor3\nomor3\obj\Debug\nomor3.csproj.SuggestedBindingRedirects.cache
+C:\Users\NOVWAL\source\repos\nomor3\nomor3\obj\Debug\nomor3.csproj.CoreCompileInputs.cache
+C:\Users\NOVWAL\source\repos\nomor3\nomor3\bin\Debug\nomor3.exe.config
+C:\Users\NOVWAL\source\repos\nomor3\nomor3\bin\Debug\nomor3.exe
+C:\Users\NOVWAL\source\repos\nomor3\nomor3\bin\Debug\nomor3.pdb
+C:\Users\NOVWAL\source\repos\nomor3\nomor3\obj\Debug\nomor3.exe
+C:\Users\NOVWAL\source\repos\nomor3\nomor3\obj\Debug\nomor3.pdb
