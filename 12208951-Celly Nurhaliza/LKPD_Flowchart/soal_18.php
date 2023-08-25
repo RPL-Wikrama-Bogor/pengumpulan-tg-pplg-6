@@ -25,6 +25,7 @@
 
         <input type="submit" name="submit" class="submit">
     </form>
+    <div class="hasil">
     <?php
     if(isset($_POST['submit'])){
         $kehadiran = $_POST["kehadiran"];
@@ -52,7 +53,7 @@
         echo "Kehadiran: " . $kehadiran . "%";
 
     }
-    ?></div>
+    ?></div></div>
     <style>
     .container {
   max-width: 350px;
