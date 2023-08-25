@@ -1,0 +1,8 @@
+C:\Users\NOVWAL\source\repos\nomor8\nomor8\bin\Debug\nomor8.exe.config
+C:\Users\NOVWAL\source\repos\nomor8\nomor8\bin\Debug\nomor8.exe
+C:\Users\NOVWAL\source\repos\nomor8\nomor8\bin\Debug\nomor8.pdb
+C:\Users\NOVWAL\source\repos\nomor8\nomor8\obj\Debug\nomor8.csproj.AssemblyReference.cache
+C:\Users\NOVWAL\source\repos\nomor8\nomor8\obj\Debug\nomor8.csproj.SuggestedBindingRedirects.cache
+C:\Users\NOVWAL\source\repos\nomor8\nomor8\obj\Debug\nomor8.csproj.CoreCompileInputs.cache
+C:\Users\NOVWAL\source\repos\nomor8\nomor8\obj\Debug\nomor8.exe
+C:\Users\NOVWAL\source\repos\nomor8\nomor8\obj\Debug\nomor8.pdb
