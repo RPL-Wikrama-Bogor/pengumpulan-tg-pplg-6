@@ -71,8 +71,8 @@ h3 {
     <input type="submit" value="Hitung">
 </form>
 
-<?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+<?php 
+if ($_SERVER["REQUEST_METHOD"] == "POST"){
     $jmlhVip = $_POST['vip'];
     $jmlhEksekutif = $_POST['eksekutif'];
     $jmlhEkonomi = $_POST['ekonomi'];
