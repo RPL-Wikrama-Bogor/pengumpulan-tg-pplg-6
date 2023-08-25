@@ -1,0 +1,8 @@
+C:\Users\NOVWAL\source\repos\nomor9\nomor9\obj\Debug\nomor9.csproj.AssemblyReference.cache
+C:\Users\NOVWAL\source\repos\nomor9\nomor9\obj\Debug\nomor9.csproj.SuggestedBindingRedirects.cache
+C:\Users\NOVWAL\source\repos\nomor9\nomor9\obj\Debug\nomor9.csproj.CoreCompileInputs.cache
+C:\Users\NOVWAL\source\repos\nomor9\nomor9\bin\Debug\nomor9.exe.config
+C:\Users\NOVWAL\source\repos\nomor9\nomor9\bin\Debug\nomor9.exe
+C:\Users\NOVWAL\source\repos\nomor9\nomor9\bin\Debug\nomor9.pdb
+C:\Users\NOVWAL\source\repos\nomor9\nomor9\obj\Debug\nomor9.exe
+C:\Users\NOVWAL\source\repos\nomor9\nomor9\obj\Debug\nomor9.pdb
