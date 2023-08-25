@@ -112,6 +112,6 @@
     color: white;
 }
 
-    </style>
+    </style> 
 </body>
 </html>
