@@ -53,8 +53,8 @@
 
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #f5f5f5;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f0f0f0;
       margin: 0;
       padding: 0;
       display: flex;
@@ -65,23 +65,23 @@
 
     .container {
       background-color: #ffffff;
-      border-radius: 5px;
-      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
       padding: 20px;
-      width: 300px;
+      width: 350px;
     }
 
     table {
       width: 100%;
       border-collapse: collapse;
-      margin-top: 10px;
+      margin-top: 15px;
     }
 
     th,
     td {
-      padding: 8px;
+      padding: 10px;
       text-align: left;
-      border-bottom: 1px solid #ddd;
+      border-bottom: 1px solid #ccc;
     }
 
     th {
@@ -90,28 +90,33 @@
 
     input[type="number"] {
       width: 60px;
-      padding: 5px;
+      padding: 8px;
       border: 1px solid #ddd;
-      border-radius: 3px;
+      border-radius: 5px;
     }
 
     input[type="submit"] {
-      background-color: #4caf50;
+      background-color: #007bff;
       color: #fff;
       border: none;
-      padding: 8px 16px;
-      border-radius: 3px;
+      padding: 10px 20px;
+      border-radius: 5px;
       cursor: pointer;
+      transition: background-color 0.3s ease;
     }
 
     input[type="submit"]:hover {
-      background-color: #45a049;
+      background-color: #0056b3;
     }
 
     .result {
-      margin-top: 10px;
+      margin-top: 15px;
+      font-size: 18px;
+      color: #333;
+
+      
     }
   </style>
+  
 </body>
-
 </html>
