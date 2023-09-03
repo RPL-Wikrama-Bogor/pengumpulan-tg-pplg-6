@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container{
+      text-align: center;
+      font-family: sans-serif;
+    }.container h1{
+      font-size: 40px;
+
+    }.tombol button{
+      background-color: orange;
+      cursor: pointer;
+      color: #fff;
+      border: none;
+      border-radius: 20px;
+      padding: 10px 15px;
+    }table {
+      border-collapse: collapse;
+      margin: 60px auto;
+      width: 95%;
+    }th, td {
+      border: 1px solid #858585;
+      padding:20px ;
+      text-align: center;
+      background-color: rgb(173, 173, 173);
+
+    }img{
+      width: 160px;
+      height: 130px;
+    }@media only screen and (max-width: 480px) {
+    .container h1{
+      font-size: 28px;
+
+    }.tombol button{
+      font-size: 10px;
+    }table{
+      width: 25%;
+      font-size: 10px;
+      
+    }
+
+  
+  }
+  </style>
+</head>
+<body>
+  <div class="container">
+      <h1>Laporan Keluhan</h1>
+
+      <form action=""class="tombol">
+        <button type="button"onclick="location.href='../user/index.html'">Home</button>
+        <button type="button" onclick="location.href='login.html'">Logout</button>
+      </form>
+
+  </div>
+
+  <!-- Table -->
+
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th class="no">N0</th>
+                    <th>NIK</th>
+                    <th>NAMA</th>
+                    <th>TELP</th>
+                    <th class="complain">PENGADUAN</th>
+                    <th>GAMBAR</th>
+                    <th>AKSI</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>12345678900</td>
+                    <td>FEMA FLAMELINA PUTRI</td>
+                    <td>081234567890</td>
+                    <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, in ipsam! Error fugit quod tempore in velit. Saepe eaque repellendus voluptatem nihil, eligendi maxime vero nemo culpa sit, optio cumque?</td>
+                    <td><img src="jalanrusak.jpg"></td>
+                    <td><button class="button-index">Hapus</button></td>
+                </tr><tr>
+                  <td>1</td>
+                  <td>12345678900</td>
+                  <td>FEMA FLAMELINA PUTRI</td>
+                  <td>081234567890</td>
+                  <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, in ipsam! Error fugit quod tempore in velit. Saepe eaque repellendus voluptatem nihil, eligendi maxime vero nemo culpa sit, optio cumque?</td>
+                  <td><img src="jalanrusak.jpg"></td>
+                  <td><button class="button-index">Hapus</button></td>
+              </tr>
+                <!-- Tambahkan baris-baris data lainnya sesuai kebutuhan -->
+            </tbody>
+        </table>
+    </div>
+  
+  
+</body>
+</html>
