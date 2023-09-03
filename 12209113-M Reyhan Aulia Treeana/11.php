@@ -4,21 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
     <style>
         body {
             background-color: gray;
-            font-family: ;
+            font-family: 'Poppins', sans-serif;
+            color: white;
         }
 
-        h1 {
-
-        }
 
         .box {
             background-color: white;
             width: 500px;
             padding: 20px 20px 100px 20px;
             border-radius: 15px;
+            margin-bottom: 50px;
         }
 
         .btn{
@@ -30,9 +32,9 @@
 <center>
     <form method="post" action="">
         <div class="box">
-            <h1>Pegawai</h1>
+            <h1 style="color: black;">Pegawai</h1>
 
-            <label for="kodepegawai">Nomor Pegawai:</label>
+            <label for="kodepegawai" style="color: black;">Nomor Pegawai:</label>
 
             <input type="number" name="no_pegawai" placeholder="gddmmyyyynn" class="kode" />
 
@@ -41,7 +43,7 @@
             <input type="submit" name="submit" value="Submit" class="btn">
         </div> <!-- End Box -->
     </form>
-</center>
+
 
 
     <?php
@@ -96,6 +98,6 @@
 
     }
     ?>
-    
+    </center>
 </body>
 </html>
