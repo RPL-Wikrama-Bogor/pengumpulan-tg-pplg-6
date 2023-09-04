@@ -106,7 +106,7 @@ body {
             </div>
             <div class="button-container">
               <a class="submit" href="adminlanding.html">Masuk</a>
-                <a href="landingpage.html" class="cancel-button">Batal</a>
+                <a href="admin.php" class="cancel-button">Batal</a>
             </div>
         </form>
     </div>

@@ -184,7 +184,7 @@
 </style>
 
 <body>
-    <a class="but" href="#">Administrator</a>
+    <a class="but" href="login.php">Administrator</a>
 
     <div class="container">
         <div class="text">
