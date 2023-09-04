@@ -1,0 +1,96 @@
+<!-- <?php
+
+    if(isset($_POST["submit"])){
+        if($_POST["user"]=="admin" && $_POST["pwd"] == "123"){
+            header("Location:proseslogin.php");
+        }else{
+            $error = true;
+        }
+    }
+
+?> -->
+
+<html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .card{
+            width: 450px;
+            background: #EFEFEF;
+            color: #fff;
+            padding: 20px;
+            border-radius:5px;
+        }
+        .card h1{
+            font-size: 20px;
+            text-align: center;
+            color: #000;
+        }
+        input{
+            width: 450px;
+            height: 30px;
+            margin: 10px 0;
+        }
+        textarea{
+            width: 590px;
+        }
+        label{
+            color: #000;
+        }
+        button{
+            background: #FFC436;
+            width: 100px;
+            padding: 5px;
+            color: #000;
+            border-radius: 5px;
+            cursor: pointer;
+            border-radius: 10px;
+            float: right;
+            margin: 2px;
+        }
+    </style>
+</head>
+<body>
+<div class="card">
+    <form action="" method="post">
+
+        <h1><b>Login Administrator</b></h1>
+            <!-- <?php  if (isset($error)) :?>
+            <p style="color: #D71313;">Username/password salah!</p>
+            <?php endif; ?> -->
+            <div class="card-body">
+                <tr>
+                    <td><label>Username :</label></td><br>
+                    <td><input type="text" name ="user"></td>
+                    <br>
+                </tr>
+                <tr>
+                    <td><label>Password :</label></td><br>
+                    
+                    <td><input type="password" name="pwd"></td>
+                    <br>
+                </tr>
+                <br>
+                <tr>
+                    <button type="submit" value="Kirim" name="submit">Kirim</button>
+                </tr>
+                <br>
+            </div>
+
+    </form>
+    <form action="index.html" method="post">
+        <button type="submit" value="Batal" name="submit" style="background: #7D7463; color: #fff;">Batal</button>
+    </form>
+    </div>
+</body>
+</html>
