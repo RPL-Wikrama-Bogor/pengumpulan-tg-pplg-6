@@ -1,0 +1,37 @@
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    display: block;
+    margin-bottom: 10px
+}
+
+body{
+    background-image: url("https://i.pinimg.com/564x/49/08/4e/49084e55c2b6320c153af7feea2d1502.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    font-family:  'sans-serif';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+form {
+    background-color: #F8F6F4;
+    border-radius: 25px;
+    padding: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+     width: 300px;
+}
+
+ label {
+    background-color: #9EB384 ;
+    display: block;
+    margin-bottom: 15px;
+    border-radius: 30px;
+    font-weight: bold;
+
+}
