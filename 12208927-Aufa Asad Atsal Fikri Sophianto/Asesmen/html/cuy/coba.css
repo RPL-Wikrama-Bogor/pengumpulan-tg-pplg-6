@@ -1,0 +1,9 @@
+.content {
+    background-color: aqua;
+}
+.main {
+    background-color: aquamarine;
+}
+.flex-container{
+	display: flex;
+}
