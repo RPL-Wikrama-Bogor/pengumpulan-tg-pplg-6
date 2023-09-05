@@ -61,6 +61,11 @@
             border-radius: 3px;
             margin-top: 20px;
         }
+        @media only screen and (max-widht: 410px) {
+            .container{
+                widht: 70%;
+            }
+        }
     </style>
 
     <form method="post">
