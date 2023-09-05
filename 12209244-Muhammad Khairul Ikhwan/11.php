@@ -48,6 +48,12 @@
         button[type="submit"]:hover {
             background-color: #0056b3;
         }
+
+        @media only screen and (max-widht: 410px) {
+            .container{
+                widht: 70%;
+            }
+        } 
     </style>
 </head>
 <body>
