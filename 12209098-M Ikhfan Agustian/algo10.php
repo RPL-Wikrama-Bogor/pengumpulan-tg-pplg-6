@@ -33,7 +33,7 @@
         if ($rata_rata >= 80 && $rata_rata <= 100) {
             echo "A";
         } elseif ($rata_rata >= 75 && $rata_rata < 80) {
-            ec ho "B";
+            echo "B";
         } elseif ($rata_rata >= 65 && $rata_rata < 75) {
             echo "C";
         } elseif ($rata_rata >= 45 && $rata_rata < 65) {
