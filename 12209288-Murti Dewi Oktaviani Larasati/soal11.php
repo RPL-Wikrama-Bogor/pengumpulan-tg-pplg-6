@@ -9,7 +9,7 @@
     <style>
 
 body{
-        background-image: url("https://i.pinimg.com/564x/49/08/4e/49084e55c2b6320c153af7feea2d1502.jpg");
+        background-color: #FFB7B7;
         background-repeat: no-repeat;
         background-size:cover;
         font-family:  'sans-serif';
@@ -65,15 +65,17 @@ $tanggal_lahir;
 if (isset($_POST['submit'])) {
     $kodepegawai = $_POST['bilangan'];
 
+    
+   if (strlen ($kodepegawai) < 11){
+    echo "nomor pegawai tidak sesuai";
+   } else{
     $golongan = substr ($kodepegawai, 0,1);
     $tanggal = substr ($kodepegawai, 1,2);
     $bulan = substr ($kodepegawai, 3, 2);
     $tahun = substr ($kodepegawai, 5,4);
     $urutan = substr ($kodepegawai, 9,2);
-    
-   if ($kodepegawai < 11){
-    echo "nomor pegawai tidak sesuai";
-   }else if ($bulan == "01"){
+ 
+   if ($bulan == "01"){
     $bulan =  "bulan januari ";
    }else if ($bulan == "02"){
     $bulan =  "bulan februari ";
@@ -106,7 +108,7 @@ echo "<br>";
 echo "tanggal lahir  " . $tanggal_lahir;
 echo "<br>";
 echo "no urutan " . $urutan;
-
+}
 }
 ?>
 
