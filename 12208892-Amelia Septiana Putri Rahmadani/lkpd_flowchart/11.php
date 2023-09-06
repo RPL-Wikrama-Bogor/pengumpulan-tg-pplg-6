@@ -26,12 +26,6 @@ if(isset($_POST['submit'])){
     <title>gddmmyyyyynn</title>
 </head>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
         body {
             font-family: Arial, sans-serif;
             background-image: url("https://i.pinimg.com/564x/57/9b/15/579b15bf916a909dcad4090a4c1b0f5b.jpg");
@@ -48,7 +42,7 @@ if(isset($_POST['submit'])){
             max-width: 100%;
             width: 550px;
             margin: 0 auto;
-            margin-top: 150px;    
+            margin-top: 150px;
         }
 
         h1 {
@@ -107,7 +101,7 @@ if(isset($_POST['submit'])){
 
     <?php
     if(isset($_POST['submit'])){
-        if ($no_pegawai < 11){
+        if ($strlen('no_pegawai' < 11)){
             echo "no pegawai tidak sesuai";
         } else {
             if ($bulan == "01"){
@@ -143,12 +137,22 @@ if(isset($_POST['submit'])){
             } else if ($bulan == "11"){
                 echo "November";
                 echo "<br>";
-            } else {
+            } else if ($bulan == "12"){
                 echo "Desember";
                 echo "<br>";
+            } else {
+                echo "bulan tidak sesuai";
+                echo "<br>";
+            }if ($tanggal > "31"){
+                echo "tanggal tidak sesuai";
+                echo "<br>";
             }
+            echo "<br>";
+
+
+        
             
-            $tanggal_lahir = $tanggal.$bulan.$tahun;
+            $tanggal_lahir = $tanggal."/". $bulan. "/".$tahun;
 
             
              echo "no golongan = ". $no_golongan . "<br>";
