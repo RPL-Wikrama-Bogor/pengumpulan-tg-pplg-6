@@ -37,8 +37,8 @@
             text-align: center;
         }
         input[type="number"] {
-            max-width: 60px;
-            padding: 5px;
+            max-width: 150px;
+            padding: 10px;
             border: 1px solid #ccc;
             border-radius: 5px;
             outline: none;
