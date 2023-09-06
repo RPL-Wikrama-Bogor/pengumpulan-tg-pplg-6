@@ -48,10 +48,7 @@ if(isset($_POST['submit'])){
             max-width: 100%;
             width: 550px;
             margin: 0 auto;
-            margin-top: 150px;
-            
-            
-            
+            margin-top: 150px;    
         }
 
         h1 {

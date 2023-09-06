@@ -62,8 +62,7 @@ $bilangan_ketiga;
       echo $bilangan_kedua . " adalah Bilangan Terbesar ";
     } elseif ($bilangan_ketiga > $bilangan_pertama && $bilangan_ketiga > $bilangan_kedua) {
       echo $bilangan_ketiga . " adalah Bilangan Terbesar ";
-    }
-    else if ($bilangan_pertama == $bilangan_kedua && $bilangan_kedua == $bilangan_pertama && $bilangan_ketiga < $bilangan_pertama && $bilangan_ketiga < $bilangan_kedua){
+    } else if ($bilangan_pertama == $bilangan_kedua && $bilangan_kedua == $bilangan_pertama && $bilangan_ketiga < $bilangan_pertama && $bilangan_ketiga < $bilangan_kedua){
       echo " Bilangan 1 Dan 2 Sama Besar Dan Nilai Terbesar Adalah ". $bilangan_pertama;
     }
     else {

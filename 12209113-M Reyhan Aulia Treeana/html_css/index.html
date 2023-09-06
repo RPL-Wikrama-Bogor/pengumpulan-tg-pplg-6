@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <style>
+        body {
+        margin: 0;
+        padding: 10px 10px 10px 10px;
+        font-family: 'Raleway', sans-serif;
+        }
+</style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-admin">
+            <a class="button" href="login.html">Administrator</a>
+        </div>
+    </nav>
+
+<div class="container">
+  <img src="banner.png" alt="">
+  <div class="teks">
+    <h3>Tempat nongkrong bukan tempat ribut</h3>
+    <p>1. Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat magnam ab quae laudantium modi?</p>
+    <p>2. Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
+    <p>3. Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident!</p>
+    <p>3. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, ad nostrum.</p>
+  </div>
+</div>
+
+  <section class="kotak">
+	   <div class="kolom"><h3>Jumlah Kecamatan</h3><p>15</p></div>
+	   <div class="kolom"><h3>Jumlah Desa</h3><p>42</p></div>
+	   <div class="kolom"><h3>Jumlah Penduduk</h3><p>12.000</p></div>
+	   <div class="kolom"><h3>Data per Tahun</h3><p>2023</p></div>
+  </section>
+
+  <div class="container">
+    <form class="ngadu" method="post" >
+        <h3 class="h3ngadu">Buat Pengaduan</h3>
+        <label for="nik">NIK:</label><br>
+        <input type="text" id="nik" name="nik" required><br><br>
+        
+        <label for="nama">Nama Lengkap:</label><br>
+        <input type="text" id="nama" name="nama" required><br><br>
+        
+        <label for="no_telp">Nomor Telepon:</label><br>
+        <input type="tel" id="no_telp" name="no_telp" required><br><br>
+        
+        <label for="pengakuan">Pengakuan:</label><br>
+        <textarea id="pengakuan" name="pengakuan" rows="5" cols="40" required></textarea><br><br>
+        
+        <label for="gambar">Upload Gambar Terkait:</label><br>
+        <input type="file" id="gambar" name="gambar" accept="image/*"><br><br>
+        
+        <div class="button-container">
+            <input type="submit" value="Kirim Pengaduan">
+    </div>
+    </form>
+</div>
+</body>
+</html>

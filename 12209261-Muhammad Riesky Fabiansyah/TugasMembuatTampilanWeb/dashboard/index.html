@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  
+
+  <section>
+    <div class="nav">
+      <ul>
+        <li>
+          <a href="#">Administrasi</a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="header">
+    <th>Pengaduan Masyarakat</th>  
+  </div>
+  <div class="list">
+    <tr>  
+      <td>1. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni facilis dignissimos nihil expedita dolore ipsa officia! Sunt odio</td><br><br>
+      <td>2. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni facilis dignissimos nihil expedita dolore ipsa officia! Sunt odio</td><br><br>
+      <td>3. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni facilis dignissimos nihil expedita dolore ipsa officia! Sunt odio</td><br><br>
+      <td>4. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni facilis dignissimos nihil expedita dolore ipsa officia! Sunt odio</td><br><br>
+    </tr>
+  </div>
+
+  <section class="banner">
+    <img src="../img/Screen Shot 2023-02-02 at 10.13.21.png" style="height: 600px; width: 1010px;">
+  </section>
+
+  <div class="card">
+    <div class="card-header">
+      <h3 style="position:relative; top: 30px;">Jumlah Kecamatan</h3>
+      <h5 style="position:relative; top: 40px; font-size: 25px;">15</h5>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header">
+      <h3 style="position:relative; top: 30px;">Jumlah Desa</h3>
+      <h5 style="position:relative; top: 40px; font-size: 25px;">42</h5>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header">
+      <h3 style="position:relative; top: 30px;">Jumlah Penduduk</h3>
+      <h5 style="position:relative; top: 40px; font-size: 25px;">12.000</h5>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header">
+      <h3 style="position:relative; top: 30px;">Data per Tahun</h3>
+      <h5 style="position:relative; top: 40px; font-size: 25px;">2023</h5>
+    </div>
+  </div>
+
+  <section class="form-pengaduan">
+    <h2 style="font-size: 30px;">Laporan Pengaduan</h2>
+    <div class="card-form">
+      <div class="judul">
+        <h5 style="text-align: right; margin-top: 10px;">22 Juni 2022 : Fema Flamenia Putri &nbsp;</h5>
+        <img class="imagehighlight" src="../img/Screen Shot 2023-02-02 at 10.13.21.png" style="height: 150px; width: 250px; display:flex;">
+      </div>
+      <h3 style="position:relative; top: -150px;"> &nbsp; Lorem ipsum dolor sit amet kadnwakdn oadmka <br> &nbsp; ajdnwand adnwa jndwa</h3>
+    </div>
+    <div class="card-form" style="margin-top: 100px;">
+      <div class="judul">
+        <h5 style="text-align: right; margin-top: 10px;">22 Juni 2022 : Fema Flamenia Putri &nbsp;</h5>
+        <img class="imagehighlight" src="../img/Screen Shot 2023-02-02 at 10.13.21.png" style="height: 150px; width: 250px; display:flex;">
+      </div>
+      <h3 style="position:relative; top: -150px;"> &nbsp; Lorem ipsum dolor sit amet kadnwakdn oadmka <br> &nbsp; ajdnwand adnwa jndwa</h3>
+    </div>
+  </section>
+
+  <section class="landing-page">
+    <div class="container">
+      <h2 class="uppertexth2">BUAT PENGADUAN</h3><br>
+      <form method="post" action="#">
+          <tr>
+            <td>
+              <label for="username">&nbsp; &nbsp; NIK : </label><br>
+              <input type="number" name="nik" id="nik" required>
+              <br>
+            </td>
+            <td>
+              <label for="nama">&nbsp; &nbsp; Nama Lengkap : </label><br>
+              <input type="text" name="nama" id="nama" required>
+            </td>
+            <td>
+              <label for="telp">&nbsp; &nbsp; No Telp : </label><br>
+              <input type="number" name="telp" id="telp" required>
+            </td>
+            <td>
+              <label for="pengaduan">&nbsp; &nbsp; Pengaduan : </label><br>
+              <textarea id="freeform" name="freeform" rows="8" cols="50" style="border: 0;"></textarea>
+              <!-- <input type="text" name="pengaduan" id="pengaduan" style="height: 100px;" required> -->
+            </td>
+            <td>
+              <label for="image">&nbsp; &nbsp; Upload Gambar Terkait : </label><br>
+              <input type="file" name="image" id="image" style="border: none;" required>
+            </td>
+            <div class="button">
+              <td>
+                <input type="submit" name="kirim" id="kirim" value="Kirim">
+              </td>
+            </div>
+          </tr>
+      </form>
+    </div>
+  </section>
+
+  <div class="copyright">
+    <p> Copyright &copy; 2023; </p>
+  </div>
+</body>
+</html>

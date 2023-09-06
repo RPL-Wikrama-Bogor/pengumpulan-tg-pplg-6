@@ -7,60 +7,55 @@
   <title>Konversi Waktu</title>
   <style>
     body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f5f5f5;
-}
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+    }
 
-.container {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
 
-h3 {
-  margin-top: 0;
-  color: #333;
-}
+    h3 {
+      margin-bottom: 15px;
+      text-align: center;
+    }
 
-form {
-  margin-top: 20px;
-}
+    form {
+      text-align: center;
+    }
 
-table {
-  width: 100%;
-  border-collapse: collapse;
-}
+    table {
+      margin: 0 auto;
+    }
 
-table td {
-  padding: 10px;
-  border: 1px solid #ddd;
-}
+    td {
+      padding: 10px;
+    }
 
-table td:first-child {
-  width: 120px;
-}
+    input[type="number"] {
+      width: 50px;
+    }
 
-input[type="number"] {
-  width: 60px;
-  padding: 5px;
-}
+    input[type="submit"] {
+      padding: 8px 20px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
 
-input[type="submit"] {
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-}
-
-input[type="submit"]:hover {
-  background-color: #0056b3;
-}
-
+    .result {
+      margin-top: 20px;
+      text-align: center;
+    }
   </style>
 </head>
 <div class="container">
