@@ -6,10 +6,10 @@
 </head>
     <style>
         body{
-            background-color: #FFF6F4;
+            background: linear-gradient(170deg, #E4A5FF, #ECF9FF)
         }
         .form{
-            background-color: #E4F1FF;
+            background: linear-gradient(170deg, #C0DBEA, #FFDEDE);
             outline: auto;
             width: 550px;
             margin: 50px auto;
