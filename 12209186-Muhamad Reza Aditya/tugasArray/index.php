@@ -35,7 +35,7 @@
                         <td>:</td>
                         <td>
                             <select name="makanan" id="color">
-                                <option value="">--- Pilih ---</option>
+                                <option value="" hidden>--- Pilih ---</option>
                                 <?php foreach( $data as $key => $daftar):?>
                                     <?php if($daftar['jenis'] === "makanan"):?>
                                         <option value="<?= $key ?>"><?= $daftar['nama']?></option>
@@ -54,7 +54,7 @@
                         <td>:</td>
                         <td>
                             <select name="minuman" >
-                                <option value="minuman">--- Pilih ---</option>
+                                <option value="minuman" hidden>--- Pilih ---</option>
                                 <?php foreach( $data as $key => $daftar):?>
                                     <?php if($daftar['jenis'] === "minuman"):?>
                                         <option value="<?= $key ?>"><?= $daftar['nama']?></option>
