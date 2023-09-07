@@ -21,7 +21,6 @@ if (isset($_POST['submit'])) {
     $suhuF = $_POST['suhu'];
     $suhuC = ($suhuF - 32) * 5/9;
 
-    var_dump($suhuC);
     if($suhuC >= 300){
         echo "panas";
     }else if($suhuC >= 250){
