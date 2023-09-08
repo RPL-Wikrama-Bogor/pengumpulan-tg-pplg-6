@@ -90,8 +90,6 @@ $dataDiri = [
                 <p>Rombel : <?= $listData["rombel"]; ?></p>
                 <p>Umur : <b><?= $listData["umur"]; ?></b></p>
                 <hr>
-            <?php else :?>
-                <p>Data tidak ditemukan</p>
             <?php endif;?>
         <?php endforeach;?>
     <?php endif;?>
