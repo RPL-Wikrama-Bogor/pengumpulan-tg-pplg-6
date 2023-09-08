@@ -4,14 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <body>
+    <center>
+<style>
+        body{
+        background-color: #FFB7B7;
+        background-repeat: no-repeat;
+        background-size:cover;
+        font-family:  'sans-serif';
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        }
+
+        form {
+        background-color: #F8F6F4;
+        border-radius: 25px;
+        padding: 20px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+         width: 300px;
+        }
+
+        label {
+        display: block;
+        margin-bottom: 15px;
+        border-radius: 30px;
+        font-weight: bold;
+
+        }
+
+       
+
+
+        
+        </style>
+
 <form action="" method="post">
     <h2>Penjualan Tiket Bioskop</h2>
     <label for="vip">Tiket VIP:</label>
-    <input type="number" name="vip" id="vip"><br>
+    <input type="number" name="vip" id="vip"><br><br>
     <label for="eksekutif">Tiket Eksekutif:</label>
-    <input type="number" name="eksekutif" id="eksekutif"><br>
+    <input type="number" name="eksekutif" id="eksekutif"><br><br>
     <label for="ekonomi">Tiket Ekonomi:</label>
-    <input type="number" name="ekonomi" id="ekonomi"><br>
+    <input type="number" name="ekonomi" id="ekonomi"><br><br>
     <input type="submit" name="submit" value="Hitung">
 </form>
 
@@ -60,5 +95,6 @@ if (isset($_POST['submit'])) {
     echo "Total Jumlah Tiket Terjual: " . $totalTiket . "<br>";
 }
 ?>
+</center>
 </body>
 </html>

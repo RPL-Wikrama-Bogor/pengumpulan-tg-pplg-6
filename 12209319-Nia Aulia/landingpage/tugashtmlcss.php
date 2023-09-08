@@ -50,24 +50,36 @@
     </form>
 </div>
 
-<div class="content2">
-<h3> Laporan Pengaduan</h3>
-<table border="1" cellspacing="0" cellpadding="10">
-        <tr class="first">     
-            <td>
-            <img src="https://media.suara.com/pictures/653x366/2021/12/21/36585-jalan-rusak.jpg"> 
-                <h4>08 juni 2022 : Nia aulia</h4>
-                <p>Lorem ipsum dolor it amet cinsectetur adipisicing elit. Dolares ques reciendis libero sunt eveinet quisquam faelis quasi placeat eaque rerum.</p>
-            </td>
-        </tr>
-        <tr class="two">
-            <td>
-            <img src="https://media.suara.com/pictures/653x366/2021/12/21/36585-jalan-rusak.jpg"> 
-                <h4>08 juni 2022 : Nia aulia</h4>
-                <p>Lorem ipsum dolor it amet cinsectetur adipisicing elit. Dolares ques reciendis libero sunt eveinet quisquam faelis quasi placeat eaque rerum.</p>
-            </td>
-        </tr>
-</table>
+
+<div class="kotak">
+    <div class="text">
+        <h3>Laporan Pengaduan</h3>
+    </div>
+    <div class="row">
+        <div class="col">
+        <p style="margin: 5px; padding-top: 5px;"> 08 Juni 2022 : Nia Aulia</p>
+            <div class="col1">
+                <div class="image" style="margin: 10px; padding-top:20px;">
+                  <img src="https://media.suara.com/pictures/653x366/2021/12/21/36585-jalan-rusak.jpg">
+                </div>
+            </div>
+        </div>
+            <p style="padding-top: 55px; margin: 5px;">Lorem ipsum dolor it amet cinsectetur adipisicing elit. Dolares ques reciendis libero sunt eveinet quisquam faelis quasi placeat eaque rerum.</p>
+       </div>
+     
+    <div class="row" style="margin-top: 10px;">
+       <div class="col">
+            <p style="margin: 5px; padding-top: 5px;">08 Juni 2022 : Nia Aulia</p>
+            <div class="col1">
+                <div class="image" style="margin: 10px; padding-top:20px;">
+                  <img src="https://media.suara.com/pictures/653x366/2021/12/21/36585-jalan-rusak.jpg">
+                </div>
+            </div>
+        </div>
+        <p style="padding-top: 55px; margin: 5px;">Lorem ipsum dolor it amet cinsectetur adipisicing elit. Dolares ques reciendis libero sunt eveinet quisquam faelis quasi placeat eaque rerum.</p>
+       </div>
+    </div>
+
 
 <footer>
 <div class="footer">
