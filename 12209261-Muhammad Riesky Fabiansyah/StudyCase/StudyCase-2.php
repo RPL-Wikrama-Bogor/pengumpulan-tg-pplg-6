@@ -11,7 +11,7 @@
   <?php
   $data =
     [
-      
+
       [
         "nama" => "Riesky",
         "usia" => 18,
@@ -44,14 +44,33 @@
   <table>
     <tr>
       <?php foreach ($data as $key => $datas) { ?>
-        <p> Nama : <?= $datas['nama']; ?><br>Usia : <?= $datas['usia']; ?> Nis : <?= $datas['nis']; ?> Rombel : <?= $datas['rombel']; ?></p>
+        <p> Nama : <?= $datas['nama']; ?><br>Usia : <?= $datas['usia']; ?></p>
       <?php
       }
       ?>
     </tr>
   </table>
 
+  <a href="?usia=TRUE">Cari yang sudah 17 tahun keatas</a><br>
+
+  <?php
+  if (isset($_GET['usia'])) { ?>
+  <h2>LIST NAMA Diatas 17 tahun</h2>
+  <table>
+    <tr>
+      <?php foreach ($data as $key => $datas) { 
+        if ($datas['usia'] >= 17) {?>
+          <p> Nama : <?= $datas['nama']; ?><br>Usia : <?= $datas['usia']; ?></p>
+        <?php
+          }
+        }
+      }
+      ?>
+    </tr>
+  </table>
+
   <form action="" method="post">
+    <br>
     <input type="text" name="nama" placeholder="Masukkan Nama">
     <input type="submit" name="submit" value="Cari">
   </form>
@@ -62,18 +81,6 @@
     $hasilnama = array_search($nama, array_column($data, "nama"));
     $new = $data[$hasilnama];
     $usia = $data[$hasilnama]['usia'];
-    // if ( isset($hasilnama)){
-    //   if ($hasilnama >= 17){
-    //     echo "<td>" . $new['nama'] ."</td>";
-    //     echo "<td>" . $new['usia'] . "</td>";
-    //     echo "<td>" . $new['nis'] . "</td>";
-    //     echo "<td>" . $new['rombel'] . "</td>";
-    //   } else {
-    //     echo "Anak tersebut Kurang dari 17 tahun";
-    //   }
-    // }else {
-    //   echo "Data tidak ditemukan";
-    // }
     if ($hasilnama !== false) {
       if ($usia >= 17) {
         echo "<table>";
