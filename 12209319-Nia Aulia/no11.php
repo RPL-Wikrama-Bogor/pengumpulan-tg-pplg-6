@@ -18,18 +18,17 @@
     if(isset($_POST['submit'])){
         $no_pegawai = $_POST["no_pegawai"];
         
-        $no_golongan = substr($no_pegawai, 0, 1);
-        $tanggal = substr($no_pegawai, 1, 2);
-        $bulan = substr($no_pegawai, 3, 2);
-        $tahun = substr($no_pegawai, 5, 4);
-        $no_urutan = substr($no_pegawai, 9, 2);
-
-        if($no_pegawai < 11){
+        if (strlen($no_pegawai) < 11){
             echo "No pegawai tidak sesuai";
         }
+        else{
+            $no_golongan = substr($no_pegawai, 0, 1);
+            $tanggal = substr($no_pegawai, 1, 2);
+            $bulan = substr($no_pegawai, 3, 2);
+            $tahun = substr($no_pegawai, 5, 4);
+            $no_urutan = substr($no_pegawai, 9, 2);    
 
-
-        elseif($bulan == "01"){
+        if($bulan == "01"){
             echo "Januari";
         }elseif($bulan == "02"){
             echo "Februari";
@@ -62,6 +61,7 @@
         echo "Tanggal lahir ".$tanggal_lahir;
         echo "<br>";
         echo "No urutan ".$no_urutan;
+        }
     }
     ?>
     </form>
@@ -78,7 +78,7 @@
 }
 
 form {
-    width: 300px;
+    width: 220px;
     border: 2px solid #ccc;
     padding: 30px;
     background: #fff;
@@ -88,9 +88,9 @@ form {
 input {
     display: block;
     border: 2px solid #ccc;
-    width: 95%;
+    width: 90%;
     padding: 10px;
-    margin: 10px auto;
+    margin: 2px auto;
     border-radius: 5px;
 }
 
@@ -101,7 +101,8 @@ label {
 }
 
 .submit{
-    width:300px;
+    
+    width:220px;
     
 }
 
