@@ -148,7 +148,6 @@
                 "harga" => 8000
             ]
         ];
-
         ?>
         <form action="" method="post">
             <table>

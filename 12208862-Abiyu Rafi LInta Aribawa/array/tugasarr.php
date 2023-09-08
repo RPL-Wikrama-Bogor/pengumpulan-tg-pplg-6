@@ -42,7 +42,7 @@
     <table>
         <tr>
             <td>
-                <input type="text" name="data" placeholder="Masukkan Data" required>
+                <input type="text" name="nama" placeholder="Masukkan Data" required>
             </td>
         </tr>
         <tr>
@@ -55,14 +55,16 @@
 
 <?php
 if (isset($_POST['submit'])) {
-    $cari = $_POST['data'];
+    $cari = $_POST['nama'];
 
     $hasil = [];
-    foreach ($data as $siswa) {
-        if ((intval($cari) >= 17 && $siswa['umur'] >= 17) || (stripos($siswa['nama'], $cari) !== false)) {
-            $hasil[] = $siswa;
-        }
+    foreach ($data as $siswa){
+    if ((is_numeric($cari) && $cari >= 17 && $siswa['umur'] >= 17) || (stripos($siswa['nama'], $cari) !== false)){
+        $hasil [] = $siswa;
+    } 
+
     }
+    
     if (!empty($hasil) && !empty($cari)) {
         echo "<h2>Hasil :</h2>";
         foreach ($hasil as $hasil) {
@@ -77,5 +79,4 @@ if (isset($_POST['submit'])) {
     }
 }
 ?>
-
 </html>
