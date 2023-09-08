@@ -33,8 +33,10 @@ $dataDiri = [
     ],
 ];
 
-
-
+foreach($dataDiri as $item){
+    echo $item['nama']. " : ";
+    echo $item['umur']." tahun<br><br> ";
+}
 ?>
 
 <!DOCTYPE html>
@@ -90,7 +92,9 @@ $dataDiri = [
                 <p>Rombel : <?= $listData["rombel"]; ?></p>
                 <p>Umur : <b><?= $listData["umur"]; ?></b></p>
                 <hr>
-            <?php endif;?>
+            <?php break; else:?>
+                <p>Data tidak ditemukan</p>
+            <?php break; endif;?>
         <?php endforeach;?>
     <?php endif;?>
 
