@@ -6,6 +6,7 @@
 </head>
 
 <body>
+
     <?php
     $listFilm = [
         [
@@ -45,7 +46,7 @@
             <table>
                 <tr>
                     <td>Usia</td>
-                    <td><input type="number" name="usia"></td>
+                    <td><input type="number" name="usia" required></td>
                 </tr>
                 <tr>
                     <td>Film</td>

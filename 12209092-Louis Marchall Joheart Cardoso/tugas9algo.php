@@ -1,60 +1,60 @@
 <?php
-$no_pegawai;
-$no_golongan;
-$tanggal;
-$bulan;
-$tahun;
-$no_urutan;
-$tanggal_lahir;
+$no_pegawai = "";
+$no_golongan = "";
+$tanggal_lahir = "";
+$no_urutan = "";
 
 if (isset($_POST['submit'])) {
     $no_pegawai = $_POST['nopega'];
+    
     $no_golongan = substr($no_pegawai, 0, 1);
-        $tanggal = substr($no_pegawai, 2, 2);
-        $bulan = substr($no_pegawai, 4, 2);
-        $tahun = substr($no_pegawai, 6, 4);
-        $no_urutan = substr($no_pegawai,10 ,2 );
-    if (strlen($no_pegawai) <= 11) {
-        echo "No Pegawai Tidak Sesuai";
-    } else {
-        $namab = "";
+    $tanggal = substr($no_pegawai, 2, 2);
+    $bulan = substr($no_pegawai, 4, 2);
+    $tahun = substr($no_pegawai, 6, 4);
+    $no_urutan = substr($no_pegawai, 10, 2);
 
-        if ($bulan == "01") {
+    $namab = "";
+
+    switch ($bulan) {
+        case "01":
             $namab = "Januari";
-        } elseif ($bulan == "02") {
+            break;
+        case "02":
             $namab = "Februari";
-        } elseif ($bulan == "03") {
+            break;
+        case "03":
             $namab = "Maret";
-        } elseif ($bulan == "04") {
+            break;
+        case "04":
             $namab = "April";
-        } elseif ($bulan == "05") {
+            break;
+        case "05":
             $namab = "Mei";
-        } elseif ($bulan == "06") {
+            break;
+        case "06":
             $namab = "Juni";
-        } elseif ($bulan == "07") {
+            break;
+        case "07":
             $namab = "Juli";
-        } elseif ($bulan == "08") {
+            break;
+        case "08":
             $namab = "Agustus";
-        } elseif ($bulan == "09") {
+            break;
+        case "09":
             $namab = "September";
-        } elseif ($bulan == "10") {
+            break;
+        case "10":
             $namab = "Oktober";
-        } elseif ($bulan == "11") {
+            break;
+        case "11":
             $namab = "November";
-        } else {
+            break;
+        default:
             $namab = "Desember";
-        }
-
-        $tanggal_lahir = $tanggal . "-" . $namab . "-" . $tahun ;
-
-    
-
-
-    
-
     }
-}
 
+    $tanggal_lahir = $tanggal . "-" . $namab . "-" . $tahun;
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -112,19 +112,21 @@ if (isset($_POST['submit'])) {
     </style>
 </head>
 <body>
-    <div class="container">
+<div class="container">
         <form action="" method="post">
-            <label for="nopega">No Pegawai:</label>
-            <input type="text" name="nopega" required id="nopega">
-            <input type="submit" value="Submit" name="submit">
+            <label for="nopega">Nomor Pegawai:</label>
+            <input type="text" name="nopega" required id="nopega" >
+            <input type="submit" value="Submit" required name="submit">
             <?php
-
-    if (isset($_POST['submit'])) {
-            echo "<br>No Golongan : $no_golongan <br>";
-    echo "Tanggal Lahir : $tanggal_lahir <br>";
-    echo "No Urutan : $no_urutan";
-    }
-
+            if (isset($_POST['submit'])) {
+                if (strlen($no_pegawai) !== 12) {
+                    echo "Nomor Pegawai Tidak Sesuai";
+                } else {
+                    echo "<br>No Golongan : $no_golongan <br>";
+                    echo "Tanggal Lahir : $tanggal_lahir <br>";
+                    echo "No Urutan : $no_urutan";
+                }
+            }
             ?>
         </form>
     </div>
