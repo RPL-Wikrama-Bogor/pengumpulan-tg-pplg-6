@@ -31,9 +31,17 @@ $siswa = [
 <body>
 
 <h2>List nama siswa</h2>
+
+    <a href="?umur=TRUE">klik untuk tampilkan siswa berdasar umur</a> <br>
+    <br>
 <?php
+
+if(isset($_GET['umur'])){
+
 foreach($siswa as $key => $cuy){
-    echo  "- " . $cuy['nama'] . "<br>";
+    echo  "- " . $cuy['nama'] . " ( " . $cuy['umur'] . " Tahun ) <br>";
+}
+
 }
 ?>
 
@@ -43,7 +51,7 @@ foreach($siswa as $key => $cuy){
         <tr>
                 <td>
                     <tr>
-                        <label for="nama">Masukan Nama: </label>
+                        <label for="nama">Cari berdasar nama: </label>
                     </tr>
                     <tr>
                         <input type="text" name="nama" id="nama" required>
