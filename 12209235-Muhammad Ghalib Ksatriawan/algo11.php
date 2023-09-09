@@ -5,47 +5,53 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #252B48;
             margin: 0;
             padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
         }
+
         .container {
-            background-color: #5B9A8B;
-            border-radius: 8px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin: 0 auto;
             padding: 20px;
-            width: 500px;
+            text-align: center;
         }
+
         h1 {
-            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
             margin-bottom: 10px;
         }
-        input {
-            width: 95%;
+
+        input[type="text"] {
+            width: 100%;
             padding: 10px;
-            margin-bottom: 10px;
             border: 1px solid #ccc;
             border-radius: 4px;
+            box-sizing: border-box;
         }
-        button {
-            background-color: #F7E987;
-            color: brown;
+
+        button[type="submit"] {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
             border: none;
             border-radius: 4px;
-            padding: 10px 20px;
             cursor: pointer;
         }
+
         .result {
-            margin-top: 20px;
-            padding: 10px;
-            background-color: #f4f4f4;
-            border-radius: 4px;
+            border-top: 1px solid #ccc;
+            padding-top: 20px;
         }
     </style>
+    
 </head>
 <body>
     <div class="container">
@@ -56,6 +62,7 @@
             <button type="submit">Submit</button>
         </form>
         <div class="result">
+        <center>
             <?php
             if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $pegawaiNumber = $_POST["pegawai_number"];
@@ -82,6 +89,7 @@
                 }
             }
             ?>
+            </center>
         </div>
     </div>
 </body>

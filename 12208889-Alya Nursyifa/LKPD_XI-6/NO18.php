@@ -1,59 +1,56 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Pencarian Juara Kelas</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juara Kelas</title>
 </head>
 <body>
-    <h2>Pencarian Juara Kelas</h2>
-    <form action="" method="post">
+    <div class="container">
+    <form method="post" action="">
         <?php
-        $mataPelajaran = array("MTK", "INDO", "INGG", "DPK", "Agama");
-        $siswaCount = 15;
-        
-        for ($i = 1; $i <= $siswaCount; $i++) {
-            echo "<h3>Siswa ke-$i</h3>";
-            echo "Nama: <input type='text' name='nama[]' required><br>";
-
-            foreach ($mataPelajaran as $mapel) {
-                echo "$mapel: <input type='number' name='nilai[$i][$mapel]' required><br>";
-            }
-
-            echo "Kehadiran (persentase): <input type='number' name='kehadiran[$i]' required><br>";
-            echo "<br>";
+        for ($i = 1; $i <= 15; $i++) {
+            echo "<h3>Data Siswa ke-$i</h3>";
+            echo "Nilai MTK: <input type='number' name='nilaiMTK[]' required><br>";
+            echo "Nilai INDO: <input type='number' name='nilaiIndo[]' required><br>";
+            echo "Nilai INGG: <input type='number' name='nilaiIngg[]' required><br>";
+            echo "Nilai DPK: <input type='number' name='nilaiDpk[]' required><br>";
+            echo "Nilai Agama: <input type='number' name='nilaiAgama[]' required><br>";
+            echo "Kehadiran (%): <input type='number' name='kehadiran[]' required><br><br>";
         }
         ?>
-        <input type="submit" name="submit" value="Cari Juara">
+        <input type="submit" value="Cari Juara Kelas">
     </form>
-
-    <?php
-    if (isset($_POST['submit'])) {
-        $nilai = $_POST['nilai'];
-        $kehadiran = $_POST['kehadiran'];
-
-        $totalSiswa = count($nilai);
-        $juaraKelas = array();
-        
-        foreach ($nilai as $siswa => $mapelNilai) {
-            $nilaiTotal = array_sum($mapelNilai);
-            $nilaiRataRata = $nilaiTotal / count($mapelNilai);
-            
-            if ($nilaiTotal >= 475 && $kehadiran[$siswa] == 100) {
-                $juaraKelas[$siswa] = $nilaiRataRata;
-            }
-        }
-
-        if (empty($juaraKelas)) {
-            echo "<h3>Tidak ada juara kelas yang memenuhi kriteria</h3>";
-        } else {
-            arsort($juaraKelas);
-            $juara = key($juaraKelas);
-
-            echo "<h3>Juara Kelas</h3>";
-            echo "Nama: " . $_POST['nama'][$juara] . "<br>";
-            echo "Nilai Rata-rata: " . $juaraKelas[$juara] . "<br>";
-        }
-    }
-    ?>
+    </div>
 </body>
 </html>
-``
+
+        <?php
+          if ($_SERVER["REQUEST_METHOD"] === "POST") {
+            $nilaiMTK = $_POST['nilaiMTK'];
+            $nilaiIndo = $_POST['nilaiIndo'];
+            $nilaiIngg = $_POST['nilaiIngg'];
+            $nilaiDpk = $_POST['nilaiDpk'];
+            $nilaiAgama = $_POST['nilaiAgama'];
+            $kehadiran = $_POST['kehadiran'];
+        
+            $juara = [];
+            for ($i = 0; $i < count($nilaiMTK); $i++) {
+                $totalNilai = $nilaiMTK[$i] + $nilaiIndo[$i] + $nilaiIngg[$i] + $nilaiDpk[$i] + $nilaiAgama[$i];
+                $rataRata = $totalNilai / 5;
+        
+                if ($rataRata >= 95 && $kehadiran[$i] >= 100) {
+                    $juara[] = "Siswa ke-" . ($i + 1);
+                }
+            }
+        
+            if (count($juara) > 0) {
+                echo "Siswa yang menjadi juara kelas:<br>";
+                foreach ($juara as $siswa) {
+                    echo "$siswa<br>";
+                }
+            } else {
+                echo "Tidak ada siswa yang memenuhi syarat juara kelas.";
+            }
+        }
+            ?>

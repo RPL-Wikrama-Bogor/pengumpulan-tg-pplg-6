@@ -144,7 +144,7 @@
     // echo $no_golongan, $tanggal_lahir, $no_urut;
   }
   ?>
-
+  
   <style type="text/css">
     /* Gaya umum */
     /* Gaya umum */
