@@ -1,0 +1,130 @@
+/* button */
+.btn{
+    background: #FFC436;
+    width: 160px;
+    padding: 10px;
+    text-decoration: none;
+    text-transform: capitalize;
+    color: #000;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.btn:hover, .btn:focus, .btn:active{
+    box-shadow: 0 0 20px rgba(0, 0, 0 ,0.2);
+    transform: scale(1.1);
+}
+.button{
+    margin: 10px;
+    padding-top:5px;
+    float: right;
+}
+/* img */
+img{
+    height: 350px;
+    width: 700px;
+    float: right;
+
+}
+.img{
+    padding-top: 50px;
+    margin: 10px;
+}
+/* text */
+.text{
+    line-height: 1.5;
+}
+/* baris */
+.baris{
+    box-sizing: border-box;
+    padding: 20px;
+}
+.kolom{
+    width: 300px;
+    height: 70px;
+    background-color: #FFC436;
+    margin: 5px;
+    box-sizing: border-box;
+    padding: 10px;
+    padding-top: 20px;
+    
+}
+.kolom1,.kolom2, .kolom3, .kolom4{
+    float: left;
+    
+}
+.sec{
+    padding-top:100px;
+    padding-bottom: 10px;
+}
+/* form */
+.form{
+    padding-top:50px;
+    margin: 15px;
+}
+.card{
+    width: 600px;
+    background: #EFEFEF;
+    color: #fff;
+    padding: 20px;
+    clear: right;
+    float: left;
+}
+.card h1{
+    font-size: 20px;
+    text-align: center;
+    color: #000;
+}
+input{
+    width: 590px;
+    height: 25px;
+    margin: 10px 0;
+}
+textarea{
+    width: 590px;
+}
+label{
+    color: #000;
+}
+button{
+    background: #FFC436;
+    width: 100px;
+    padding: 5px;
+    color: #000;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    float: right;
+}
+button:hover, button:focus, button:active{
+    transform: scale(1.1);
+}
+/* laporan */
+.judul{
+    float: right;
+    width: 48%;
+    max-width: 1500%;
+    margin: 2px;
+}
+.col p{
+    float: right;
+}
+.row{
+    border: 1px solid #000;
+    float: right;
+    width: 100%;
+}
+.img-img{
+   width: 20%;
+   float: right;
+   clear: right; 
+}
+.img-img img{
+    width: 140px;
+    height: 90px;
+}
+/* footer */
+
+

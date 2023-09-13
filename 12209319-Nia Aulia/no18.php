@@ -61,22 +61,19 @@ if (isset($_POST['submit']) && $i < 15) {
         <div>
             <?php if ($i < 15) { ?>
 
-                <label for="nama"> Input nama:</label> <br>
-                <input type="text" name="nama" id="nama" required> <br>
-                <label for="kehadiran"> Input kehadiran: </label><br>
-                <input type="number" name="kehadiran" id="kehadiran" required><br>
-                <label for="mtk"> Input nilai mtk: </label><br>
-                <input type="number" name="mtk" id="mtk" required><br>
-                <label for="indo"> Input nilai indo: </label><br>
-                <input type="number" name="indo" id="indo" required><br>
-                <label for="ing"> Input nilai ing: </label><br>
-                <input type="number" name="ing" id="ing" required><br>
-                <label for="dpk"> Input nilai dpk: </label><br>
-                <input type="number" name="dpk" id="dpk" required><br>
-                <label for="agama"> Input nilai agama: </label><br>
-                <input type="number" name="agama" id="agama" required><br>
+                <label for="nama"> Input Nama:</label> 
+                <input type="text" name="nama" id="nama" required> 
+                <label for="kehadiran"> Input Kehadiran: </label>
+                <input type="number" name="kehadiran" id="kehadiran" required>
+                <hr>
+                <h3>Input Nilai!<h3>
+                <input type="number" placeholder="Nlai Matematika" name="mtk" id="mtk" required>
+                <input type="number" placeholder="Nilai Indonesia" name="indo" id="indo" required>
+                <input type="number" placeholder="Nilai Inggris" name="ing" id="ing" required>
+                <input type="number" placeholder="Nilai DPK" name="dpk" id="dpk" required>
+                <input type="number" placeholder="Nilai Agama" name="agama" id="agama" required>
                 <label for="submit"></label><br>
-                <input type="submit" name="submit" id="submit">
+                <input type="submit" name="submit" class="submit" id="submit">
             <?php } else { ?>
                 <p>Anda telah mengisi data untuk 15 siswa. Tidak dapat mengisi lebih banyak.</p>
             <?php } ?>
@@ -99,6 +96,65 @@ if (isset($_POST['submit']) && $i < 15) {
         }
     }
     ?>
-</body>
 
+<style>
+body{
+   background:linear-gradient(135deg,  #7C96AB, #EDC6B1, #B7B7B7 );
+   display:flex;
+   align-items:center;
+   justify-content:center;
+   padding :10px;
+   border-radius:5px;
+   height:100vh;
+}
+
+form{
+    width: 350px;
+    border: 2px solid #ccc;
+    padding: 30px;
+    background: #F8F0E5;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    height: 420px;
+    margin: 24px;
+    border-radius: 2px;
+    text-align: left;
+    justify-content: center;
+
+}
+
+form h3{
+    color:#7C96AB;
+    text-align:center;
+}
+
+form p{
+    
+}
+input {
+    display: block;
+    border: 2px solid #ccc;
+    width: 60%;
+    padding: 7px;
+    margin: 5px auto;
+    border-radius: 5px;
+
+}
+
+label {
+    color:#7C96AB;
+    font-size: 15px;
+    padding: 15px;
+    text-align:center;
+}
+
+.submit{
+    width:350px;
+    border-radius:7px;
+    padding:8px 10px;
+    background: linear-gradient(135deg,  #7C96AB, #EDC6B1, #B7B7B7 );
+    color:white;
+    border:#DAC0A3;
+}
+</style>
+</body>
 </html>
