@@ -151,6 +151,7 @@
                         $disc = $tomak - $dis;
                     }elseif ($jmlh >= 5) {
                         $dis =floor($tomak * 10 / 100);
+                        $disc = $tomak - $dis;
                     }else{
                         $dis = 0;
                         $disc = $tomak;
