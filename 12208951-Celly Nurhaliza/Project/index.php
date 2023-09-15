@@ -21,7 +21,7 @@
                 </ol>
             </div>
             <div class="foto">
-            <img class="img" src="img/Screen Shot 2023-02-02 at 10.13.21.png" alt="">
+            <img class="img" src="img/Screen_Shot_2023-02-02_at_10.13.21.png" alt="">
             </div>
         </div>
         <div class="box_data">
