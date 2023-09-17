@@ -47,7 +47,7 @@
             <button class="btn_kirim">Kirim</button>
         </form>
         <div class="laporan">
-            <h2 class="text_laporan">Laporan Pengaduan</h2>
+            <h2 class="text_laporan">Laporan Pengaduan </h2>
             <div class="box_laporan">
                 <p class="text_tanggal">22 Juni 2022 : Fema Flamelina Putri</p>
                 <p class="text_keterangan">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores quos reiciendis libero sunt eveniet quisquam facilis quasi placeat eaque rerum.</p>
