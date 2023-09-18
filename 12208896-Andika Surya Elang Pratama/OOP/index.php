@@ -138,7 +138,7 @@ class buy extends cars
         echo "<center>";
         echo "----------------------------------------------" . "<br>";
         echo "Anda membeli bensin " . $this->jenis . "<br>";
-        echo "Dengan jumlah liter: " . $this->jumlah . " buah <br>";
+        echo "Dengan jumlah liter: " . $this->jumlah . " liter <br>";
         echo "Total yang harus anda bayar Rp. " . number_format($this->harga(), 0, '', '.') . "<br>";
         echo "----------------------------------------------";
         echo "</center>";
