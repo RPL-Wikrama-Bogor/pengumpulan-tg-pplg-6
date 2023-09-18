@@ -6,7 +6,7 @@
 </head>
     <style>
         body{
-            background: linear-gradient(170deg, #E4A5FF, #ECF9FF)
+            background: #FFFADD;
         }
         .form{
             background: linear-gradient(170deg, #C0DBEA, #FFDEDE);
