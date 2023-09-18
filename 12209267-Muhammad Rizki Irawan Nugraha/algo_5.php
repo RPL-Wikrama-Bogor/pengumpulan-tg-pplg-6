@@ -4,8 +4,8 @@
     <title>Konversi Jam Menit Detik ke Total Detik</title>
 </head>
 <body>
-    <h2>Konversi Jam-Menit-Detik ke Total Detik</h2>
-    <form method="post" action="">
+      <h2>Konversi Jam-Menit-Detik ke Total Detik</h2>
+        <form method="post" action="">
         Jam: <input type="number" name="jam" min="0" max="24"><br>
         Menit: <input type="number" name="menit" min="0" max="59"><br>
         Detik: <input type="number" name="detik" min="0" max="59"><br>
