@@ -3,6 +3,64 @@
 <head>
     <title>Hitung Penghasilan Penjualan Tiket Bioskop</title>
 </head>
+<style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+
+        h2 {
+            color: #4287f5;
+        }
+
+        form {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        label {
+            display: block;
+            text-align: left;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #4287f5;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #2553a5;
+        }
+
+        h3 {
+            color: #4287f5;
+        }
+
+        .result {
+            text-align: left;
+            margin-top: 20px;
+        }
+    </style>
 <body>
     <h2>Hitung Penghasilan Penjualan Tiket Bioskop</h2>
     <form method="post" action="">
