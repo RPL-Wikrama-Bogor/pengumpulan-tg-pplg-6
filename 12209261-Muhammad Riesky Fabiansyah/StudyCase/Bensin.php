@@ -5,13 +5,13 @@ class Shell
     $shellvpower,
     $shellvpowerdiesel,
     $shellvpowernitro;
-  protected $pajak;
+  protected $ppn;
   public $jumlah;
-  public $model;
+  public $tipe;
 
   function __construct()
   {
-    $this->pajak = 0.1;
+    $this->ppn = 0.1;
   }
 
   public function setHarga($tipe1, $tipe2, $tipe3, $tipe4)
@@ -37,9 +37,9 @@ class Beli extends Shell
   public function harga()
   {
     $dataHarga = $this->getHarga();
-    $hargaBeli = $this->jumlah * $dataHarga[$this->model];
-    $hargaPajak = $hargaBeli * $this->pajak;
-    $hargaBayar = $hargaBeli + $hargaPajak;
+    $hargaBeli = $this->jumlah * $dataHarga[$this->tipe];
+    $hargaPPN = $hargaBeli * $this->ppn;
+    $hargaBayar = $hargaBeli + $hargaPPN;
     return $hargaBayar;
   }
 
@@ -54,15 +54,17 @@ class Beli extends Shell
     echo "    background-color: #ffff;";
     echo "    padding: 20px;";
     echo "    border-radius: 10px;";
+    echo "    width: 25%;";
+    echo "    transform: translate(134%, 250%)";
     echo "  }";
     echo "</style>";
     echo "</head>";
     echo "<body>";
     echo "  <div class='container'>";
     echo "    <h2>Struk Pembelian</h2>";
-    echo "    <p>Anda membeli bahan bakar minyak tipe " . $this->model . "</p>";
+    echo "    <p>Anda membeli bahan bakar minyak tipe " . "<b><i>" . $this->tipe . "</b></i>" ."</p>";
     echo "    <p> dengan jumlah: " . $this->jumlah . " liter</p>";
-    echo "    <p> Total yang harus anda bayar Rp. " . number_format($this->harga(), 0, '', '.') . "</p>";
+    echo "    <p> Total yang harus anda bayar <b>Rp. " . number_format($this->harga(), 0, '', '.') . "</b></p>";
     echo "  </div>";
     echo "</body>";
     echo "</html>";
@@ -126,7 +128,7 @@ $proses = new Beli();
 $proses->setHarga(15420, 16130, 18310, 16510);
 if (isset($_POST['kirim'])) {
   $proses->jumlah = $_POST['Shell'];
-  $proses->model = $_POST['model'];
+  $proses->tipe = $_POST['tipe'];
 
   $proses->harga();
   $proses->strukPembelian();
@@ -140,7 +142,7 @@ if (isset($_POST['kirim'])) {
         <tr>
           <td>Pilih Tipe Bahan Bakar :</td>
           <td>
-            <select name="model" required>
+            <select name="tipe" required>
               <option value="shellsuper">Shell Super</option>
               <option value="shellvpower">Shell V-Power</option>
               <option value="shellvpowerdiesel">Shell V-Power Diesel</option>
@@ -160,6 +162,6 @@ if (isset($_POST['kirim'])) {
       </form>
     </table>
   </center>
+  
 </body>
-
 </html>
