@@ -9,11 +9,11 @@
 
 <body>
 <a class="but" href="#">Administrator</a>
-<img src="gambar1.png">
+<img src="gambar1.png" >
 <div class="content">
         <div class="text1" style="padding-top: 2px;">
                  <ul>
-                       <h2>Pengaduan Masyarakat</h2>
+                       <h2>Pengaduan Masyarakat</h2>    
                     <li>
                         1. Lorem ipsum, dolor sit amet consectetur adipiscing elit. Alias modi illum beatae omnis fugit!
                     </li><br>
@@ -71,7 +71,7 @@
        <div class="col">
             <p style="margin: 5px; padding-top: 5px;">08 Juni 2022 : Nia Aulia</p>
             <div class="col1">
-                <div class="image" style="margin: 10px; padding-top:20px;">
+                <div class="image" style="margin: 10px; ">
                   <img src="https://media.suara.com/pictures/653x366/2021/12/21/36585-jalan-rusak.jpg">
                 </div>
             </div>
@@ -79,7 +79,6 @@
         <p style="padding-top: 55px; margin: 5px;">Lorem ipsum dolor it amet cinsectetur adipisicing elit. Dolares ques reciendis libero sunt eveinet quisquam faelis quasi placeat eaque rerum.</p>
        </div>
     </div>
-
 
 <footer>
 <div class="footer">
