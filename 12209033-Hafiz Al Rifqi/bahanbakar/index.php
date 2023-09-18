@@ -94,7 +94,7 @@ class Beli extends Shell
      background-color:black;
          padding: 20px;
             border-radius: 10px;
-                box-shadow: 0px 0px 10px 2px white;
+                box-shadow: 0px 0px 10px 2px blue;
                 color:white;
   }
 
@@ -109,7 +109,7 @@ class Beli extends Shell
     color: white;
     width: 100%;
     padding: 10px;
-    border: 1px solid #52524E;
+    border: 1px solid blue;
     border-radius: 5px;
     margin-top: 5px;
   }
