@@ -29,7 +29,7 @@
         }
     }
 
-    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    if (isset($_POST['hitung'])) {
         $selectedFuel = $_POST['jenis'];
         $quantity = floatval($_POST['jumlah']);
 
