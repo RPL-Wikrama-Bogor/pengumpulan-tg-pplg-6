@@ -12,7 +12,7 @@ class cars{
         $this->pajak = 0.1;
     }
 
-    public function lemparHarga($tipe1, $tipe2, $tipe3, $tipe4) {
+    public function nyetiHarga($tipe1, $tipe2, $tipe3, $tipe4) {
         $this->bmw = $tipe1;
         $this->porsche= $tipe2;
         $this->mclaren = $tipe3;
@@ -114,7 +114,7 @@ class buy extends cars {
 </style>
 <?php
 $proses = new buy();
-$proses->lemparHarga(4000000000, 10000000000, 9000000000, 6000000000);
+$proses->nyetiHarga(4000000000, 10000000000, 9000000000, 6000000000);
 if (isset($_POST['kirim'])) {
     $proses->jumlah = $_POST['mobil'];
     $proses->model = $_POST['model'];
