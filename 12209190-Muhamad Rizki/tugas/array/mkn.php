@@ -1,32 +1,32 @@
 <?php
 $menus =  [
     [
-        "nama" => "Nasi Goreng",
-        "harga" => 15000,
+        "nama" => "ayam bakar",
+        "harga" => 20000,
         "type" => "makanan"
     ],
     [
-        "nama" => "Mie Goreng",
-        "harga" => 10000,
+        "nama" => "sate kadal",
+        "harga" => 12000,
         "type" => "makanan"
     ],
     [
-        "nama" => "Kwetiaw",
-        "harga" => 15000,
+        "nama" => "bebek guling",
+        "harga" => 25000,
         "type" => "makanan"
     ],
     [
-        "nama" => "Es Jeruk",
+        "nama" => "es kelapa",
         "harga" => 5000,
         "type" => "minuman"
     ], 
     [
-        "nama" => "Es Teh Manis",
+        "nama" => "Es teh",
         "harga" => 5000,
         "type" => "minuman"
     ],
 ];
-
+  
 
 $pesanMakanan = "";
 $pesanMinuman = "";
@@ -97,7 +97,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         margin-top: 100px;
     }
     .button {
-        width: 100px;
+        width: 495px;
     }
 </style>
 <body>
@@ -141,7 +141,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <label for="jumlahmin">Jumlah Minuman:</label>
         <input type="number" id="jumlahmin" name="jumlahmin" min="1" value="0">
         <br><br>
-        <input class="button" type="submit" value="Pesan">
+        <input class="button" type="submit" value="Pesan Orderan Anda">
     </form>
 </div>
 <div class="out">
@@ -152,8 +152,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <?php endif; ?>
         <?php if ($pesanMinuman !== "") : ?>
             <p><?php echo $pesanMinuman; ?></p>
-        <?php if ($diskon !== "") : ?>
-        <p><?php echo $diskon; ?></p>
         <?php endif; ?>
         <p>Total Pesanan Anda: Rp <?php echo number_format($totalPesanan, 0, ',', '.'); ?></p>
     <?php endif; ?>

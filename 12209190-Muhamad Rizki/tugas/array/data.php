@@ -72,12 +72,7 @@
         $nama = $_POST['nama'];
         foreach($names as $key => $data_siswa){
             if($nama == $data_siswa['nama']){
-                if ($name && $name['usia'] >= 17){
-                    echo "Nama : ".$name['nama'];
-                }else {
-                    echo "Umur kurang dari 17 tahun";
-                }
-        
+               
             }
         }
     }
