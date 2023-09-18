@@ -1,27 +1,21 @@
 <?php
 $listnama = [
     [
-        "Nama" => "Louis Marchall Joheart Cardoso",
-        "Nis" => 12209092,
-        "Rombel" => "PPLG XI - 6",
+        "Nama" => "Andika Surya",
+        "Nis" => 1222000,
+        "Rombel" => "PPLG",
         "Umur" => 17
     ],
     [
-        "Nama" => "Reyhan Aulia Treeana",
-        "Nis" => 12122321,
-        "Rombel" => "PPLG XI - 2",
-        "Umur" => 16
-    ],
-    [
-        "Nama" => "Jesen Marselino",
-        "Nis" => 12209065,
-        "Rombel" => "PPLG XI - 1",
+        "Nama" => "Asep",
+        "Nis" => 122200080,
+        "Rombel" => "PPLG",
         "Umur" => 15
     ],
     [
-        "Nama" => "Abyi",
-        "Nis" => 12122320,
-        "Rombel" => "PPLG XI - 6",
+        "Nama" => "Brody",
+        "Nis" => 1222000,
+        "Rombel" => "PPLG",
         "Umur" => 19
     ]
 ];
@@ -33,32 +27,74 @@ $listnama = [
 <html>
 
 <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <title>Pencarian Data Siswa</title>
     <style>
-        * {
-            font-family: 'Cabin', sans-serif;
+        body {
+            font-family: Arial, sans-serif;
             background-color: #f2f2f2;
-
+            margin: 0;
+            padding: 0;
         }
-=
+
+        h1 {
+            color: #333;
+        }
+
+        form {
+            margin: 20px 0;
+        }
+
+        label {
+            font-weight: bold;
+            color: #333;
+        }
+
+        input[type="number"],
+        input[type="text"] {
+            padding: 5px;
+            width: 200px;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 5px;
+        }
+
+        b {
+            color: #f00;
+        }
     </style>
 </head>
 
 <body>
 
-
+    <center>
         <h1>Pencarian Data Siswa</h1>
 
-   
+        <!-- Form untuk mencari umur -->
         <form method="POST" action="">
-            <label for="umur">Cari siswa dengan umur >=</label>
+            <label for="umur">Cari siswa dengan umur >= </label>
             <input type="number" name="umur" id="umur" required>
             <input type="submit" name="submit" value="Cari">
         </form>
 
+        <!-- Form untuk mencari nama -->
         <form method="POST" action="">
             <label for="nama">Cari siswa berdasarkan Nama:</label>
             <input type="text" name="nama" id="nama" required>
@@ -66,7 +102,7 @@ $listnama = [
         </form>
 
         <?php
- 
+        // ... (kode PHP Anda tetap sama)
         ?>
 
 
@@ -74,7 +110,7 @@ $listnama = [
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-  
+    // Jika form umur di-submit
     if (isset($_POST['submit'])) {
         $umurMin = $_POST['umur'];
         $siswaUmurTertentu = [];
@@ -92,7 +128,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "</ul>";
     }   
 
-
+    // Jika form pencarian nama di-submit
     if (isset($_POST['nama_submit'])) {
         $namaCari = $_POST['nama'];
         $siswaDitemukan = null;
@@ -119,6 +155,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     ?>
 
+</center>
 
    
     
