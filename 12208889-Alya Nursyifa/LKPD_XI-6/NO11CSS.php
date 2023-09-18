@@ -10,10 +10,6 @@
             margin: 0;
             padding: 0;
             background-image: url('https://i.pinimg.com/564x/8f/53/86/8f53862ef5e9a776a6761812cb92a96b.jpg');
-            /* background-repeat : no-repeat;
-            background-size : cover;
-            background-attachment : flex; */
-            /* background-color: #f4f4f4; */
         }
         
         form {
@@ -111,7 +107,7 @@
 
         <div class="tampil">
         <?php
-        if($no_pegawai < 11){
+        if(strlen($no_pegawai)< 11){
             echo "No pegawai tidak sesuai";
         }elseif($bulan == "01"){
             echo "Januari";

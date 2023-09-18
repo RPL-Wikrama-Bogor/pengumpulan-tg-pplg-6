@@ -4,18 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        body {
-            padding: 50px; /* Adjust padding for smaller screens */
+    body {
+            padding: 50px; 
             background-image: url("https://i.pinimg.com/564x/4a/ab/58/4aab58e0e0bd778350ee5a2f3715b9d7.jpg");
             background-repeat: no-repeat;
             background-size: cover;
-            margin: 0; /* Remove default margin */
+            margin: 0; 
             font-family: sans-serif;
         }
 
         #feedback-form {
-            width: 100%; /* Use full width for small screens */
-            max-width: 400px; /* Limit maximum width */
+            width: 100%;
+            max-width: 400px; 
             margin: 0 auto;
             background-color: #fcfc;
             padding: 25px;
@@ -49,6 +49,23 @@
             border-radius: 5px;
             cursor: pointer;
         }
+
+        /* Responsive Styles */
+        @media screen and (max-width: 500px) {
+            #feedback-form {
+                max-width: 90%;
+            }
+        }
+
+        @media screen and (max-width: 320px) {
+            body {
+                padding: 20px;
+            }
+
+            #feedback-form {
+                padding: 15px;
+            }
+        }
     </style>
     <title>Responsive Form</title>
 </head>
@@ -72,6 +89,10 @@
     if (isset($_POST['submit'])) {
         $pegawai = $_POST['pegawai'];
 
+        if (strlen($pegawai) != 11) {
+            echo "No pegawai tidak sesuai";
+
+        } else {
         $golongan = substr ($pegawai , 0, 1);
         $tanggal = substr ($pegawai, 1, 2);
         $bulan = substr ($pegawai ,3, 2);
@@ -102,7 +123,9 @@
             $bulan = " oktober ";
         } else if ($bulan == "11") {
             $bulan = " november ";
-        } else ($bulan = "desember");
+
+        } else { $bulan = "desember";
+    }
 
         $tanggal_lahir = $tanggal. $bulan. $tahun;
         echo "<br>";
@@ -114,7 +137,7 @@
         echo "no urutann " . $urutan;
         echo "<br>";
     }
-
+}
 
 ?>
     

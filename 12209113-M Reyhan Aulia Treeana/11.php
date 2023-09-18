@@ -47,19 +47,18 @@
 
 
     <?php
-    if(isset($_POST['submit'])){
+    if (isset($_POST['submit'])) {
         $no_pegawai = $_POST['no_pegawai'];
-        // $nama = $_POST['nama'];
+    
+        // Periksa apakah panjang string adalah 11 karakter
+        if (strlen($no_pegawai) == 11) {
+            $no_golongan = substr($no_pegawai, 0, 1);
+            $tanggal = substr($no_pegawai, 1, 2);
+            $bulan = substr($no_pegawai, 3, 2);
+            $tahun = substr($no_pegawai, 5, 4);
+            $no_urutan = substr($no_pegawai, 9, 2);
 
-        if($no_pegawai > 11 && $no_pegawai < 11){
-            echo "Error cuy";
-        }
-
-        $no_golongan = substr($no_pegawai, 0, 1);
-        $tanggal = substr($no_pegawai, 1, 2);
-        $bulan = substr($no_pegawai, 3, 2);
-        $tahun = substr($no_pegawai, 5, 4);
-        $no_urutan = substr($no_pegawai, 9, 2);
+        
 
         if ($bulan == 1) {
             $bulan = "Januari";
@@ -87,6 +86,8 @@
             $bulan = "Desember";
         }
 
+  
+
         $tanggal_lahir = $tanggal . " " . $bulan . " " . $tahun;
         
         // echo "Nama Pegawai: " . $nama . "<br>";
@@ -94,9 +95,12 @@
         echo "No golongan: " . $no_golongan . "<br>";
         echo "No urutan: " . $no_urutan . "<br>";
 
-
-
+    } else {
+        echo "Nomor Pegawai harus terdiri dari 11 karakter.";
     }
+}
+
+    
     ?>
     </center>
 </body>
