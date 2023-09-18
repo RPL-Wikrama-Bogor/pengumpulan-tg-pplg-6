@@ -14,7 +14,7 @@ class Shell
     $this->pajak = 0.1;
   }
 
-  public function lemparHarga($tipe1, $tipe2, $tipe3, $tipe4)
+  public function setHarga($tipe1, $tipe2, $tipe3, $tipe4)
   {
     $this->shellsuper = $tipe1;
     $this->shellvpower = $tipe2;
@@ -22,7 +22,7 @@ class Shell
     $this->shellvpowernitro = $tipe4;
   }
 
-  public function cekHarga()
+  public function getHarga()
   {
     $data["shellsuper"] = $this->shellsuper;
     $data["shellvpower"] = $this->shellvpower;
@@ -36,7 +36,7 @@ class Beli extends Shell
 {
   public function harga()
   {
-    $dataHarga = $this->cekHarga();
+    $dataHarga = $this->getHarga();
     $hargaBeli = $this->jumlah * $dataHarga[$this->model];
     $hargaPajak = $hargaBeli * $this->pajak;
     $hargaBayar = $hargaBeli + $hargaPajak;
@@ -123,7 +123,7 @@ class Beli extends Shell
 </style>
 <?php
 $proses = new Beli();
-$proses->lemparHarga(15420, 16130, 18310, 16510);
+$proses->setHarga(15420, 16130, 18310, 16510);
 if (isset($_POST['kirim'])) {
   $proses->jumlah = $_POST['Shell'];
   $proses->model = $_POST['model'];
