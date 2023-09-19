@@ -15,10 +15,10 @@
                 <tr>
                     <td><label for="">Pilih Tipe Bahan Bakar</label></td>
                     <td><select name="tipe" id="">
-                        <option value="YN">Yamaha Nmax</option>
-                        <option value="YAC">Yamaha Aerox Connected</option>
-                        <option value="HV">Honda Vario 125</option>
-                        <option value="HB">Honda Beat</option>
+                        <option value="Yamaha Nmax">Yamaha Nmax</option>
+                        <option value="Yamaha Aerox Connected">Yamaha Aerox Connected</option>
+                        <option value="Honda Vario 125">Honda Vario 125</option>
+                        <option value="Honda Beat">Honda Beat</option>
                     </select></td>
                 </tr>
                 <tr>
@@ -32,7 +32,7 @@
 
 <?php
 class data{
-    protected $pajak = 10000; // Pajak sebesar Rp. 10.000
+    protected $pajak = 10000;
     protected $YN = 31620000;
     protected $YAC = 31310000;
     protected $HV = 24400000;
@@ -43,21 +43,21 @@ class data{
     public function hitungHarga($nama, $waktu, $tipe) {
         $diskon = 0;
         if (in_array($nama, $this->member)) {
-            $diskon = 5; // Diskon 5% untuk member
+            $diskon = 5;
         }
 
         $harga_motor = 0;
         switch ($tipe) {
-            case 'YN':
+            case 'Yamaha Nmax':
                 $harga_motor = $this->YN;
                 break;
-            case 'YAC':
+            case 'Yamaha Aerox Connected':
                 $harga_motor = $this->YAC;
                 break;
-            case 'HV':
+            case 'Honda Vario 125':
                 $harga_motor = $this->HV;
                 break;
-            case 'HB':
+            case 'Honda Beat':
                 $harga_motor = $this->HB;
                 break;
         }
@@ -87,12 +87,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($result['diskon'] > 0) {
         echo "member mendapatkan diskon sebesar " . $result['diskon'] . "%<br>";
     } else {
-        echo "non member<br>";
+        echo "non member mendapatkan diskon sebesar 0%<br>";
     }
-    echo "jenis motor yang dirental adalah " . $result['jenis_motor'] . " selama " . $waktu . " hari<br>";
+    echo "jenis motor yang dirental adalah ". $result['jenis_motor'] . " selama " . $waktu . " hari<br>";
     echo "harga rental per-harinya :" . $result['harga_per_hari'] . "<br>";
-    echo "besar yang harus dibayarkan adalah Rp. " . number_format($result['total_harga'], 0, ',', '.') . "<br>";
+    echo "besar yang harus dibayarkan adalah Rp." . number_format($result['total_harga'], 0, ',', '.') . "<br>";
 }
 ?>
-<h1><b>TUGAS INI BELUM BERES YAAA</b></h1>
 </center>
