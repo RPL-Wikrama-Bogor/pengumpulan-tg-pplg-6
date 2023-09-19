@@ -144,7 +144,7 @@ font-size: 15px;
 }
 
 
-@media screen and (max-width: 1500px){
+@media screen and (max-width: 900px){
 
  .gambarr img {
     width: 90%;
@@ -168,8 +168,6 @@ font-size: 15px;
     margin-left: 20px;
     width: 90%;
 }
-
-  
 
 .container {
     border-radius: 5px;
