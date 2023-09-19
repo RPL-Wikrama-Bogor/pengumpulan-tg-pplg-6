@@ -91,16 +91,20 @@ h1 {
     <?php
     if(isset($_POST['submit'])){
         $no_pegawai = $_POST['no_pegawai'];
-
-        if($no_pegawai > 11 && $no_pegawai < 11){
-            echo "Error guys";
-        }
-
-        $no_golongan = substr($no_pegawai, 0, 1);
-        $tanggal = substr($no_pegawai, 1, 2);
-        $bulan = substr($no_pegawai, 3, 2);
-        $tahun = substr($no_pegawai, 5, 4);
-        $no_urutan = substr($no_pegawai, 9, 2);
+    
+        // Periksa apakah panjang nomor pegawai adalah 11 angka
+        if(strlen($no_pegawai) != 11){
+            echo "Nomor pegawai harus terdiri dari 11 angka.";
+        } else {
+            $no_golongan = substr($no_pegawai, 0, 1);
+            $tanggal = substr($no_pegawai, 1, 2);
+            $bulan = substr($no_pegawai, 3, 2);
+            $tahun = substr($no_pegawai, 5, 4);
+            $no_urutan = substr($no_pegawai, 9, 2);
+    
+            // ... (sisa kode tetap sama)
+        
+    
 
         if ($bulan == 1) {
             $bulan = "Januari";
@@ -134,7 +138,7 @@ h1 {
         echo "No golongan: " . $no_golongan . "<br>";
         echo "No urutan: " . $no_urutan . "<br>";
 
-
+    }
 
     }
     ?>
