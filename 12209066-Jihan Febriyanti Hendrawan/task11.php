@@ -51,7 +51,7 @@
         .besar {
         font-size: 13px;
         color: #fff;
-        text-align: center; 
+        text-align: center; /* Center-align text */
          }
 
         .gradasi {
@@ -91,63 +91,64 @@
         </table>
     </form>
 
-    <?php
-     $kode_pegawai;
-     $no_golongan;
-     $tanggal;
-     $bulan;
-     $tahun;
-     $no_urutan;
-     $tanggal_lahir;
- 
-     if(isset($_POST['submit'])){
-         $kode_pegawai=$_POST['kode'];
- 
-         $no_golongan=substr($kode_pegawai,0,1);
-         $tanggal=substr($kode_pegawai,1,2);
-         $bulan=substr($kode_pegawai,3,2);
-         $tahun=substr($kode_pegawai,5,4);
-         $no_urutan=substr($kode_pegawai,9,2);
- 
- 
-         if ($kode_pegawai < 11){
-             echo "<div class='tekss'>No Pegawai Tidak Sesuai";
-         }else if ($bulan=="01"){
-             $bulan = "Januari";
-         } else if($bulan =="02"){
+<?php
+$kode_pegawai;
+$no_golongan;
+$tanggal;
+$bulan;
+$tahun;
+$no_urutan;
+$tanggal_lahir;
+
+    if (isset($_POST['submit'])) {
+    $kode_pegawai = $_POST['kode'];
+
+    if (strlen($kode_pegawai) < 11) {
+        echo "<div class='tekss'>No Pegawai Tidak Sesuai</div>";
+    } else {
+        $no_golongan = substr($kode_pegawai, 0, 1);
+        $tanggal = substr($kode_pegawai, 1, 2);
+        $bulan = substr($kode_pegawai, 3, 2);
+        $tahun = substr($kode_pegawai, 5, 4);
+        $no_urutan = substr($kode_pegawai, 9, 2);
+
+        if ($bulan == "01") {
+            $bulan = "Januari";
+        } elseif ($bulan == "02") {
             $bulan = "Februari";
-         } else if($bulan =="03"){
+        } elseif ($bulan == "03") {
             $bulan = "Maret";
-         } else if ($bulan =="04"){
+        } elseif ($bulan == "04") {
             $bulan = "April";
-         } else if ($bulan =="05"){
-            $bulan =  "Mei";
-         } else if ($bulan =="06"){
+        } elseif ($bulan == "05") {
+            $bulan = "Mei";
+        } elseif ($bulan == "06") {
             $bulan = "Juni";
-         } else if ($bulan =="07"){
+        } elseif ($bulan == "07") {
             $bulan = "Juli";
-         } else if ($bulan =="08"){
+        } elseif ($bulan == "08") {
             $bulan = "Agustus";
-         } else if ($bulan =="09"){
+        } elseif ($bulan == "09") {
             $bulan = "Semptember";
-         } else if ($bulan =="10"){
+        } elseif ($bulan == "10") {
             $bulan = "Oktober";
-         } else if($bulan =="11"){
-            $bulan =  "november";
-         } else {
+        } elseif ($bulan == "11") {
+            $bulan = "november";
+        } else {
             $bulan = "Desember";
-         }
- 
-     
-         echo"<br>";
-         echo"<br>";
-         
-         $tanggal_lahir = " Tanggal " . $tanggal . " Bulan " . $bulan . " Tahun " . $tahun;
-         echo "<div class='gradasi besar'>Kode Pegawai : " . $kode_pegawai . "</div></br>";
-         echo "<div class='gradasi besar'>Nomor Golongan : " . $no_golongan . "</div></br>";
-         echo "<div class='gradasi besar'>Tanggal Lahir : " . $tanggal_lahir . "</div></br>";
-         echo "<div class='gradasi besar'>Nomor Urutan : " . $no_urutan . "</div></br>";
-     }
-     ?>
+        }
+
+        echo "<br>";
+        echo "<br>";
+
+        $tanggal_lahir = " Tanggal " . $tanggal . " Bulan " . $bulan . " Tahun " . $tahun;
+        echo "<div class='gradasi besar'>Kode Pegawai : " . $kode_pegawai . "</div></br>";
+        echo "<div class='gradasi besar'>Nomor Golongan : " . $no_golongan . "</div></br>";
+        echo "<div class='gradasi besar'>Tanggal Lahir : " . $tanggal_lahir . "</div></br>";
+        echo "<div class='gradasi besar'>Nomor Urutan : " . $no_urutan . "</div></br>";
+    }
+}
+?>
+
  </body>
  </html>

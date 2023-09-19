@@ -52,22 +52,26 @@ if (isset($_POST['submit']) && $i < 15) {
 </head>
 
 <style>
-  body {
+        body {
             font-family: Arial, sans-serif;
         }
+
         .container {
             max-width: 400px;
             margin: 0 auto;
             padding: 20px;
         }
+
         form {
             background-color: #f4f4f4;
             padding: 20px;
             border-radius: 10px;
         }
+
         label {
             font-weight: bold;
         }
+
         input[type="text"],
         input[type="number"] {
             width: 100%;
@@ -76,6 +80,7 @@ if (isset($_POST['submit']) && $i < 15) {
             border: 1px solid #ccc;
             border-radius: 5px;
         }
+
         input[type="submit"] {
             background-color: #007bff;
             color: #fff;
@@ -84,13 +89,21 @@ if (isset($_POST['submit']) && $i < 15) {
             border-radius: 5px;
             cursor: pointer;
         }
+
         input[type="submit"]:hover {
             background-color: #0056b3;
         }
+
         p {
             color: #007bff;
         }
-</style>
+
+        @media (max-width: 600px) {
+            form {
+                padding: 10px;
+            }
+        }
+    </style>
 
 <body>
 
