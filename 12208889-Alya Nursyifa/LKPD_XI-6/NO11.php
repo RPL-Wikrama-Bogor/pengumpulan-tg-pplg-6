@@ -33,7 +33,7 @@
         $no_urut = substr($no_pegawai, 9, 2);
         
 
-        if($no_pegawai < 11){
+        if(strlen($no_pegawai) < 11){
             echo "No pegawai tidak sesuai";
         }elseif($bulan == "01"){
             echo "Januari";

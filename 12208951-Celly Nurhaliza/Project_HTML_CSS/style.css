@@ -20,6 +20,9 @@ body{
 .hal_pengaduan{
     flex-wrap: wrap;
     flex-direction: row;
+    box-sizing: border-box;
+	flex-grow:1; 
+	flex-shrink: 1;
 }
 .awal{
     box-sizing: border-box;
@@ -42,6 +45,8 @@ body{
     margin-left: 46%;
     margin-top: -14%;
     box-shadow: #9ba7ad 0px 10px 10px -5px;
+    flex: 1;
+    max-width: 54%;
 }
 .box_data{
     display: flex;

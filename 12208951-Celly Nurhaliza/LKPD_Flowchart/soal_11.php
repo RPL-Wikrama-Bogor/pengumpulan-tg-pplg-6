@@ -49,12 +49,17 @@
             echo "Oktober";
         }elseif($bulan == "11"){
             echo "November";
-        }else{
+        }elseif($bulan == "12"){
             echo "Desember";
+        }else{
+            echo '<script type ="text/JavaScript">';  
+            echo 'alert("Masukkan bulan lahir yang valid!")';  
+            echo '</script>';
+
         }
         echo "<br>";
         
-        $tanggal_lahir = $tanggal.$bulan.$tahun;
+        $tanggal_lahir = $tanggal." ".$bulan." ".$tahun;
 
         echo "No golongan ".$no_golongan;
         echo "<br>";

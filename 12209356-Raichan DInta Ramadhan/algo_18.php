@@ -1,18 +1,70 @@
 <!DOCTYPE html>
-<y lang="en">
+<html
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+        margin: 0;
+        padding: 0;
+    }
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-    </head>
+    h3 {
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+
+    form {
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    input[type="number"] {
+        width: 100%;
+        padding: 5px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+    }
+
+    input[type="submit"] {
+        background-color: #007bff;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #0056b3;
+    }
+
+    h2 {
+        font-size: 24px;
+        margin-top: 20px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+</style>
+
+</head>
 
     <body>
         <form action="" method="post">
             <?php
             if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $siswa = array();
-                for ($i = 1; $i <= 15; $i++) {
+                for ($i = 1; $i <= 3; $i++) {
                     echo "<h3>Siswa ke-$i</h3>";
                     $nilaiTotal = 0;
                     for ($j = 1; $j <= 5; $j++) {
