@@ -20,8 +20,8 @@
     <?php if(isset($_POST['submit'])) {
         $bilangan = $_POST['bilangan'];
         $satuan = $bilangan % 10;
-        $puluhan = ($bilangan / 10) % 10;
-        $ratusan = $bilangan / 100;
+        $puluhan = ($bilangan % 100) - $satuan;
+        $ratusan = ($bilangan % 100) - $puluhan - $satuan;
 
         echo "Bilangan Satuan = $satuan<br>";
       echo "Bilangan Puluhan = $puluhan<br>";

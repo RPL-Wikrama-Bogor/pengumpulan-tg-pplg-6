@@ -22,7 +22,8 @@
         }
 
         .text{
-            padding-top: 2%;
+            margin-top: -26%;
+           
         }
 
         .text h2{
@@ -37,19 +38,19 @@
             font-size: 14.5px;
         }
 
-        .gambar img{
+        .gambarr img{
             width: 727px;
             max-width: 100%;
             margin-left: 773px;
-            margin-top: -190px;
+            margin-top: 15px;
         }
 
-            .flex-container{
+        .flex-container{
             display: flex;
             flex-wrap: wrap; 
             flex-direction: row; 
             justify-content: center;  
-            margin-top: 1%;
+            margin-top: 15%;
             padding-bottom: 20px;
         }
 
@@ -81,8 +82,8 @@
         height: 20px;
         }
 
-        input[id=ngadu]{
-            height: 100px;
+        input[id=pengaduan]{
+            height: 180px;
         }
 
         .container {
@@ -106,7 +107,7 @@
         .border1{
             width: 58%;
             margin-left: 36%;
-            margin-top: -32%;
+            margin-top: -37%;
             border: solid;
             border-width: 2px;
             padding: 18px;
@@ -147,19 +148,204 @@
 
         .ujung{
             background-color: #F0B86E;
-            margin-top: 6%;
+            margin-top: 9%;
             padding: 3px;
             text-align: center;
         }
         
-/* 
-        @media screen and(max-width: 360px) {
-            .gambar img{
-                max-width: 300px;
-                margin-left: 20px ;
-            }
-        } */
 
+    @media (max-width: 834px){
+
+
+         .gambarr img {
+            width: 90%;
+            max-width: 100%;
+            margin-left: 3%;
+            margin-top: 40px;
+        }
+
+         .text {
+             margin-top: 8%;
+             margin-left: 3%;
+            }
+
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: center;
+            margin-top: 15%;
+            padding-bottom: 60px;
+            margin-left: 20px;
+            width: 90%;
+        }
+
+          
+
+        .container {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+            width: 84%;
+            margin-left: 3%;
+        }
+
+        .btn {
+            float: right;
+            background-color: rgb(255, 183, 0);
+            text-decoration: none;
+            padding: 4px 10px;
+            border-radius: 15px;
+            margin-top: -20px;
+            font-size: 15px;
+        }
+
+        .border1 {
+            width: 83%;
+            margin-left: 2%;
+            margin-top: 10%;
+            border: solid;
+            border-width: 2px;
+            padding: 18px;
+        }   
+
+        .gambar1 img {
+            margin-left: 85%;
+            width: 120px;
+            margin-top: -2%;
+        }
+
+        .border2 {
+            width: 84%;
+            margin-left: 1.5%;
+            margin-top: 2%;
+            border: solid;
+            border-width: 2px;
+            padding: 20px;
+        }
+
+        .gambar2 img {
+            margin-left: 85%;
+            width: 120px;
+            margin-top: -2%;
+        }
+
+            .ujung {
+            background-color: #F0B86E;
+            margin-top: 9%;
+            padding: 3px;
+            width: 100%;
+            text-align: center;
+        }
+
+    }
+
+
+
+    @media (max-width: 390px){
+        .gambar img{
+            margin-left: 3%;
+        }
+
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: center;
+            margin-top: 15%;
+            padding-bottom: 50px;
+            margin-left: 20px;
+            width: 90%;
+        }
+
+    }
+
+   
+        @media (max-width: 360px){
+
+         .gambarr img {
+            width: 330px;
+            max-width: 100%;
+            margin-left: 1px;
+            margin-top: 15px;
+        }
+
+         .text {
+             margin-top: -2%;
+             margin-left: 3%;
+            }
+
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: center;
+            margin-top: 15%;
+            padding-bottom: 20px;
+            margin-left: 20px;
+            width: 90%;
+        }
+
+          
+
+        .container {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+            width: 84%;
+            margin-left: 3%;
+        }
+
+        .btn {
+            float: right;
+            background-color: rgb(255, 183, 0);
+            text-decoration: none;
+            padding: 4px 10px;
+            border-radius: 15px;
+            margin-top: -20px;
+            font-size: 15px;
+        }
+
+        .border1 {
+            width: 70%;
+            margin-left: 10%;
+            margin-top: 20%;
+            border: solid;
+            border-width: 2px;
+            padding: 18px;
+        }   
+
+        .gambar1 img {
+            margin-left: 52%;
+            width: 120px;
+            margin-top: -2%;
+        }
+
+        .border2 {
+            width: 70%;
+            margin-left: 10%;
+            margin-top: 2%;
+            border: solid;
+            border-width: 2px;
+            padding: 20px;
+        }
+
+        .gambar2 img {
+            margin-left: 52%;
+            width: 120px;
+            margin-top: -2%;
+        }
+
+        .ujung {
+            background-color: #F0B86E;
+            margin-top: 9%;
+            padding: 3px;
+            width: 100%;
+            text-align: center;
+        }
+
+        }
+        
 
     </style>
 
@@ -167,7 +353,12 @@
 <body>
      <a href="" class="button">Administrator</a>
 
-     <div class="text">
+     
+         <div class="gambarr">
+        <img src="https://wiggly-library-a46.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fe681035c-4b22-4a22-8c77-78bf5de66009%2FScreen_Shot_2023-02-02_at_10.13.21.png?table=block&id=1fca370a-0015-41e6-8c74-c049c7cf3dfb&spaceId=915c965e-4b46-4d9c-8500-23ab513e5f6b&width=1530&userId=&cache=v2" alt="">
+        </div>
+
+        <div class="text">
         <h2>Pengaduan Masyarakat</h2>
         <ol>
             <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias modi nemo illum beatae omnis fugit!</li>
@@ -175,13 +366,9 @@
             <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Volupate eligendi et atque dolores veniam maiores quasi error 
             <br>deserunt ducimus delectus?</li>
             <li>Lorem ipsum dolor sit amet.</li>
-        </ol>
+            </ol>
      </div>
-
-     <div class="gambar">
-        <img src="https://wiggly-library-a46.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fe681035c-4b22-4a22-8c77-78bf5de66009%2FScreen_Shot_2023-02-02_at_10.13.21.png?table=block&id=1fca370a-0015-41e6-8c74-c049c7cf3dfb&spaceId=915c965e-4b46-4d9c-8500-23ab513e5f6b&width=1530&userId=&cache=v2" alt="">
-     </div>
-
+        
      <section class="flex-container">
         <div class="item">Jumlah Kecamatan <br> 15</div>
         <div class="item">Jumlah Desa <br> 42</div>
@@ -198,16 +385,16 @@
         </div>
 
         <label for="nik">NIK :</label>
-        <input type="text" id="niks" name="nik" >
+        <input type="text" id="nik" name="nik" >
     
         <label for="nama">Nama Lengkap :</label>
-        <input type="text" id="name" name="nama">
+        <input type="text" id="nama" name="nama">
 
         <label for="notelp">No telp :</label>
-        <input type="text" id="no" name="notelp">
+        <input type="text" id="notelp" name="notelp">
 
         <label for="pengaduan">Pengaduan :</label>
-        <input type="text" id="ngadu" name="pengaduan">
+        <input type="text" id="pengaduan" name="pengaduan">
 
         <label for="" >Upload Gambar Terkait :</label>
         <br>
