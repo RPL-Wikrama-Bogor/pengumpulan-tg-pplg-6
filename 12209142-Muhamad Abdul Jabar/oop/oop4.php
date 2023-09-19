@@ -38,7 +38,6 @@
     </center>
 </body>
 </html>
-
 <?php
 class rental{
     public $pajak = 10000;
@@ -52,24 +51,23 @@ class beli extends rental{
 
     public function beli($harga,$hari){
         $total = $harga * $hari + $this->pajak;
-        $diskon = $harga * $hari * 0.5;
-        foreach($this->member as $pembeli){
-            if($pembeli == $_POST['nama']){
-                echo $_POST['nama']." berstatus sebagai Member mendapatkan diskon sebesar 5%";
-                echo "<br>Jenis motor yang dirental ialah ". $_POST['jenis']. " selama $hari hari";
-                echo "<br>Harga rental per-harinya : $harga";
-                echo "<br>Besar yang harus dibayarkan adalah Rp. ".number_format($total-$diskon,0,',','.');
-                exit;
-            }else{
-                echo $_POST['nama']." berstatus sebagai Non Member mendapatkan diskon sebesar 0%";
-                echo "<br>Jenis motor yang dirental ialah ". $_POST['jenis'] . " selama $hari hari";
-                echo "<br>Harga rental per-harinya : $harga";
-                echo "<br>Besar yang harus dibayarkan adalah Rp. ".number_format($total,0,',','.');
-                exit;
-            }
+        $diskon = $harga * $hari * 0.05;
+
+        $namaPembeli = $_POST['nama'];
+
+        if(in_array($namaPembeli, $this->member)){
+            echo $namaPembeli." berstatus sebagai Member mendapatkan diskon sebesar 5%";
+        } else {
+            echo $namaPembeli." berstatus sebagai Non Member mendapatkan diskon sebesar 0%";
+            $diskon = 0;
         }
+
+        echo "<br>Jenis motor yang dirental adalah ".$_POST['jenis']." selama $hari hari";
+        echo "<br>Harga rental per-harinya : $harga";
+        echo "<br>Besar yang harus dibayarkan adalah Rp. ".number_format($total - $diskon, 0, ',', '.');
     }
 }
+
 
 
 
@@ -93,4 +91,3 @@ if (isset($_POST['submit'])) {
     echo $pelanggan->beli($harga,$hari);
 }
 
-?>
