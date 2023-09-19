@@ -1,63 +1,80 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Pencarian Juara Kelas</title>
-</head>
-<body>
-
-<h2>Pencarian Juara Kelas</h2>
-
-<form method="post" action="">
-    <label for="nama">Nama Siswa:</label>
-    <input type="text" name="nama"><br><br>
-    
-    <label for="mtk">Nilai Matematika:</label>
-    <input type="number" name="mtk"><br>
-    
-    <label for="indo">Nilai Bahasa Indonesia:</label>
-    <input type="number" name="indo"><br>
-    
-    <label for="ingg">Nilai Bahasa Inggris:</label>
-    <input type="number" name="ingg"><br>
-    
-    <label for="dpk">Nilai Desain Pemrograman:</label>
-    <input type="number" name="dpk"><br>
-    
-    <label for="agama">Nilai Agama:</label>
-    <input type="number" name="agama"><br><br>
-    
-    <label for="kehadiran">Kehadiran (%):</label>
-    <input type="number" name="kehadiran"><br><br>
-    
-    <input type="submit" value="Cari Juara">
-</form>
-
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $mtk = $_POST['mtk'];
-    $indo = $_POST['indo'];
-    $ingg = $_POST['ingg'];
-    $dpk = $_POST['dpk'];
-    $agama = $_POST['agama'];
-    $kehadiran = $_POST['kehadiran'];
+  $students = [];
+  for ($i = 1; $i <= 3; $i++) {
+    $name = $_POST["name$i"];
+    $math = floatval($_POST["math$i"]);
+    $indonesian = floatval($_POST["indonesian$i"]);
+    $english = floatval($_POST["english$i"]);
+    $science = floatval($_POST["science$i"]);
+    $religion = floatval($_POST["religion$i"]);
+    $attendance = floatval($_POST["attendance$i"]);
 
-    $totalNilai = $mtk + $indo + $ingg + $dpk + $agama;
-    
-    if ($kehadiran == 100 && $totalNilai >= 475) {
-        echo "<h3>Hasil Pencarian Juara Kelas:</h3>";
-        echo "Nama Siswa: " . $_POST['nama'] . "<br>";
-        echo "Total Nilai: " . $totalNilai . "<br>";
-        echo "Kehadiran: " . $kehadiran . "%<br>";
-        echo "<strong>Siswa ini menjadi Juara Kelas!</strong>";
-    } else {
-        echo "<h3>Hasil Pencarian Juara Kelas:</h3>";
-        echo "Nama Siswa: " . $_POST['nama'] . "<br>";
-        echo "Total Nilai: " . $totalNilai . "<br>";
-        echo "Kehadiran: " . $kehadiran . "%<br>";
-        echo "Maaf, siswa ini tidak memenuhi kriteria juara kelas.";
+    $totalScore = $math + $indonesian + $english + $science + $religion;
+
+
+    if ($totalScore >= 475 && $attendance == 100) {
+      $students[] = [
+        'name' => $name,
+        'totalScore' => $totalScore
+      ];
     }
+  }
+
+  if (!empty($students)) {
+    usort($students, function ($a, $b) {
+      return $b['totalScore'] - $a['totalScore'];
+    });
+
+    echo "Juara Kelas: " . $students[0]['name'] . "<br>";
+    echo "Total Nilai: " . $students[0]['totalScore'];
+  } else {
+    echo "Tidak ada siswa yang memenuhi syarat.";
+  }
 }
 ?>
 
-</body>
-</html>
+<form method="post" action="">
+  <?php for ($i = 1; $i <= 3; $i++) : ?>
+    <h3>Siswa <?= $i ?></h3>
+    <table>
+      <tr>
+        <td>Nama: <input type="text" name="name<?= $i ?>"><br></td>
+      </tr>
+      <tr>
+        <td>Nilai MTK: <input type="number" name="math<?= $i ?>"><br></td>
+      </tr>
+      <tr>
+        <td>Nilai Bahasa Indonesia: <input type="number" name="indonesian<?= $i ?>"><br></td>
+      </tr>
+      <tr>
+        <td>Nilai Bahasa Inggris: <input type="number" name="english<?= $i ?>"><br></td>
+      </tr>
+      <tr>
+        <td>Nilai IPA: <input type="number" name="science<?= $i ?>"><br></td>
+      </tr>
+      <tr>
+        <td>Nilai Agama: <input type="number" name="religion<?= $i ?>"><br></td>
+      </tr>
+      <tr>
+        <td>Kehadiran (%): <input type="number" name="attendance<?= $i ?>"><br></td>
+      </tr>
+
+    </table>
+    <hr>
+  <?php endfor; ?>
+  <input type="submit" value="Cari Juara Kelas">
+</form>
+
+<style>
+  input[type=text], input[type=number],
+  select {
+    width: 100%;
+    padding: 5px 15px;
+    margin: 3px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+</style>
