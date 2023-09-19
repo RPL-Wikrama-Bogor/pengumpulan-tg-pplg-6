@@ -51,7 +51,7 @@ class Beli extends Shell
     echo "  .container {";
     echo "    text-align: center;";
     echo "    font-family: Arial, sans-serif;";
-    echo "    background-color: #FFF9C9;";
+    echo "    background-color: #E4F1FF;";
     echo "    padding: 20px;";
     echo "    border-radius: 10px;";
     echo "  }";

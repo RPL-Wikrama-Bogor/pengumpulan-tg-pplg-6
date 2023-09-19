@@ -1,95 +1,145 @@
-<?php
-$no_pegawai;
-$no_golongan;
-$tanggal;
-$bulan;
-$tahun;
-$no_urutan;
-$tanggal_lahir;
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pegawai</title>
+    <title>Document</title>
     <style>
-        body{
-            background-color: #CEDEBD;
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color:#ccc;
         }
-        .card{
-        background-color:#FAF1E4 ;
-        box-sizing: border-box;
-		padding: 20px;
-        display: flex;
-        justify-content: center;
-        width: 290px;
-        height: 80px;
-        margin: 10px;
-        box-sizing: border-box;
+        
+        form {
+            background: #fff;
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 30px;
+            margin-top : 10%;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        table {
+            width: 100%;
+        }
+        
+        table tr {
+            margin-bottom: 10px;
+        }
+        
+        table td:first-child {
+            width: 30%;
+            padding-right: 10px;
+            text-align: right;
+        }
+        
+        input[type="number"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .tampil{
+            margin-top: 20px;
+            text-align : center;
+        }
+        
+        @media screen and (max-width: 480px) {
+            form {
+                padding: 10px;
+            }
+            
+            table td {
+                display: block;
+                text-align: left;
+            }
+            
+            input[type="number"] {
+                width: 100%;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="card">
-<form action="" method="post">
-        <div style="display: flex;">
-        <label for="no_pegawai"> no pegawai : </label>
-        <input type="number" name="no_pegawai" id="no_pegawai">
-        </div>
-        <button type="submit" name="submit">Kirim</button>
+    <form action="#" method="post">
+        <table>
+            <tr>
+                <td>No pegawai</td>
+                <td>:</td>
+                <td><input type="number" name="nopega"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td><input type="submit" name="submit" value="Submit"></td>
+            </tr>
+        </table>
     </form>
-    </div>
 </body>
 </html>
 
 
 <?php
-    // Cek apakah button dgn name submit di klik
-    if (isset($_POST['submit'])) {
-        $no_pegawai = $_POST['no_pegawai'];
-        
-        $no_pegawai = strval($no_pegawai);
-
-        if ($no_pegawai > 99999999999) {
-            echo "No Pegawai Tidak Sesuai";
-        } else {
-            $no_golongan = substr($no_pegawai, 0, 1);
-            $tanggal = substr($no_pegawai, 1, 2);
-            $bulan = substr($no_pegawai, 3, 1);
-            $tahun = substr($no_pegawai, 5, 4);
-            $no_urutan = substr($no_pegawai, 9, 2);
-
-            if($bulan == "01") {
-                $bulan = "Januari";
-            } else if($bulan == "02") {
-                $bulan = "Februari";
-            } else if($bulan == "03") {
-                $bulan = "Maret";
-            } else if($bulan == "04") {
-                $bulan = "April";
-            } else if($bulan == "05") {
-                $bulan = "Mei";
-            } else if($bulan == "06") {
-                $bulan = "Juni";
-            } else if($bulan == "07") {
-                $bulan = "Juli";
-            } else if($bulan == "08") {
-                $bulan = "Agustus";
-            } else if($bulan == "09") {
-                $bulan = "September";
-            } else if($bulan == "10") {
-                $bulan = "Oktober";
-            } else if($bulan == "11") {
-                $bulan = "November";
-            } else {
-                $bulan = "Desember";
-            } 
-
-            $tanggal_lahir = $tanggal . " " . $bulan . " " . $tahun;
-            echo "<center>Kode Pegawai : " . $no_pegawai . "<br>No Golongan : " . $no_golongan . "<br>Tanggal Lahir : " . $tanggal_lahir . "<br>No Urutan : " . $no_urutan . "</center>";
-        }
-         
-    }
+    if(isset($_POST['submit'])){
+        $no_pegawai = $_POST['nopega'];
+        $no_golongan = substr($no_pegawai, 0, 1);
+        $tgl = substr($no_pegawai, 1, 2);
+        $bulan = substr($no_pegawai, 3, 2);
+        $thn = substr($no_pegawai, 5, 4);
+        $no_urut = substr($no_pegawai, 9, 2);
 ?>
+
+        <div class="tampil">
+        <?php
+        if($no_pegawai < 11){
+            echo "No pegawai tidak sesuai";
+        }elseif($bulan == "01"){
+            echo "Januari";
+        }elseif($bulan == "02"){
+            echo "Februari";
+        }elseif($bulan == "03"){
+            echo "Maret";
+        }elseif($bulan == "04"){
+            echo "April";
+        }elseif($bulan == "05"){
+            echo "Mei";
+        }elseif($bulan == "06"){
+            echo "Juni";
+        }elseif($bulan == "07"){
+            echo "Juli";
+        }elseif($bulan == "08"){
+            echo "Agustus";
+        }elseif($bulan == "09"){
+            echo "September";
+        }elseif($bulan == "10"){
+            echo "Oktober";
+        }elseif($bulan == "11"){
+            echo "November";
+        }else{
+            echo "Desember";
+        } echo "</br>";
+
+        $ttl = $tgl . $bulan . $thn;
+        
+        echo "No golongan : " . $no_golongan . "</br>";
+        echo "Tanggal lahir : " . $ttl . "</br>";
+        echo "No urutan : " . $no_urut;
+        ?>
+        </div>
+ <?php  }?>
