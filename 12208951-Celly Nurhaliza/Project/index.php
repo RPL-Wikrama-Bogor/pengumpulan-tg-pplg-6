@@ -21,7 +21,7 @@
                 </ol>
             </div>
             <div class="foto">
-            <img class="img" src="img/Screen Shot 2023-02-02 at 10.13.21.png" alt="">
+            <img class="img" src="img/Screen_Shot_2023-02-02_at_10.13.21.png" alt="">
             </div>
         </div>
         <div class="box_data">
@@ -47,7 +47,7 @@
             <button class="btn_kirim">Kirim</button>
         </form>
         <div class="laporan">
-            <h2 class="text_laporan">Laporan Pengaduan</h2>
+            <h2 class="text_laporan">Laporan Pengaduan </h2>
             <div class="box_laporan">
                 <p class="text_tanggal">22 Juni 2022 : Fema Flamelina Putri</p>
                 <p class="text_keterangan">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores quos reiciendis libero sunt eveniet quisquam facilis quasi placeat eaque rerum.</p>
