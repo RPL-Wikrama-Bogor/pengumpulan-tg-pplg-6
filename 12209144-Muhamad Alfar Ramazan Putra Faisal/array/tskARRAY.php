@@ -31,7 +31,7 @@ $menus =  [
 $pesanMakanan = "";
 $pesanMinuman = "";
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if (isset($_POST['hitung'])) {
     $makanan = $_POST["makanan"];
     $jumlahMakanan = $_POST["jumlahmak"];
     $minuman = $_POST["minuman"];
@@ -115,7 +115,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <div class="input">
     <h1>Order</h1></br> 
     <form action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="post">
-        <label for="makanan">Pilih Makanan:</label>
+        <label for="makanan">Pilih Makanan Kamu:</label>
         <select id="makanan" name="makanan">
             <?php foreach ($menus as $menu) : ?>
                 <?php if ($menu['type'] === 'makanan') : ?>
@@ -125,10 +125,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <?php endforeach; ?>
         </select>
         <br><br>
-        <label for="jumlahmak">Jumlah Makanan:</label>
+        <label for="jumlahmak">Jumlah Makanan Kamu:</label>
         <input type="number" id="jumlahmak" name="jumlahmak" min="1" value="0">
         <br><br>
-        <label for="minuman">Pilih Minuman:</label>
+        <label for="minuman">Pilih Minuman Kamu:</label>
         <select id="minuman" name="minuman">
             <?php foreach ($menus as $menu) : ?>
                 <?php if ($menu['type'] === 'minuman') : ?>
@@ -138,23 +138,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <?php endforeach; ?>
         </select>
         <br><br>
-        <label for="jumlahmin">Jumlah Minuman:</label>
+        <label for="jumlahmin">Jumlah Minuman Kamu:</label>
         <input type="number" id="jumlahmin" name="jumlahmin" min="1" value="0">
         <br><br>
-        <input class="button" type="submit" value="Pesan Orderan Anda">
+        <input class="button" type="submit" name="hitung" value="Pesan Orderan Anda">
     </form>
 </div>
 <div class="out">
     <?php if ($pesanMakanan !== "" || $pesanMinuman !== "") : ?>
-        <h2>Detail Pesanan:</h2>
+        <h2>Detail Pesanan Kamu:</h2>
         <?php if ($pesanMakanan !== "") : ?>
             <p><?php echo $pesanMakanan; ?></p>
         <?php endif; ?>
         <?php if ($pesanMinuman !== "") : ?>
             <p><?php echo $pesanMinuman; ?></p>
         <?php endif; ?>
-        <p>Total Pesanan Anda: Rp <?php echo number_format($totalPesanan, 0, ',', '.'); ?></p>
-    <?php endif; ?>
+        <p>Total Pesanan Kamu: Rp <?php echo number_format($totalPesanan, 0, ',', '.'); ?></p>
+    <?php endif; ?>             
 </div>
 </body>
 </html>
