@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rental Motor</title>
+    <style>
+        table {
+            margin: 0 auto;
+            border-collapse: collapse;
+            text-align: center;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <h1>Rental Motor</h1>
+    <form>
+        <label for="namaPelanggan">Nama Pelanggan:</label>
+        <input type="text" id="namaPelanggan" required><br><br>
+
+        <label for="lamaPenyewaan">Lama Penyewaan (hari):</label>
+        <input type="number" id="lamaPenyewaan" required><br><br>
+
+        <label for="motorType">Tipe Motor:</label>
+        <select id="motorType">
+            <option value="scoopy">Scoopy</option>
+            <option value="trail">Trail</option>
+            <option value="sport">Sport</option>
+            <option value="tour">Tour</option>
+        </select><br><br>
+
+        <input type="button" value="Hitung Harga" onclick="hitungHarga()">
+    </form>
+
+    <table id="resultTable">
+        <thead>
+            <tr>
+                <th>Nama Pelanggan</th>
+                <th>Tipe Motor</th>
+                <th>Harga Sewa</th>
+                <th>Biaya Tambahan</th>
+                <th>Diskon</th>
+                <th>Total Harga</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <script>
+        class RentalMotor {
+            constructor(namaPelanggan, lamaPenyewaan, motorType) {
+                this.namaPelanggan = namaPelanggan;
+                this.lamaPenyewaan = lamaPenyewaan;
+                this.motorType = motorType;
+            }
+
+            hitungHargaSewa() {
+                const hargaMotor = this.getHargaMotor();
+                const biayaTambahan = hargaMotor * 0.1;
+                const diskonMember = this.isMember() ? 0.05 : 0;
+                const totalHarga = (hargaMotor + biayaTambahan) * (1 - diskonMember);
+                return totalHarga;
+            }
+
+            getHargaMotor() {
+                switch (this.motorType) {
+                    case 'scoopy':
+                        return 100000;
+                    case 'trail':
+                        return 150000;
+                    case 'sport':
+                        return 200000;
+                    case 'tour':
+                        return 250000;
+                    default:
+                        return 0;
+                }
+            }
+
+            isMember() {
+                const memberNames = ['ajip', 'aman', 'adi', 'uday', 'ujil'];
+                return memberNames.includes(this.namaPelanggan.toLowerCase());
+            }
+        }
+
+        function hitungHarga() {
+            const namaPelanggan = document.getElementById('namaPelanggan').value;
+            const lamaPenyewaan = parseInt(document.getElementById('lamaPenyewaan').value);
+            const motorType = document.getElementById('motorType').value;
+
+            const rental = new RentalMotor(namaPelanggan, lamaPenyewaan, motorType);
+            const totalHarga = rental.hitungHargaSewa();
+
+            const resultTable = document.getElementById('resultTable').getElementsByTagName('tbody')[0];
+            const newRow = resultTable.insertRow(resultTable.rows.length);
+            const cell1 = newRow.insertCell(0);
+            const cell2 = newRow.insertCell(1);
+            const cell3 = newRow.insertCell(2);
+            const cell4 = newRow.insertCell(3);
+            const cell5 = newRow.insertCell(4);
+            const cell6 = newRow.insertCell(5);
+
+            cell1.innerHTML = namaPelanggan;
+            cell2.innerHTML = motorType;
+            cell3.innerHTML = rental.getHargaMotor();
+            cell4.innerHTML = rental.getHargaMotor() * 0.1;
+            cell5.innerHTML = rental.isMember() ? '5%' : '0%';
+            cell6.innerHTML = totalHarga;
+        }
+    </script>
+</body>
+</html>
