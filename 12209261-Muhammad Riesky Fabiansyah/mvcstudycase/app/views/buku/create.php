@@ -11,8 +11,8 @@
         <select name="jenis_barang" id="jenis_barang" class="form-control">
           <option hidden>PILIH</option>
           <option value="Laptop">Laptop</option>
-          <option value="Hp">Hp</option>
-          <option value="Adapter Lan">Adapter Lan</option>
+          <option value="HP">Hp</option>
+          <option value="Adaptor LAN">Adaptor Lan</option>
         </select>
       </div>
       <div class="form-group mb-3">
