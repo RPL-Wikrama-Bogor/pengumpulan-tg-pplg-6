@@ -2,9 +2,69 @@
 <html>
 <head>
     <title>Penghitungan Keuntungan Bioskop</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="submit"] {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        h3 {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+
+        p {
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
 </head>
 <body>
-    
     <h2>Penghitungan Keuntungan Bioskop</h2>
     <form method="post" action="">
         <label for="vip">Jumlah Tiket VIP Terjual:</label>
@@ -19,6 +79,7 @@
         <input type="submit" name="submit" value="Hitung Keuntungan">
     </form>
 
+    <center>
     <?php
     if(isset($_POST['submit'])) {
         $vipSold = $_POST['vip'];
@@ -62,5 +123,6 @@
         echo "Total Tiket Terjual: $totalTickets";
     }
     ?>
+    </center>
 </body>
 </html>

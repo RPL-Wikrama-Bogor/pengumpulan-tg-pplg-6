@@ -1,0 +1,38 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color:#FFD1DA;
+}
+
+center {
+    text-align: center;
+    margin-top:8rem;
+}
+
+table {
+    width: 29%;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 3px solid #FBA1B7;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+select, input[type="number"], input[type="submit"] {
+    padding: 5px;
+}
+
+h2 {
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    table {
+        width: 100%;
+    }
+}

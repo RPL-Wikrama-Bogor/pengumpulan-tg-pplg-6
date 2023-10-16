@@ -19,21 +19,22 @@ $waktu;
     </form>
     <?php
     if(isset($_POST['submit'])){
-        $waktu = $_POST["waktu"];
+        $waktu = $_POST["waktu"]; 
     
-        if($waktu > 3600){
-            $jam = $waktu / 3600;
-            $waktu = $waktu - ($jam * 3600);
-            $hasil = $jam . "jam";
-        } elseif($waktu > 60){
-            $menit = $waktu / 60;
-            $waktu = $waktu - ($menit * 60);
-            $hasil = $menit . "menit";
-        } else{
-            $detik = $waktu;
-            $hasil = $detik . "detik";
-            
+        $jam = floor($waktu / 3600);
+        $sisaDetik = $waktu % 3600;
+        $menit = floor($sisaDetik / 60);
+        $detik = $sisaDetik % 60;
+
+        $hasil = "";
+        if ($jam > 0) {
+            $hasil .= $jam . " jam ";
         }
+        if ($menit > 0) {
+            $hasil .= $menit . " menit ";
+        }
+        $hasil .= $detik . " detik";
+
         echo $hasil;
     }
     ?>

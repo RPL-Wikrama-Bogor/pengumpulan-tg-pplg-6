@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* body{
+            padding-bottom: 6%;
+        } */
+        .button{
+            background-color: #F0B86E;
+            border-radius: 50px;
+            text-decoration: none;
+            padding: 6px 9px;
+            /* margin-left: 92%; */
+            float: right;
+            margin-top: 5px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .text{
+            margin-top: -26%;
+           
+        }
+
+        .text h2{
+            margin-left: 2.5%;
+            font-weight: bold;
+        }
+
+        .text ol li{
+            margin-bottom: 2.5%;
+            margin-top: -1.5%;
+            /* font-weight: bold; */
+            font-size: 14.5px;
+        }
+
+        .gambarr img{
+            width: 727px;
+            max-width: 100%;
+            margin-left: 773px;
+            margin-top: 15px;
+        }
+
+        .flex-container{
+            display: flex;
+            flex-wrap: wrap; 
+            flex-direction: row; 
+            justify-content: center;  
+            margin-top: 15%;
+            padding-bottom: 20px;
+        }
+
+        .item{
+            width: 333px;
+            height: 100px;
+            background-color: #F0B86E;
+            margin: 3px;
+            box-sizing: border-box;
+            flex-grow:1; 
+            flex-shrink: 1; 
+            text-align: center;
+            padding-top: 2%;
+            font-weight: bold;
+        }
+        
+        .judul{
+            text-align: center;
+        }
+
+        input[type=text]{
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        height: 20px;
+        }
+
+        input[id=pengaduan]{
+            height: 180px;
+        }
+
+        .container {
+        border-radius: 5px;
+        background-color: #f2f2f2;
+        padding: 20px;
+        width: 30%;
+        margin-left: 2%;
+        }
+
+        .btn {
+        float: right;
+        background-color: rgb(255, 183, 0);
+        text-decoration: none;
+        padding: 4px 10px;
+        border-radius: 15px;
+        margin-top: 3px;
+        font-size: 15px;
+        }
+
+        .border1{
+            width: 58%;
+            margin-left: 36%;
+            margin-top: -37%;
+            border: solid;
+            border-width: 2px;
+            padding: 18px;
+        }
+
+        .border1 h4{
+            margin-left: 75%;
+            margin-top: -1%;
+
+        }
+
+        .gambar1 img{
+            margin-left: 82%;
+            width: 150px;
+            margin-top: -7%;
+        }
+
+        .border2{
+            width: 58%;
+            margin-left: 36%;
+            margin-top: 2%;
+            border: solid;
+            border-width: 2px;
+            padding: 20px;
+        }
+
+        .border2 h4{
+            margin-left: 75%;
+            margin-top: -1%;
+
+        }
+
+        .gambar2 img{
+            margin-left: 82%;
+            width: 150px;
+            margin-top: -8%;
+        }
+
+        .ujung{
+            background-color: #F0B86E;
+            margin-top: 9%;
+            padding: 3px;
+            text-align: center;
+        }
+        
+
+    @media (max-width: 1500px){
+
+         .gambarr img {
+            width: 90%;
+            max-width: 100%;
+            margin-left: 3%;
+            margin-top: 40px;
+        }
+
+         .text {
+             margin-top: 8%;
+             margin-left: 3%;
+            }
+
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: center;
+            margin-top: 15%;
+            padding-bottom: 20px;
+            margin-left: 20px;
+            width: 90%;
+        }
+
+          
+
+        .container {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+            width: 84%;
+            margin-left: 3%;
+        }
+
+        .btn {
+            float: right;
+            background-color: rgb(255, 183, 0);
+            text-decoration: none;
+            padding: 4px 10px;
+            border-radius: 15px;
+            margin-top: -20px;
+            font-size: 15px;
+        }
+
+        .border1 {
+            width: 83%;
+            margin-left: 2%;
+            margin-top: 20%;
+            border: solid;
+            border-width: 2px;
+            padding: 18px;
+        }   
+
+        .gambar1 img {
+            margin-left: 85%;
+            width: 120px;
+            margin-top: -2%;
+        }
+
+        .border2 {
+            width: 84%;
+            margin-left: 1.5%;
+            margin-top: 2%;
+            border: solid;
+            border-width: 2px;
+            padding: 20px;
+        }
+
+        .gambar2 img {
+            margin-left: 85%;
+            width: 120px;
+            margin-top: -2%;
+        }
+
+            .ujung {
+            background-color: #F0B86E;
+            margin-top: 9%;
+            padding: 3px;
+            width: 100%;
+            text-align: center;
+        }
+
+    }
+
+
+
+    @media (max-width: 390px){
+        .gambar img{
+            margin-left: 3%;
+        }
+
+    }
+
+    @media (max-width: 880px){
+
+
+        .gambar2 img {
+            margin-left: 65%;
+            width: 120px;
+            margin-top: -2%;
+        }
+
+        .gambar1 img {
+            margin-left: 65%;
+            width: 120px;
+            margin-top: -2%;
+        }
+    }
+
+
+        
+
+        @media (max-width: 360px){
+
+         .gambarr img {
+            width: 330px;
+            max-width: 100%;
+            margin-left: 1px;
+            margin-top: 15px;
+        }
+
+         .text {
+             margin-top: -2%;
+             margin-left: 3%;
+            }
+
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: center;
+            margin-top: 15%;
+            padding-bottom: 20px;
+            margin-left: 20px;
+            width: 90%;
+        }
+
+          
+
+        .container {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+            width: 84%;
+            margin-left: 3%;
+        }
+
+        .btn {
+            float: right;
+            background-color: rgb(255, 183, 0);
+            text-decoration: none;
+            padding: 4px 10px;
+            border-radius: 15px;
+            margin-top: -20px;
+            font-size: 15px;
+        }
+
+        .border1 {
+            width: 70%;
+            margin-left: 10%;
+            margin-top: 20%;
+            border: solid;
+            border-width: 2px;
+            padding: 18px;
+        }   
+
+        .gambar1 img {
+            margin-left: 52%;
+            width: 120px;
+            margin-top: -2%;
+        }
+
+        .border2 {
+            width: 70%;
+            margin-left: 10%;
+            margin-top: 2%;
+            border: solid;
+            border-width: 2px;
+            padding: 20px;
+        }
+
+        .gambar2 img {
+            margin-left: 52%;
+            width: 120px;
+            margin-top: -2%;
+        }
+
+        .ujung {
+            background-color: #F0B86E;
+            margin-top: 9%;
+            padding: 3px;
+            width: 100%;
+            text-align: center;
+        }
+
+        }
+        
+
+    </style>
+
+</head>
+<body>
+     <a href="" class="button">Administrator</a>
+
+     
+         <div class="gambarr">
+        <img src="https://wiggly-library-a46.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fe681035c-4b22-4a22-8c77-78bf5de66009%2FScreen_Shot_2023-02-02_at_10.13.21.png?table=block&id=1fca370a-0015-41e6-8c74-c049c7cf3dfb&spaceId=915c965e-4b46-4d9c-8500-23ab513e5f6b&width=1530&userId=&cache=v2" alt="">
+        </div>
+
+        <div class="text">
+        <h2>Pengaduan Masyarakat</h2>
+        <ol>
+            <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias modi nemo illum beatae omnis fugit!</li>
+            <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur, debitis?</li>
+            <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Volupate eligendi et atque dolores veniam maiores quasi error 
+            <br>deserunt ducimus delectus?</li>
+            <li>Lorem ipsum dolor sit amet.</li>
+            </ol>
+     </div>
+        
+     <section class="flex-container">
+        <div class="item">Jumlah Kecamatan <br> 15</div>
+        <div class="item">Jumlah Desa <br> 42</div>
+        <div class="item">Jumlah Penduduk <br> 12.000</div>
+        <div class="item">Data perTahun <br>2023</div>
+   </section>
+
+   <div class="container">
+
+    <form action="">
+
+        <div class="judul">
+            <h2>Buat Pengaduan</h2>
+        </div>
+
+        <label for="nik">NIK :</label>
+        <input type="text" id="nik" name="nik" >
+    
+        <label for="nama">Nama Lengkap :</label>
+        <input type="text" id="nama" name="nama">
+
+        <label for="notelp">No telp :</label>
+        <input type="text" id="notelp" name="notelp">
+
+        <label for="pengaduan">Pengaduan :</label>
+        <input type="text" id="pengaduan" name="pengaduan">
+
+        <label for="" >Upload Gambar Terkait :</label>
+        <br>
+        <br>
+        <input type="file">
+
+        <a href="" class="btn">Kirim</a>
+
+    </form>
+   </div>
+
+   <div class="border1">
+    <h4>22 Juni : Fema Flamelia Putri</h4>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores quos reiciedis libero sunt
+        <br>eveniet quisquam facilis quasi placeat eaque rerum.
+    </p>
+    <div class="gambar1">
+        <img src="https://i.pinimg.com/236x/6a/be/55/6abe55da38471486f2ea9879068d32bd.jpg" alt="">
+    </div>
+    </div>
+
+    
+   <div class="border2">
+    <h4>22 Juni : Fema Flamelia Putri</h4>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores quos reiciedis libero sunt
+        <br>eveniet quisquam facilis quasi placeat eaque rerum.
+    </p>
+    <div class="gambar2">
+        <img src="https://i.pinimg.com/236x/6a/be/55/6abe55da38471486f2ea9879068d32bd.jpg" alt="">
+    </div>
+    </div>
+
+    <footer>
+        <div class="ujung">
+        <h5>Copyright @ 2023.</h5>
+        </div>
+    </footer>
+
+</body>
+</html>

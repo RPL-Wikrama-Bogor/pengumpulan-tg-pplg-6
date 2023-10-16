@@ -106,25 +106,23 @@
                 <td><input type="submit" value="Submit" name="submit" style="padding:5px; "></td>
             </tr>
         </table>
-        
-    
     </form>
     <br>
     <?php
         if(isset($_POST['submit'])){
             $no_pegawai = $_POST['pegawai'];
-
-            $no_golongan = substr($no_pegawai, 0, 1);
-            $tanggal = substr($no_pegawai, 1,2);
-            $bulan = substr($no_pegawai, 3, 2);
-            $tahun = substr($no_pegawai, 5, 4);
-            $no_urutan = substr($no_pegawai, 9, 2);
-
             //proses
-            if ($no_pegawai < 11){
+            if (strlen($no_pegawai) < 11){
                 echo "No pegawai tidak sesuai!";
             }
-            else if ($bulan == "01"){
+            else{
+                $no_golongan = substr($no_pegawai, 0, 1);
+                $tanggal = substr($no_pegawai, 1,2);
+                $bulan = substr($no_pegawai, 3, 2);
+                $tahun = substr($no_pegawai, 5, 4);
+                $no_urutan = substr($no_pegawai, 9, 2);    
+            
+            if ($bulan == "01"){
                 echo "Bulan = Januari";
             }
             else if ($bulan == "02"){
@@ -160,7 +158,7 @@
             else if ($bulan == "12"){
                 echo "Bulan = Desember";
             }
-            else {
+            else{
                 echo "Bulan tidak sesuai!";
                 echo "<br>";
             }
@@ -169,18 +167,16 @@
                 echo "Tanggal tidak sesuai!";
                 echo "<br>";
             }
-            
-      
-
+            echo "<br>";
             $tanggal_lahir = $tanggal. "/" .$bulan . "/".$tahun;
           
             //output
             echo "No Golongan = " . $no_golongan . "<br>";
             echo "Tanggal Lahir = " . $tanggal_lahir . "<br>";
             echo "No Urutan = " . $no_urutan;
-
         }
-
+        
+    }
     ?>
     </div>
 </body>
