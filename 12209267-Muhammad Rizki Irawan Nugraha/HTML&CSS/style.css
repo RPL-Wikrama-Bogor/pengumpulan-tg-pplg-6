@@ -1,0 +1,213 @@
+body {
+    background-color: white;
+}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav {
+    margin-top: 20px;
+    padding : 7px 15px;
+    float : right;
+    text-decoration: none;
+    border-radius: 15px;
+    background-color: #F0B86E;
+    color: black;
+}
+
+nav:hover {
+    background: #DAD4B5;
+}
+
+.baris {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    max-width: 100%;
+}
+
+.baris-img {
+    flex: 1;
+}
+
+.baris-img img {
+    max-width: 100%;
+    border-radius: 15px;
+}
+
+li{
+    font-size: 15px;
+}
+
+.awal{
+    float: left;
+    color: black;
+    font-size: 25px;
+    margin: 20px;
+}
+
+.card {
+    height: 120px;
+    background-color: #F0B86E;
+    margin: 3px;
+    box-sizing: border-box;
+    padding: 1px 50px;
+}
+
+.baris2 {
+    color: black;
+    box-sizing: border-box;
+    padding: 20px;
+    margin: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+
+
+h4 {
+    padding-top: -25px;
+}    
+
+
+h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+textarea {
+    max-width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+input[type="file"] {
+    width: 100%;
+    margin-top: 10px;
+}
+
+input[type="submit"] {
+    margin-top: 20px;
+    width: 100%;
+    padding: 10px;
+    background-color: #FFBB5C;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #E25E3E;
+}
+
+.form-section form {
+    display: flex;
+    flex-direction: column;
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.laporan-section {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 40px;
+}
+
+.form-section {
+    flex: 1;
+    padding-right: 10px;
+    margin-bottom: 15px;
+}
+
+.laporan p {
+    text-align: end;
+    margin-bottom: 10px;
+}
+
+.laporan {
+    flex: 1;
+    padding-left: 20px; 
+    background-color: #fff;
+    padding: 28px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.konten {
+    border: 1px solid black;
+    max-width: 100%;
+    margin-bottom: 10px;
+}
+
+.box-laporan {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.laporan-img img {
+    flex: 1;
+}
+
+.text {
+    margin-right: 10px;
+    max-width: 100%;
+}
+
+footer {
+    text-align: center;
+    color: black;
+    background-color: #F0B86E;
+    fill: solid;
+    margin-top: 30px;
+    width: 99%;
+    padding: 1px;
+}
+
+@media (max-width: 900px) {
+    .baris {
+        flex-direction: column;
+    }
+
+    .baris2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .box-laporan {
+        flex-direction: column;
+    }
+
+}
+
+@media (max-width: 600px) { 
+    .baris2 {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+    .laporan-section {
+        flex-direction: column;
+    }
+
+    header {
+        justify-content: center;
+    }
+
+}
