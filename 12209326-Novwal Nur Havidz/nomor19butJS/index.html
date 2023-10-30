@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penjualan Tiket Bioskop</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Penjualan Tiket Bioskop</h1>
+        <table>
+            <tr>
+                <th>Kelas</th>
+                <th>Jumlah Tiket Terjual</th>
+                <th>Keuntungan</th>
+            </tr>
+            <tr>
+                <td>VIP</td>
+                <td><input type="number" id="Vip" value="0"></td>
+                <td><span id="VipKeuntungan">0</span></td>
+            </tr>
+            <tr>
+                <td>Eksekutif</td>
+                <td><input type="number" id="Eksekutif" value="0"></td>
+                <td><span id="EksekutifKeuntungan">0</span></td>
+            </tr>
+            <tr>
+                <td>Ekonomi</td>
+                <td><input type="number" id="Ekonomi" value="0"></td>
+                <td><span id="EkonomiKeuntungan">0</span></td>
+            </tr>
+            <tr>
+                <td>Total</td>
+                <td><span id="TotalTiket">0</span></td>
+                <td><span id="TotalKeuntungan">0</span></td>
+            </tr>
+        </table>
+        <button onclick="hitungKeuntungan()">Hitung Keuntungan</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

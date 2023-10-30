@@ -19,16 +19,35 @@ namespace nomor12
 
             ss = ss + 1;
 
-            if (ss >= 60)
-            {
-                Console.WriteLine(ss = 00);
-            }
-            else
+           if (ss >= 60)
             {
                 mm = mm + 1;
                 ss = 00;
             }
-            if 
+            else
+            {
+                ss = 00;
+            }
+           if (mm >= 60)
+            {
+                hh = hh + 1;
+                mm = 00;
+                ss = 00;
+            }
+            else
+            {
+                Console.WriteLine(hh + "" + mm + "" + ss);
+            }
+           if (hh >= 24)
+            {
+                hh = 00;
+                mm = 00;
+                ss = 00;
+            }
+            else
+            {
+                Console.WriteLine(hh + "" + mm + "" + ss);
+            }
         }
     }
 }

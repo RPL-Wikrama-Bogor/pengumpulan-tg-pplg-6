@@ -1,0 +1,8 @@
+C:\Users\NOVWAL\source\repos\nomor14\nomor14\obj\Debug\nomor14.csproj.AssemblyReference.cache
+C:\Users\NOVWAL\source\repos\nomor14\nomor14\obj\Debug\nomor14.csproj.SuggestedBindingRedirects.cache
+C:\Users\NOVWAL\source\repos\nomor14\nomor14\obj\Debug\nomor14.csproj.CoreCompileInputs.cache
+C:\Users\NOVWAL\source\repos\nomor14\nomor14\bin\Debug\nomor14.exe.config
+C:\Users\NOVWAL\source\repos\nomor14\nomor14\bin\Debug\nomor14.exe
+C:\Users\NOVWAL\source\repos\nomor14\nomor14\bin\Debug\nomor14.pdb
+C:\Users\NOVWAL\source\repos\nomor14\nomor14\obj\Debug\nomor14.exe
+C:\Users\NOVWAL\source\repos\nomor14\nomor14\obj\Debug\nomor14.pdb

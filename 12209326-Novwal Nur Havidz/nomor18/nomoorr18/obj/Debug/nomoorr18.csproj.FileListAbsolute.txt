@@ -1,0 +1,8 @@
+C:\Users\NOVWAL\source\repos\nomoorr18\nomoorr18\bin\Debug\nomoorr18.exe.config
+C:\Users\NOVWAL\source\repos\nomoorr18\nomoorr18\bin\Debug\nomoorr18.exe
+C:\Users\NOVWAL\source\repos\nomoorr18\nomoorr18\bin\Debug\nomoorr18.pdb
+C:\Users\NOVWAL\source\repos\nomoorr18\nomoorr18\obj\Debug\nomoorr18.csproj.AssemblyReference.cache
+C:\Users\NOVWAL\source\repos\nomoorr18\nomoorr18\obj\Debug\nomoorr18.csproj.SuggestedBindingRedirects.cache
+C:\Users\NOVWAL\source\repos\nomoorr18\nomoorr18\obj\Debug\nomoorr18.csproj.CoreCompileInputs.cache
+C:\Users\NOVWAL\source\repos\nomoorr18\nomoorr18\obj\Debug\nomoorr18.exe
+C:\Users\NOVWAL\source\repos\nomoorr18\nomoorr18\obj\Debug\nomoorr18.pdb
