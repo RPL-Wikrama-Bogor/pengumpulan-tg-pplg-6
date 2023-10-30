@@ -47,7 +47,7 @@ $siswa = [
     "nis" => "12209239",
     "rombel" => "PPLG XI-2",
     "rayon" => "Cicurug 2",
-    "umur" => 17,
+    "umur" => 16,
 ]
 
 ]
