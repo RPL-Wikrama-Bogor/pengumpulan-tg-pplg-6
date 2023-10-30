@@ -1,0 +1,8 @@
+C:\Users\NOVWAL\source\repos\nomor6\nomor6\obj\Debug\nomor6.csproj.AssemblyReference.cache
+C:\Users\NOVWAL\source\repos\nomor6\nomor6\obj\Debug\nomor6.csproj.SuggestedBindingRedirects.cache
+C:\Users\NOVWAL\source\repos\nomor6\nomor6\obj\Debug\nomor6.csproj.CoreCompileInputs.cache
+C:\Users\NOVWAL\source\repos\nomor6\nomor6\bin\Debug\nomor6.exe.config
+C:\Users\NOVWAL\source\repos\nomor6\nomor6\bin\Debug\nomor6.exe
+C:\Users\NOVWAL\source\repos\nomor6\nomor6\bin\Debug\nomor6.pdb
+C:\Users\NOVWAL\source\repos\nomor6\nomor6\obj\Debug\nomor6.exe
+C:\Users\NOVWAL\source\repos\nomor6\nomor6\obj\Debug\nomor6.pdb
