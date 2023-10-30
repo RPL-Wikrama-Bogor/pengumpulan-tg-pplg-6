@@ -92,6 +92,7 @@ export default {
         }
     },
 }
+
 </script>
 <style>
 .color {
