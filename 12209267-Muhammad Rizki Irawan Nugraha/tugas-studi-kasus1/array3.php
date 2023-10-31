@@ -47,7 +47,11 @@ $siswa = [
     "nis" => "12209239",
     "rombel" => "PPLG XI-2",
     "rayon" => "Cicurug 2",
+<<<<<<< HEAD
     "umur" => 17,
+=======
+    "umur" => 16,
+>>>>>>> 415949227f41535ed6de9844a86e9c53db2663bb
 ]
 
 ]

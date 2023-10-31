@@ -1,21 +1,524 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing Page</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <title>Document</title>
+
     <style>
         body {
-        margin: 0;
-        padding: 10px 10px 10px 10px;
-        font-family: 'Raleway', sans-serif;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            padding: 10px 10px 10px 10px;
         }
-</style>
+
+        .navbar {
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 15px;
+        }
+
+        .nav-admin {
+            margin-left: auto;
+            /* Memindahkan elemen ke kanan */
+        }
+
+        .button {
+            height: 10px;
+            display: inline-block;
+            padding: 8px 25px;
+            padding-bottom: 15px;
+            background-color: #fac552;
+            color: rgb(0, 0, 0);
+            border: none;
+            border-radius: 30px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #dfab41;
+        }
+
+        .container {
+            width: 100%;
+            overflow: hidden;
+            /* Mencegah konten keluar dari container */
+        }
+
+        .container-1 {
+            width: 100%;
+            
+            overflow: hidden;
+            /* Mencegah konten keluar dari container */
+        }
+
+
+        img {
+            width: 850px;
+            max-width: 100%;
+            float: right;
+            /* Mengapungkan gambar ke kanan */
+            margin: 0 0 10px 10px;
+            /* Memberi jarak agar tidak terlalu dekat dengan teks */
+        }
+
+        .teks {
+            float: left;
+            /* Meletakkan teks di sebelah kiri gambar */
+            padding-left: 30px;
+        }
+
+        .teks h3 {
+            font-size: 20px;
+            margin-top: 0;
+            text-align: left;
+        }
+
+        .teks p {
+            font-size: 14px;
+            margin: 5px 0;
+            text-align: left;
+        }
+
+        .kotak {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .kolom {
+            width: calc(100% - 6px);
+            height: 100px;
+            background-color: #fac552;
+            margin: 3px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            /* Menambahkan flex-direction untuk menjadikan elemen anak menjadi kolom */
+            justify-content: center;
+            align-items: center;
+            padding: 9px;
+        }
+
+        .kolom h3 {
+            font-size: 30px;
+            margin: 0;
+            text-align: center;
+        }
+
+        .kolom p {
+            font-size: 20px;
+            margin: 0;
+            text-align: center;
+        }
+
+        form {
+            background-color: #e9e9e9;
+            max-width: 550px;
+            margin: 0 auto;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            padding-right: 30px;
+            margin-top: 50px;
+            overflow: hidden;
+            float: left;
+            margin-left: 40px;
+            margin-right: 68px;
+        }
+
+        label {
+
+            font-weight: bold;
+
+        }
+
+        input[type="text"],
+        input[type="tel"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            padding-right: 2px;
+            margin-top: 5px;
+            margin-bottom: 30px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            padding: 8px 18px;
+            background-color: #e9ba55;
+            color: #ffffff;
+            border: none;
+            border-radius: 30px;
+            font-size: 14.8px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+            cursor: pointer;
+            order: 2;
+            float: right;
+        }
+
+        .laporan-container h3 {
+
+            margin-top: 30px;
+
+            text-align: left;
+
+        }
+
+        .laporan {
+           
+            display: flex;
+            justify-content: space-between;
+            border: 2px solid #000;
+            width: 50%;
+            margin-bottom: 60px;
+            overflow: hidden;
+            float: right;
+            /* Memberikan jarak antara dua laporan */
+        }
+
+        /* CSS Untuk Kolom Kiri */
+        .kolom-kiri {
+            flex: 1;
+            padding: 15px;
+            margin-top: 25px;
+            font-size: 18px;
+        }
+
+        /* CSS Untuk Kolom Kanan */
+        .kolom-kanan {
+            flex: 1;
+            padding: 15px;
+            padding-top: none;
+
+        }
+
+        /* CSS Untuk Gambar */
+        .gambar {
+            max-width: 70%;
+            height: auto;
+            float: right;
+        }
+
+        /* CSS Untuk Informasi */
+        .informasi {
+
+            margin-top: 15px;
+            margin-bottom: 15px;
+            font-size: 18px;
+            text-align: right;
+        }
+
+
+
+     @media (min-width: 576px) {
+    .laporan {
+        width: 50%;
+        float: right;
+        margin: auto;
+    }
+
+    .kolom-kiri {
+        font-size: 10px;
+    }
+
+    .kolom-kanan {
+        padding-top: none; /* Jika ini adalah nilai default, Anda bisa menghapusnya */
+    }
+
+    .gambar {
+        max-width: 70%;
+    }
+}
+
+/* Media Query untuk Layar Berukuran Kecil (misalnya ponsel) */
+@media (max-width: 576px) {
+
+    .laporan-container h3{
+        font-size: 15px;
+        text-align: center;
+    }
+    .laporan {
+    
+        width: 60%;
+        float: none; /* Membatalkan float */
+        margin: auto;
+        margin-bottom: 30px;
+        margin-top: 15px;
+    }
+
+    .kolom-kiri,
+    .kolom-kanan {
+        flex: 1; /* Kembalikan flex ke nilai default */
+        padding: 15px;
+        font-size: 10px; /* Atur ukuran font lebih kecil untuk tampilan ponsel */
+    }
+
+    .informasi {
+        text-align: left;
+        font-size: 10px; /* Mengubah alignment informasi untuk tampilan ponsel */
+    }
+}
+
+        /* Ubah di bawah ini untuk responsif */
+        @media (max-width: 576px) {
+x
+            input[type="text"],
+            input[type="tel"],
+            textarea {
+                width: 100%;
+                margin-bottom: -5px;
+            }
+
+            input[type="text"]{
+                margin-bottom: 1px;
+            }
+
+            input[type="submit"] {
+                font-size: 10px;
+                padding: 4px 14px;
+            }
+
+            .kolom h3 {
+                font-size: 10px;
+                margin: 0;
+                text-align: center;
+            }
+
+            .kolom p {
+                font-size: 9px;
+                margin: 0;
+                text-align: center;
+            }
+        }
+
+        /* Ubah di bawah ini untuk responsif */
+        @media (max-width: 576px) {
+
+
+            form {
+                width: 70%;
+                margin: auto;
+                margin-top: 50px;
+                float: none;
+            }
+
+            label {
+                font-size: 11px;
+
+            }
+
+            .h3ngadu {
+                font-size: 15px;
+                margin-bottom: 30px;
+            }
+
+
+        }
+
+
+
+        input[type="file"] {
+            width: 100%;
+            margin-bottom: 5px;
+        }
+
+
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .h3ngadu {
+            align-items: center;
+            text-align: center;
+        }
+
+
+
+        /* Ukuran layar mobile phone minimal resolusi 576px */
+        @media (min-width: 576px) {
+            .kolom {
+                width: calc(50% - 6px);
+            }
+  .kolom h3 {
+            font-size: 15px;
+            margin: 0;
+            text-align: center;
+        }
+
+        .kolom p {
+            font-size: 13px;
+            margin: 0;
+            text-align: center;
+        }
+
+        form {
+            
+            float: none;
+              width: 70%;
+                margin: auto;
+                margin-top: 50px;
+                float: none;
+           
+          
+        }
+
+        label {
+
+            font-weight: bold;
+
+        }
+
+        input[type="text"],
+        input[type="tel"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            padding-right: 2px;
+            margin-top: 5px;
+            margin-bottom: 30px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            padding: 8px 18px;
+            background-color: #e9ba55;
+            color: #ffffff;
+            border: none;
+            border-radius: 30px;
+            font-size: 14.8px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+            cursor: pointer;
+            order: 2;
+            float: right;
+        }
+
+        
+        }
+
+        /* Ukuran layar tablet minimal resolusi 768px */
+        @media (min-width: 768px) {
+            .kolom {
+                width: calc(100vw / 3 - 12px);
+            }
+  .kolom h3 {
+            font-size: 25px;
+            margin: 0;
+            text-align: center;
+        }
+
+        .kolom p {
+            font-size: 20px;
+            margin: 0;
+            text-align: center;
+        }
+
+        form {
+            background-color: #e9e9e9;
+            max-width: 550px;
+            margin: 0 auto;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            padding-right: 30px;
+            margin-top: 50px;
+            overflow: hidden;
+            float: left;
+            margin-left: 40px;
+            margin-right: 68px;
+        }
+
+        label {
+
+            font-weight: bold;
+
+        }
+
+        input[type="text"],
+        input[type="tel"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            padding-right: 2px;
+            margin-top: 5px;
+            margin-bottom: 30px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            padding: 8px 18px;
+            background-color: #e9ba55;
+            color: #ffffff;
+            border: none;
+            border-radius: 30px;
+            font-size: 14.8px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+            cursor: pointer;
+            order: 2;
+            float: right;
+        }
+        }
+
+        /* Ukuran layar dekstop minimal resolusi 992px */
+        @media (min-width: 992px) {
+            .kolom {
+                width: calc(100vw / 4 - 18px);
+            }
+
+            h3 {
+                font-size: 14px;
+            }
+
+            p {
+                font-size: 12px;
+            }
+        }
+
+
+        @media (min-width: 1200px) {
+            .kolom {
+                width: calc(100vw / 3 - 24px);
+                /* Anda bisa mengubah nilai sesuai preferensi */
+            }
+
+            h3 {
+                font-size: 21px;
+                /* Anda bisa mengubah nilai sesuai preferensi */
+            }
+
+            p {
+                font-size: 18px;
+                /* Anda bisa mengubah nilai sesuai preferensi */
+            }
+        }
+
+
+        /* Ukuran layar sangat besar minimal resolusi 1400px */
+        @media (min-width: 1400px) {
+            h3 {
+                font-size: 20px;
+            }
+
+            p {
+                font-size: 18px;
+            }
+        }
+    </style>
 </head>
+
 <body>
     <nav class="navbar">
         <div class="nav-admin">
@@ -23,46 +526,85 @@
         </div>
     </nav>
 
-<div class="container">
-  <img src="banner.png" alt="">
-  <div class="teks">
-    <h3>Tempat nongkrong bukan tempat ribut</h3>
-    <p>1. Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat magnam ab quae laudantium modi?</p>
-    <p>2. Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
-    <p>3. Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident!</p>
-    <p>3. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, ad nostrum.</p>
-  </div>
-</div>
-
-  <section class="kotak">
-	   <div class="kolom"><h3>Jumlah Kecamatan</h3><p>15</p></div>
-	   <div class="kolom"><h3>Jumlah Desa</h3><p>42</p></div>
-	   <div class="kolom"><h3>Jumlah Penduduk</h3><p>12.000</p></div>
-	   <div class="kolom"><h3>Data per Tahun</h3><p>2023</p></div>
-  </section>
-
-  <div class="container">
-    <form class="ngadu" method="post" >
-        <h3 class="h3ngadu">Buat Pengaduan</h3>
-        <label for="nik">NIK:</label><br>
-        <input type="text" id="nik" name="nik" required><br><br>
-        
-        <label for="nama">Nama Lengkap:</label><br>
-        <input type="text" id="nama" name="nama" required><br><br>
-        
-        <label for="no_telp">Nomor Telepon:</label><br>
-        <input type="tel" id="no_telp" name="no_telp" required><br><br>
-        
-        <label for="pengakuan">Pengakuan:</label><br>
-        <textarea id="pengakuan" name="pengakuan" rows="5" cols="40" required></textarea><br><br>
-        
-        <label for="gambar">Upload Gambar Terkait:</label><br>
-        <input type="file" id="gambar" name="gambar" accept="image/*"><br><br>
-        
-        <div class="button-container">
-            <input type="submit" value="Kirim Pengaduan">
+    <div class="container">
+        <img src="banner.png" alt="">
+        <div class="teks">
+            <h3>Pengaduan Masyarakat</h3>
+            <p>1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel possimus fugit labore omnis.</p>
+            <p>2. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed ut soluta veritatis ex commodi quasi enim!</p>
+            <p>3. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores!</p>
+            <p></p>
+        </div>
     </div>
-    </form>
-</div>
+
+    <section class="kotak">
+        <div class="kolom">
+            <h3>Jumlah Kecamatan</h3>
+            <p>15</p>
+        </div>
+        <div class="kolom">
+            <h3>Jumlah Desa</h3>
+            <p>42</p>
+        </div>
+        <div class="kolom">
+            <h3>Jumlah Penduduk</h3>
+            <p>12.000</p>
+        </div>
+        <div class="kolom">
+            <h3>Data per Tahun</h3>
+            <p>2023</p>
+        </div>
+    </section>
+
+    <div class="container-1">
+        <form class="ngadu" method="post">
+            <h3 class="h3ngadu">Buat Pengaduan</h3>
+            <label for="nik">NIK:</label><br>
+            <input type="text" id="nik" name="nik" required><br><br>
+
+            <label for="nama">Nama Lengkap:</label><br>
+            <input type="text" id="nama" name="nama" required><br><br>
+
+            <label for="no_telp">Nomor Telepon:</label><br>
+            <input type="tel" id="no_telp" name="no_telp" required><br><br>
+
+            <label for="pengakuan">Pengakuan:</label><br>
+            <textarea id="pengakuan" name="pengakuan" rows="5" cols="40" required></textarea><br><br>
+
+            <label for="gambar">Upload Gambar Terkait:</label><br>
+            <input type="file" id="gambar" name="gambar" accept="image/*"><br><br>
+
+            <div class="button-container">
+                <input type="submit" value="Kirim Pengaduan">
+            </div>
+        </form>
+        <div class="laporan-container">
+            <h3>Laporan Pengaduan</h3>
+            <div class="laporan">
+                <div class="kolom-kiri">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem sapiente molestiae recusandae repudiandae eius explicabo tenetur debitis natus distinctio iure!</p>
+                </div>
+                <div class="kolom-kanan">
+                    <div class="informasi">
+                        <p>3 September 2023</p>
+                    </div>
+                    <img class="gambar" src="tsu.jpg" alt="Gambar">
+                </div>
+            </div>
+
+            <div class="laporan">
+                <div class="kolom-kiri">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt sed aliquid in fugiat est dolorum quos quam distinctio pariatur animi.</p>
+                </div>
+                <div class="kolom-kanan">
+                    <div class="informasi">
+                        <p>4 September 2023</p>
+                    </div>
+                    <img class="gambar" src="tsu.jpg" alt="Gambar 2">
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>

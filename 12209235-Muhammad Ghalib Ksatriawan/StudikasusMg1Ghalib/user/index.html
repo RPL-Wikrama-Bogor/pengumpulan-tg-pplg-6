@@ -57,7 +57,7 @@
       font-size: 1rem;
       border-radius: 10px;
     }
-    .kotak-persegi-panjang {
+    .kolom-rincian {
       background-color: #f2f2f2;
       padding: 20px;
       border: 1px solid #ddd;
@@ -66,19 +66,19 @@
       margin-bottom: 10px;
     }
 
-    .gambar {
-      flex: 1;
+    .foto {
+      flex: 3;
       padding: 10px;
     }
 
-    .gambar img {
+    .foto img {
       max-width: 100%;
       border-radius: 10px;
       width: 100%;
     }
 
     .rincian {
-      flex: 2;
+      flex: 3;
       padding: 10px;
       background-color: #f2f2f2;
       border: 1px solid #ddd;
@@ -97,6 +97,9 @@
       text-align: center;
       height: 23px;
       padding-top: 7px;
+      margin-top: 35px;
+      
+    
     }
 
     @media screen and (max-width: 1000px) {
@@ -110,7 +113,7 @@
       }
 
       .footer {
-        margin-top: 40rem;
+        margin-top: 70px;
       }
 
       img {
@@ -144,6 +147,9 @@
       footer {
         display: none;
       }
+      button{
+        font-size: 12px;
+      }
     }
   </style>
 </head>
@@ -172,8 +178,9 @@
     <div class="kolom">Data perTahun 2023</div>
   </section>
   <br><br>
-  <section class="formm" style="height: 100vh; display: flex; margin: 20px;">
-    <div class="form" style="flex: 1;  background-color: #f2f2f2; padding: 20px;">
+  <section class="formm" style=" display: flex; margin: 20px;">
+    <div class="form" style="flex: 1;   padding: 20px; border-radius: 30px;">
+      <center>
       <form action="" textare>
         <h3>Hasil Pengaduan</h3>
         <label for="">Nik : </label>
@@ -192,33 +199,34 @@
         <br>
         <textarea name="" id="" cols="55" rows="10"></textarea>
         <br><br>
-        <label for="">Upload Gambar Terkait : </label>
+        <label for="">Upload Foto laproran : </label>
         <br><br>
         <input type="file">
         <br><br>
         <button class="buttonpengaduan">Kirim</button>
       </form>
+      </center>
     </div>
-    <div class="laporan" style="flex: 1; padding: 20px;">
-      <h3>Laporan</h3>
-      <div class="kotak-persegi-panjang">
+    <div class="laporan" style="flex: 1; padding: 25px;">
+      <h1 style="font-size: 35px; ;">Laporan</h1>
+      <div class="kolom-rincian">
         <div class="rincian">
           <p>27 Juni 2023 : Ghalib</p>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget justo a mauris convallis lacinia nec
             sed elit.</p>
         </div>
-        <div class="gambar">
-          <img src="jalanrusak.jpg" alt="Gambar Terkait">
+        <div class="foto">
+          <img src="jalanrusak.jpg" alt="Foto laproran">
         </div>
       </div>
-      <div class="kotak-persegi-panjang">
+      <div class="kolom-rincian">
         <div class="rincian">
           <p>24 Februari 2023 : Muhammad Ghalib</p>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget justo a mauris convallis lacinia nec
             sed elit.</p>
         </div>
-        <div class="gambar">
-          <img src="pohonTumbang.jpeg" alt="Gambar Terkait">
+        <div class="foto">
+          <img src="pohonTumbang.jpeg" alt="Foto laproran">
         </div>
       </div>
     </div>

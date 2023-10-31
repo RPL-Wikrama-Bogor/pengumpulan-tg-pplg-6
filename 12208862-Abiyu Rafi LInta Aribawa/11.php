@@ -14,7 +14,7 @@
             <table>
                 <tr>
                     <td>No Pegawai</td>
-                    <td><input type="number" value="kode pegawai" name="bilangan"></td>
+                    <td><input type="number" value="kode pegawai" name="bilangan" maxlength="11" onKeyPress="if( this.value.length == 11 ) return false;"></td>
                 </tr>
                 <tr>
                     <td><input type="submit" value="Submit" name="submit"></td>
@@ -23,14 +23,14 @@
             <?php
             if (isset($_POST['submit'])) {
                 $kodepegawai = $_POST['bilangan'];
-                $golongan = substr($kodepegawai, 0, 1);
-                $tanggal = substr($kodepegawai, 1, 2);
-                $bulan = substr($kodepegawai, 3, 2);
-                $tahun = substr($kodepegawai, 5, 4);
-                $urutan = substr($kodepegawai, 12, 1);
-                if ($kodepegawai < 11) {
-                    echo "nomor pegawai tidak sesuai";
+                if (strlen($kodepegawai) < 11) {
+                    echo "Panjang nomor pegawai tidak sesuai";
                 } else {
+                    $golongan = substr($kodepegawai, 0, 1);
+                    $tanggal = substr($kodepegawai, 1, 2);
+                    $bulan = substr($kodepegawai, 3, 2);
+                    $tahun = substr($kodepegawai, 5, 4);
+                    $urutan = substr($kodepegawai, 12, 1);
                     $nama_bulan = "";
                     if ($bulan == "01") {
                         $nama_bulan = "Januari";
@@ -64,6 +64,7 @@
                 }
             }
             ?>
+
         </form>
     </div>
 
