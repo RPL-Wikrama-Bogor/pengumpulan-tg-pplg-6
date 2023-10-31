@@ -27,7 +27,7 @@
       return{
         dataKelas: [{
           nama: 'Azka',
-          Kelas: XI
+          Kelas: 11
         }],
         formDataKelas:{
           nama:'',
