@@ -46,11 +46,13 @@ export default {
     font-size: 18px;
     line-height: 30px;
     color: #343b4e;
+    background: white;
 }
 
 .card-service p {
     font-weight: 400;
     color: #827f8d;
     margin: 0 0 10px 0;
+    background: white;
 }
 </style>
