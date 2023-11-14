@@ -1,67 +1,80 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Max, Min, Avrg</title>
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
 </head>
-<body>
-    <h1>Kalkulator Bilangan</h1>
-    <form method="post">
-        <?php
-        $max_bilangan = 20;
-        $counter = 1;
 
-        while ($counter <= $max_bilangan) {
-            echo "<label for='bilangan_$counter'>Masukkan bilangan $counter: </label>";
-            echo "<input type='number' name='bilangan_$counter' id='bilangan_$counter'><br>";
-            $counter++;
-        }
-        ?>
-        <input type="submit" value="Hitung">
+<body>
+
+    <form action="" method="post">
+
+        <div id="wrap">
+
+            <div style="display: flex;">
+
+                <label for="angka"> Masukan angka : </label>
+
+                <input type="number" name="angka[]" id="angka">
+
+            </div>
+
+        </div>
+
+        <p style="cursor: pointer; color: blue" onclick = "tambahInput()"> Tambah input form </p>
+        <button type="submit" name="submit" > kirim </button>
+
     </form>
 
-</body>
-</html>
-    <?php
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $bilangan_terbesar = PHP_INT_MIN;
-        $bilangan_terkecil = PHP_INT_MAX;
-        $total = 0;
-        $bilangan_valid = 0;
-        $counter = 1;
+    <script>
 
-        while ($counter <= $max_bilangan) {
-            $input_name = "bilangan_$counter";
-            if (isset($_POST[$input_name])) {
-                $bilangan = (float) $_POST[$input_name];
+        let jumlahInput = 1;
+        function tambahInput() {
 
-                if (!empty($bilangan) && is_numeric($bilangan)) {
-                    $bilangan_valid++;
-                    $total += $bilangan;
 
-                    if ($bilangan > $bilangan_terbesar) {
-                        $bilangan_terbesar = $bilangan;
-                    }
+            let inputElement = `
+            <div style = "display: flex;"> 
 
-                    if ($bilangan < $bilangan_terkecil) {
-                        $bilangan_terkecil = $bilangan;
-                    }
-                }
+            <label for = "angka"  > Masukan angka : </label>
+            <input type = "number"  name = "angka[]" id = "angka"> </input>
+            
+            </div>
+            `;
+           
+            jumlahInput++;
+            if (jumlahInput < 10) {
+                document.getElementById  ('wrap').innerHTML += inputElement;
             }
-            $counter++;
         }
 
-        if ($bilangan_valid > 0) {
-            $rata_rata = $total / $bilangan_valid;
-        } else {
-            $rata_rata = 0;
-        }
+    </script>
 
-        echo "<h2>Hasil Perhitungan</h2>";
-        echo "Bilangan terbesar: $bilangan_terbesar<br>";
-        echo "Bilangan terkecil: $bilangan_terkecil<br>";
-        echo "Rata-rata: $rata_rata<br>";
-}
-?>
+
+        <?php
+
+        $arrAngka = [];
+        $nilaiTerbesar;
+        $nilaiTerkecil;
+        $ratarata;
+
+            if (isset($_POST['submit'])) {
+                $arrAngka = $_POST['angka'];
+                $nilaiTerbesar = max($arrAngka);
+                $nilaiTerkecil = min($arrAngka);
+
+                $ratarata = array_sum($arrAngka) / count($arrAngka);
+                echo "Nilai terbesar : " . $nilaiTerbesar . " <br> Nilai terkecil : " . $nilaiTerkecil . " <br> Nilai rata-rata : " . $ratarata;
+                echo "</br>";
+                echo "</br>";
+                echo "</br>";
+
+            }
+
+        ?>
+
+</body>
+
+</html>

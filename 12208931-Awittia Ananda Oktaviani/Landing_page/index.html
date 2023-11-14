@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <style>
+      body{
+        background-color: white;
+        font-family: Arial, sans-serif;
+        margin: 0;
+            padding: 0;
+    }
+
+    .button{
+        float: right;
+        background-color: #ffcc84;
+        text-decoration: black;
+        padding: 8px 15px;
+        border-radius: 50px;
+        margin-bottom: 40px;
+        margin-right: 4em;
+    }
+    .button:hover{
+        background-color: #FF9B50
+    }
+
+    .konten{
+        padding: 5px;    
+    }
+
+    .text {
+        flex: 1;
+        padding-right: 20px;
+        float: left;
+        margin-top: -2em;
+        margin-left: 3em;
+        font-size: large;
+    }
+
+    ol {
+        flex-wrap: wrap; 
+	    flex-direction: row;
+	    justify-content: center;
+        padding-right: 55%;
+        line-height: 150%;
+    }
+
+    li {
+        margin-bottom: 10px;
+    }
+
+    .foto img {
+        max-width: 100%;
+        height: auto;
+        flex: 1;
+    }
+        
+    .foto{
+        width: 40%;
+        max-width: 100%;
+        float: right;
+        margin-top: -20em;
+        padding: 2%;
+        margin-right: 2em;
+    }
+
+    .baris{
+        height: 120px;
+    margin: 3px;
+    box-sizing: border-box;
+    padding: 1px 50px;
+    }
+
+    .jumlah1{
+        width: 300px;
+        height: 100px;
+        background-color: #ffcc84;
+        margin: 5px;
+        box-sizing: border-box;
+	    padding: 40px;
+        text-align: center;
+        padding: 40px;
+    }
+    .jumlah1:hover{
+        background-color: #FF9B50
+    }
+
+    .container {
+        max-width: 400px; /* Merubah maksimum lebar container menjadi 400px */
+        margin-left: 4em; /* Mengurangi margin kiri menjadi 1em */
+        padding: 7px; /* Mengurangi padding menjadi 10px */
+        border: 1px solid #ccc;
+        border-radius: 2px; /* Mengurangi border-radius menjadi 3px */
+        background-color: #f9f9f9; 
+    }
+
+    .container h2{
+        text-align: center;    
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    label {
+        display: block;
+    }
+
+    input[type="text"],
+        textarea {
+            width: 90%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="file"] {
+            margin-top: 5px;
+        }
+
+        button {
+            background-color: #ffcc84;
+            color: black;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 40px;
+            cursor: pointer;
+            margin-left: 25em;
+        }
+
+        button:hover {
+            background-color: #FF9B50;
+        }
+
+        .laporan {
+  padding: 5%;
+  max-width: 400px;
+  margin-top: -42em;
+  margin-left: auto;
+  margin-right: 8em;
+}
+
+
+.textlapor {
+  font-size: 24px;
+}
+
+.garis-tepi {
+  border: 1px solid;
+  padding: 10px;
+  margin-top: 2em;
+  width: 140%;
+  height: 10em;
+}
+
+.tglapor {
+  font-size: 14px;    
+  font-weight: bold;    
+  margin-left: 62%;   
+  margin-top: -1px;
+}
+
+
+.keterangan {
+  font-size: 14px;
+  width: 60%;
+}
+
+
+.laporimg {
+  max-width: 100%;
+  display: block;
+  margin-top: -80px;
+  width: 30%;
+  margin-left: auto;
+}
+
+        .footer{
+            background-color: #ffcc84;
+            text-align: center;
+            padding: 1px;
+            margin-top: 120px;
+        }
+
+        @media (max-width: 900px) {
+        
+
+            .text {
+                float: none;
+                margin-left: 0;
+                margin-top: 0;
+                padding-right: 0;
+            }
+
+            ol {
+                padding-right: 0;
+                text-align: left;
+            }
+
+            .foto {
+                float: none;
+                margin: 20px auto;
+                max-width: 100%;
+                width: 85%;
+                padding: 1%;
+            }
+
+            .baris{
+                max-width: 100%;
+                width: 100%;
+                flex-direction: column;
+            }
+            .jumlah1{
+                width: 100%;
+            }
+
+
+            .container {
+                max-width: 80%;
+                margin: 0 auto;
+                padding: 10px;
+                margin-top: 22em;
+            }
+
+
+            .laporan {
+                margin-top: 20px;
+                margin-left: 2em;
+                max-width: 500%;
+            }
+
+            .garis-tepi{
+                max-width: 100;
+                padding: 20px;
+            }
+
+        /* Tambahkan CSS untuk tombol "Administrator" */
+        .button {
+            float: right;
+            background-color: #ffcc84;
+            text-decoration: none;
+            padding: 8px 15px;
+            border-radius: 50px;
+            margin-bottom: 40px;
+        }
+
+        button{
+            margin-left: 2px;
+            width: 10em;
+        }
+
+        /* Tambahkan CSS untuk footer */
+        .footer {
+            background-color: #ffcc84;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+            width: 120%;
+            max-width: 100;
+        }
+
+        /* Tambahkan CSS untuk gambar laporan */
+        .laporimg {
+            max-width: 100%;
+            display: block;
+            padding: 21px;
+        }
+    }
+    @media (max-width: 400px){
+        .garis-tepi{
+            width: 18em;
+            padding: 20px;
+        }
+        .laporan{
+            margin-left: 2px;
+        }
+        .container{
+            width: 20em;
+            padding: 20px;
+        }
+        .keterangan{
+            margin-top: -1em;
+        }
+        .text{
+            margin-top: 5em;
+        }
+        .button{
+            margin-right: 1em;
+        }
+    }
+
+ 
+
+</style>
+
+</head>
+<body>
+<a href="" class="button">Administrator</a>
+<section class="konten">
+    <section class="konten">
+        <div class="text">
+            <h1>Pengaduan Masyarakat</h1>
+                <ol>
+                    <li>Lorem ipsum,dolor sit amet consectetur adipisicing elit.Alias modi nemo illum beatae omnis fugit!</li>
+                    <li>Lorem ipsum,dolor sit amet consectetur adipisicing elit.Aspernatur,debitis?</li>
+                    <li>Lorem ipsum dolor sit,amet consectetur adipisicing elit.Voluptate eligendi et atque dolores veniam maiores quasi error deserunt ducimus delestus?</li>
+                    <li>Lorem ipsum dolor sit amet.</li>
+                </ol>
+        </div>
+    </section>
+    <div class="foto">
+    <img src="https://wiggly-library-a46.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fe681035c-4b22-4a22-8c77-78bf5de66009%2FScreen_Shot_2023-02-02_at_10.13.21.png?table=block&id=1fca370a-0015-41e6-8c74-c049c7cf3dfb&spaceId=915c965e-4b46-4d9c-8500-23ab513e5f6b&width=2000&userId=&cache=v2">
+</div>
+
+    <section class="baris" style="display: flex;">
+        <div class="jumlah1">Jumlah Produk <br> 320</div>
+        <div class="jumlah1">Jumlah Pengikut <br> 5.909</div>
+        <div class="jumlah1">Jumlah Penilaian <br> 1.254</div>
+        <div class="jumlah1">Produk Baru <br> 55 </div>
+    
+    </section>
+
+    <div class="container">
+        <h2>Buat Pengaduan</h2>
+        <form action="#" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="nama">NIK :</label>
+                <input type="text" id="nik" name="nik" required>
+            </div>
+
+            <div class="form-group">
+                <label for="username">Nama Lengkap :</label>
+                <input type="text" id="nama" name="nama" required>
+            </div>
+
+            <div class="form-group">
+                <label for="no_barang">No Telp :</label>
+                <input type="text" id="no_telp" name="no_telp" required>
+            </div>
+
+            <div class="form-group">
+                <label for="pengaduan">Pengaduan :</label>
+                <textarea id="pengaduan" name="pengaduan" rows="4" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="gambar">Upload Gambar Terkait :</label>
+                <input type="file" id="gambar" name="gambar" accept="image/*">
+            </div>
+
+            <button type="submit">Kirim</button>
+        </form>
+    </div>
+    
+    <div class="laporan">
+        <h2 class="textlapor">Laporan Pengaduan</h2>
+        <div class="garis-tepi">
+            <p class="tglapor">22 Juni 2022 : Fema Flamelina Putri</p>
+            <p class="keterangan">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores quos <br>reiciendis libero sunt eveniet quisquam facilis quasi placeat eaque rerum.</p>
+            <img class="laporimg" src="https://media.suara.com/pictures/653x366/2021/12/21/36585-jalan-rusak.jpg" alt="">
+        </div><br>
+        <div class="garis-tepi">
+            <p class="tglapor">22 Juni 2022 : Fema Flamelina Putri</p>
+            <p class="keterangan">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores quos <br> reiciendis libero sunt eveniet quisquam facilis quasi placeat eaque rerum.</p>
+            <img class="laporimg" src="https://media.suara.com/pictures/653x366/2021/12/21/36585-jalan-rusak.jpg" alt="">
+        </div>
+    </div>
+
+    <div class="footer">
+        <p class="text_footer">Copyright © 2023 Awittia Ananda Oktaviani</p>
+    </div>
+
+</body>
+</html>

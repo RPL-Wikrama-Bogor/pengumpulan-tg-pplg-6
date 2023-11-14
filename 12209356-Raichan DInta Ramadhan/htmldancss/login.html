@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .login-container {
+            background-color: #EEEEEE;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            width: 95%; /* Change the width to adapt to different screen sizes */
+            max-width: 700px; /* Set a maximum width for larger screens */
+            text-align: center;
+        }
+        .login-container h2 {
+            margin-bottom: 20px;
+        }
+        .login-form input {
+            width: 100%; /* Make the input fields span the full width */
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        .login-form button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 10px;
+            border-radius: 10px;
+            cursor: pointer;
+            float: right;
+        }
+        label {
+            padding-right: 610px;
+        }
+        .button {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .button .submit {
+            padding: 8px 18px;
+            background-color: #e9ba55;
+            color: #ffffff;
+            border: none;
+            border-radius: 30px;
+            font-size: 14.8px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+            cursor: pointer;
+            order: 2;
+        }
+        .button .batal-button {
+            padding: 8px 18px;
+            background-color: #F2E8C6;
+            color: #ffffff;
+            border: none;
+            border-radius: 30px;
+            font-size: 14.8px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+            cursor: pointer;
+            margin-left: 540px; /* Adjust the margin for spacing */
+            order: 1;
+        }
+
+        /* Media query for screens smaller than 768px */
+        @media (max-width: 768px) {
+            .login-container {
+                width: 100%;
+            }
+            label {
+                padding-right: 300px; /* Reduce padding for smaller screens */
+            }
+            .button .batal-button {
+                margin-left: 220px; /* Reset margin for smaller screens */
+                margin-top: 0px; /* Add margin at the top for spacing */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login Administrator</h2>
+        <form class="login-form">
+            <b><label>Username:</label></b>
+            <input type="text" name="username" placeholder="" required>
+            <b><label>Password:</label></b>
+            <input type="password" name="password" placeholder="" required>
+            <div class="button">
+                <a class="submit" href="dashboard-admin.html">Masuk</a>
+                <a href="landing-page.html" class="batal-button">Batal</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
