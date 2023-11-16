@@ -1,26 +1,21 @@
-// // Online Javascript Editor for free
-// // Write, Edit and Run your Javascript code using JS Online Compiler
-// // Online Javascript Editor for free
-// // Write, Edit and Run your Javascript code using JS Online Compiler
+// const user = {
+//     nama:'Amel',
+//     userType:'Admin',
+// }
 
-// // const user = {
-// //     nama:'Amel',
-// //     userType:'Admin',
-// // }
+// for (let i = 10;i > 0;i--){
+//     console.log(i);
+// }
 
-// // for (let i = 10;i > 0;i--){
-// //     console.log(i);
-// // }
-
-// // let n = 0
-// // for (let i = 0;i < 10;++i){
-// //     console.log(n++);
-// // }
-// // console.log('---------------------------')
-// // n = 0
-// // for (let i = 0;i < 10;++i){
-// //     console.log(++n);
-// // }
+// let n = 0
+// for (let i = 0;i < 10;++i){
+//     console.log(n++);
+// }
+// console.log('---------------------------')
+// n = 0
+// for (let i = 0;i < 10;++i){
+//     console.log(++n);
+// }
 
 // const students =[
 //     {
@@ -102,10 +97,35 @@
 //     console.log('C');
 // }
 
-// console.log("Welcome to Programiz!");;
-// Online Javascript Editor for free
-// Write, Edit and Run your Javascript code using JS Online Compiler
-// 
+// const students = [
+//   {
+//       nama: 'ameliaa',
+//       nilai: 87
+//   },
+//   {
+//       nama: 'amel',
+//       nilai: 76
+//   },
+// ];
+// const underperformingstudents = students.filter
+//   (student => student.nama == 'amel');
+
+// console.log(underperformingstudents);
+
+// const students = [
+//   {
+//       nama: 'amelia',
+//       nilai: 86
+//   },
+//   {
+//       nama: 'amel',
+//       nilai: 78
+//   },
+// ];
+// const underperformingstudents = students.filter
+//   (student => student.nilai <=75);
+
+// console.log(underperformingstudents);
 
 // const students = [
 //     {
@@ -125,43 +145,41 @@
 //     },
 //     ];
     
-const students = [
-    {
-        nama: 'John',
-        umur: 20,
-        nilai: [90, 85, 88],
-    },
-    {
-        nama: 'Alice',
-        umur: 22,
-        nilai: [75, 80, 92],
-    },
-    {
-        nama: 'Bob',
-        umur: 21,
-        nilai: [88, 91, 78],
-    },
-];
+// const students = [
+//     {
+//         nama: 'John',
+//         umur: 20,
+//         nilai: [90, 85, 88],
+//     },
+//     {
+//         nama: 'Alice',
+//         umur: 22,
+//         nilai: [75, 80, 92],
+//     },
+//     {
+//         nama: 'Bob',
+//         umur: 21,
+//         nilai: [88, 91, 78],
+//     },
+// ];
 
 
-function hitungRataRataNilai(students) {
-  const rataRataNilai = students.map((student) => {
-    const totalNilai = student.nilai.reduce((total, nilai) => total + nilai, 0);
-    const rataRata = totalNilai / student.nilai.length;
+// function hitungRataRataNilai(students) {
+//   const rataRataNilai = students.map((student) => {
+//     const totalNilai = student.nilai.reduce((total, nilai) => total + nilai, 0);
+//     const rataRata = totalNilai / student.nilai.length;
 
-    return {
-      ...student,
-      rataRataNilai: rataRata,
-    };
-  });
+//     return {
+//       ...student,
+//       rataRataNilai: rataRata,
+//     };
+//   });
 
-  return rataRataNilai;
-}
+//   return rataRataNilai;
+// }
 
-const rataRataNilaiSiswa = hitungRataRataNilai(students);
-console.log(rataRataNilaiSiswa);
+// const rataRataNilaiSiswa = hitungRataRataNilai(students);
+// console.log(rataRataNilaiSiswa);
 
-    
-// buatlah sebuah fungsi javascript yang menggunakan map untuk mengembalikan rata-rata nilai siswa.
+  
 // console.log("Welcome to Programiz!");
-console.log("Welcome to Programiz!");
