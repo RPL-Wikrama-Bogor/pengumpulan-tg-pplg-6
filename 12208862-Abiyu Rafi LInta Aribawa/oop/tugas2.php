@@ -147,5 +147,3 @@ class PelangganMember extends Pelanggan
         ?>
     </center>
 </body>
-
-</html>

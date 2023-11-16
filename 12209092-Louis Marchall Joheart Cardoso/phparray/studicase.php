@@ -43,7 +43,7 @@ if (isset($_POST['jumlah']) && isset($_POST['tipe_bahan_bakar'])) {
     $jumlah = $_POST['jumlah'];
     $tipe_bahan_bakar = $_POST['tipe_bahan_bakar'];
 
-    // Find the selected bahan bakar
+
     $selected_bahan_bakar = null;
     foreach ($hitungan as $bahan_bakar) {
         if ($bahan_bakar->bensin === $tipe_bahan_bakar) {
