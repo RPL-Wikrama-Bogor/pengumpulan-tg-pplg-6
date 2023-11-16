@@ -4,33 +4,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Soal 18</title>
 </head>
 <body>
-    <form action="" method="post">
-        <label for="">Kehadiran</label> 
-        <input type="number" name="kehadiran"><br><br>
+    <div class="container">
+    <form action="" method="post" class="form">
+        <input type="number" name="kehadiran" class="input" placeholder="Input Kehadiran"><br><br>
 
-        <label for="">Nilai MTK</label>
-        <input type="number" name="mtk"><br><br>
+        <input type="number" name="mtk" class="input" placeholder="Input Nilai MTK"><br><br>
 
-        <label for="">Nilai Indonesia</label>
-        <input type="number" name="indo"><br><br>
+        <input type="number" name="indo" class="input" placeholder="Input Nilai Indonesia"><br><br>
 
-        <label for="">Nilai B.Inggis</label>
-        <input type="number" name="ing"><br><br>
+        <input type="number" name="ing" class="input" placeholder="Input Nilai B.Inggris"><br><br>
 
-        <label for="">Nilai DPK</label>
-        <input type="number" name="dpk"><br><br>
+        <input type="number" name="dpk" class="input" placeholder="Input Nilai DPK"><br><br>
 
-        <label for="">Nilai Agama</label>
-        <input type="number" name="agama"><br><br>
+        <input type="number" name="agama" class="input" placeholder="Input Nilai Agama"><br><br>
 
-        <label for="">Nama</label>
-        <input type="text" name="nama"><br><br>
+        <input type="text" name="nama" class="input" placeholder="Input Nama"><br><br>
 
-        <input type="submit" name="submit">
+        <input type="submit" name="submit" class="submit">
     </form>
+    <div class="hasil">
     <?php
     if(isset($_POST['submit'])){
         $kehadiran = $_POST["kehadiran"];
@@ -58,6 +53,57 @@
         echo "Kehadiran: " . $kehadiran . "%";
 
     }
-    ?>
+    ?></div></div>
+    <style>
+    .container {
+  max-width: 350px;
+  background: #F8F9FD;
+  background: linear-gradient(0deg, rgb(255, 255, 255) 0%, rgb(244, 247, 251) 100%);
+  border-radius: 40px;
+  padding: 25px 35px;
+  border: 5px solid rgb(255, 255, 255);
+  box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 30px 30px -20px;
+  margin: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 4em;
+}
+.form {
+  margin-top: 20px;
+}
+
+.form .input {
+  width: 90%;
+  background: white;
+  border: none;
+  padding: 15px;
+  border-radius: 20px;
+  margin-top: 15px;
+  box-shadow: #cff0ff 0px 10px 10px -5px;
+  border-inline: 2px solid transparent;
+  
+}
+.form .submit {
+  width: 100%;
+  background: white;
+  border: none;
+  padding: 15px;
+  border-radius: 20px;
+  margin-top: 15px;
+  box-shadow: #cff0ff 0px 10px 10px -5px;
+  border-inline: 2px solid transparent;
+}
+.hasil{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto; 
+    margin-top: 20px;
+}
+.submit:hover{
+    background-color: #cff0ff;
+    color: white;
+}
+
+    </style>
 </body>
 </html>

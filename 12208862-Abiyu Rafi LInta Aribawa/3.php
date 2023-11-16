@@ -33,7 +33,6 @@ $bil3;
                 <td><input type="text" name="bil3"></td>
             </tr>
             <td><input type="submit" value="cari" name="submit"></td>
-            </tr>
         </table>
     </form>
 </body>

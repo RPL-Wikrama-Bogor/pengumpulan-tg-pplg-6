@@ -1,0 +1,252 @@
+
+
+
+.navbar {
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 15px;
+}
+
+.nav-admin {
+    margin-left: auto; /* Memindahkan elemen ke kanan */
+}
+
+.button {
+    height: 10px;
+    display: inline-block;
+    padding: 8px 25px;
+    padding-bottom: 15px;
+    background-color: #2261aa;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #0d2d5b;
+}
+
+.container {
+    width: 100%;
+    overflow: hidden;
+     /* Mencegah konten keluar dari container */
+}
+
+img {
+    width: 850px;
+    max-width: 100%;
+    float: right; /* Mengapungkan gambar ke kanan */
+    margin: 0 0 10px 10px; /* Memberi jarak agar tidak terlalu dekat dengan teks */
+}
+
+.teks {
+float: left; /* Meletakkan teks di sebelah kiri gambar */
+   padding-left: 30px;
+}
+
+.teks h3 {
+    font-size: 20px;
+    margin-top: 0;
+    text-align: left;
+}
+
+.teks p {
+    font-size: 14px;
+    margin: 5px 0;
+    text-align: left;
+}
+
+.kotak{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.kolom{
+    width: calc(100% - 6px);
+    height: 100px;
+    background-color: #2261aa;
+    margin: 3px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column; /* Menambahkan flex-direction untuk menjadikan elemen anak menjadi kolom */
+    justify-content: center;
+    align-items: center;
+    padding: 9px;
+    color: white;
+}
+
+h3{font-size: 10px; margin: 0; text-align: center;}
+p{font-size: 9px; margin: 0; text-align: center;}
+
+form {
+        background-color: #e9e9e9;
+        max-width: 550px;
+        margin: 0 auto;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        padding-right: 30px;
+        margin-top: 20px;
+        overflow: hidden;
+        float: left;
+        margin-left:70px;
+    }
+
+    label {
+    
+        font-weight: bold;
+        
+    }
+
+input[type="text"],
+input[type="tel"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    padding-right: 2px;
+    margin-top: 5px;
+    margin-bottom: 30px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+        padding: 8px 18px;
+    background-color: #2261aa;
+    color: #ffffff;
+    border: none;
+    border-radius: 30px;
+    font-size: 14.8px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    cursor: pointer;
+    order: 2;
+    float: right;
+}
+
+/* Ubah di bawah ini untuk responsif */
+@media (max-width: 576px) {
+    input[type="text"],
+    input[type="tel"],
+    textarea {
+        width: 90%;
+        padding-top: 2px;
+        margin-bottom: 1px;
+    }
+
+    input[type="submit"]{
+        font-size: 10px;
+        padding: 4px 14px;
+    }
+}
+
+/* Ubah di bawah ini untuk responsif */
+@media (max-width: 576px) {
+    form {
+        width: 40%;
+       
+    }
+
+    label {
+        font-size: 11px;
+        
+    }
+
+    .h3ngadu{
+        font-size: 15px;
+        margin-bottom: 30px;
+    }
+
+    
+}
+
+
+
+    input[type="file"] {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+   
+
+    input[type="submit"]:hover {
+        background-color: #0056b3;
+    }
+
+    .h3ngadu {
+        align-items: center;
+        text-align: center;
+    }
+
+/* Ukuran layar mobile phone minimal resolusi 576px */
+@media (min-width: 576px) { 
+	.kolom{
+		width: calc(50% - 6px);
+	}
+	h3{
+		font-size: 11px;
+	}
+  p{
+		font-size: 10px;
+	}
+
+    form{
+        width: calc(50% - 6px);
+
+    }
+}
+
+/* Ukuran layar tablet minimal resolusi 768px */
+@media (min-width: 768px) { 
+	.kolom{
+		width: calc(100vw / 3 - 12px);
+	}
+  h3{
+		font-size: 13px;
+	}
+  p{
+		font-size: 12px;
+	}
+}
+
+/* Ukuran layar dekstop minimal resolusi 992px */
+@media (min-width: 992px) { 
+	.kolom{width: calc(100vw / 4 - 18px);}
+		h3{
+			font-size: 14px;
+		}
+		p{
+			font-size: 12px;
+		}
+}
+
+
+@media (min-width: 1200px) { 
+    .kolom {
+        width: calc(100vw / 3 - 24px); /* Anda bisa mengubah nilai sesuai preferensi */
+    }
+    h3 {
+        font-size: 21px; /* Anda bisa mengubah nilai sesuai preferensi */
+    }
+    p {
+        font-size: 18px; /* Anda bisa mengubah nilai sesuai preferensi */
+    }
+}
+
+
+/* Ukuran layar sangat besar minimal resolusi 1400px */
+@media (min-width: 1400px) {
+	h3{
+		font-size: 20px;
+	}
+	p{
+		font-size: 18px;
+	}
+}
+

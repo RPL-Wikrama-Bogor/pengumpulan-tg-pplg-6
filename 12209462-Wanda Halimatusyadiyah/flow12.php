@@ -8,32 +8,43 @@
 <body>
     <center>
     <style>
-        body{
-            background-image : url("https://i.pinimg.com/564x/3a/cc/ab/3accabcd33611e499b316e7458f00748.jpg");
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url("https://i.pinimg.com/564x/3a/cc/ab/3accabcd33611e499b316e7458f00748.jpg");
             background-repeat: no-repeat;
-            background-size:cover;
-            padding:190px;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
         }
-        h2{
-            color:#ED7B7B;
+        .container {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+            max-width: 400px;
+            width: 100%;
         }
-        .form-style-3{
-	max-width: 450px;
-	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-}
-.form-style-3 label{
-	display:block;
-	margin-bottom: 10px;
-}
-.form-style-3 label > span{
-	float: left;
-	width: 100px;
-	color: #F072A9;
-	font-weight: bold;
-	font-size: 13px;
-	text-shadow: 1px 1px 1px #fff;
-}
-.form-style-3 fieldset{
+        .form-style-3 label > span {
+            width: auto;
+        }
+        .form-style-3 input[type=number] {
+            width: 80px;
+        }
+        .form-style-3 input[type=submit] {
+            width: 100%;
+            margin-top: 10px;
+        }
+        .result {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 18px;
+            color: #ED7B7B;
+        }
+		.form-style-3 fieldset{
 	border-radius: 10px;
 	-webkit-border-radius: 10px;
 	-moz-border-radius: 10px;
@@ -107,16 +118,16 @@
 	color:red;
 	font-weight:normal;
 }
-</style>
+
     </style>
 <form action="" method="post">
     <h2>Input Waktu</h2>
 <div class="form-style-3">
 <form>
 <fieldset><legend> Input   </legend>
-<label for="field1"><span>jam <span class="required">*</span></span><input type="number" class="input-field" name="jam" value="" /></label>
-<label for="field2"><span>menit <span class="required">*</span></span><input type="number" class="input-field" name="menit" value="" /></label>
-<label for="field3"><span>detik <span class="required">*</span></span><input type="number" class="input-field" name="detik" value="" /></label>
+<label for="field1"><span><span class="required"></span></span><input type="number" class="input-field" name="jam" value="" /></label>
+<label for="field2"><span><span class="required"></span></span><input type="number" class="input-field" name="menit" value="" /></label>
+<label for="field3"><span><span class="required"></span></span><input type="number" class="input-field" name="detik" value="" /></label>
 <input type="submit" value="Submit" name="submit">
 <br><br>
 </form>

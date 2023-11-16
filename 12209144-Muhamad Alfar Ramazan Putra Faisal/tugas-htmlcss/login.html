@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Administrator</title>
+    <style>
+        body {
+            background-color: #FAF1E4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .form {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 15px;
+            background-color: #176B87;
+            padding: 2rem;
+        }
+
+        input {
+            width: 95%;
+            padding: 10px;
+            margin: 10px 2;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .a {
+            background-color: #C70039;
+            text-decoration: none;
+            border-radius: 25px;
+            padding: 10px;
+            color: white;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .a:hover {
+            background-color: #FE0000;
+            transition: 0.3s;
+        }
+
+        .b {
+            background-color: #053B50;
+            text-decoration: none;
+            border-radius: 25px;
+            padding: 10px;
+            color: white;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .b:hover {
+            background-color: #64CCC5;
+            transition: 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <div class="form">
+        <h1>Login Administrator</h1>
+        <label for="Username" class="label">Username:</label>
+        <br>
+        <input type="text" name="Username" id="Username">
+        <br>
+        <label for="password" class="label">Password:</label>
+        <br>
+        <input type="password" name="password" id="password">
+        <br>
+        <br>
+        <a href="index.html" class="a">Kembali</a>
+        <a href="admin.html" class="b">Masuk</a>
+    </div>
+</body>
+</html>

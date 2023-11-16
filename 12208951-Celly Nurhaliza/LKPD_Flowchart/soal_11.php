@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Soal 11</title>
 </head>
 <body>
     <div class="container">
@@ -49,12 +49,17 @@
             echo "Oktober";
         }elseif($bulan == "11"){
             echo "November";
-        }else{
+        }elseif($bulan == "12"){
             echo "Desember";
+        }else{
+            echo '<script type ="text/JavaScript">';  
+            echo 'alert("Masukkan bulan lahir yang valid!")';  
+            echo '</script>';
+
         }
         echo "<br>";
         
-        $tanggal_lahir = $tanggal.$bulan.$tahun;
+        $tanggal_lahir = $tanggal." ".$bulan." ".$tahun;
 
         echo "No golongan ".$no_golongan;
         echo "<br>";
