@@ -48,7 +48,7 @@
 
 <p>---------------list rendering-----------</p>
 <ul>
-  <li v-for="(item, index) in daftarKelas"> {{ index+1 }}{{ item }} </li>
+  <li v-for="(item, index) in daftarKelas">{{ index+1 }}{{ item }} </li>
 </ul>
 
 <p>--------------- v-model -----------</p>
