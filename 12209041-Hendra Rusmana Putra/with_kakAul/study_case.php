@@ -32,24 +32,24 @@ $listmenu = [
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jualan</title>
-    <style>
-        body{
-            padding: 0;
-            margin: 0;
-        }
-        .menu{
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jualan</title>
+<style>
+body{
+    padding: 0;
+    margin: 0;
+}
+.menu{
     padding: 10px;
     max-width: 600px;
     margin-top: 120px;
     margin-bottom: 30px;
     margin-left: 30px;
-  }
+}
 
-  .itemm{
+.itemm{
     width: 30%;
     height: 140%;
     border-style: solid;
@@ -60,8 +60,8 @@ $listmenu = [
     flex-grow:1; 
     flex-shrink: 1;
     padding: 0 10px 10px;
-  }
-    </style>
+}
+</style>
 </head>
 <body>
 <center>

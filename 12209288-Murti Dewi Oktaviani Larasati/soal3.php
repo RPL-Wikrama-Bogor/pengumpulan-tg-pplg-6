@@ -25,7 +25,7 @@
                 <td><input type="number" name="bil_dua"></td>
             </tr>
             <tr>
-                <td>Bilangan Ketiga</td>
+                <td>bilangan Ketiga</td>
                 <td></td>
                 <td><input type="number" name="bil_tiga"></td>
             </tr>

@@ -1,0 +1,62 @@
+// HTTP Method: GET POST PUT PATCH
+
+//Url Root
+
+//localhost:300/contohparam/wan?sort=asc
+
+// const siswa = [
+//   {
+//     id: 1,
+//     nama: 'wanda',
+//   },
+
+//   {
+//     id: 2,
+//     nama: 'nda',
+//   },
+//   {
+//     id: 3,
+//     nama: 'halimatu',
+//   },
+  
+// ]; 
+
+// app.post('/test' , (req, res) => {
+//   res.send('POST test');
+// });
+// app.put('/test', (req, res) => {
+//   res.send('PUT test');
+// });
+// app.delete('/test', (req, res) => {
+//   res.send('DELETE test');
+// });
+
+// app.get('/siswa/:id', (req, res) => {
+//   const { id } = req.params;
+//   const student = siswa.find((student) => 
+//   student.id == parseInt(id))
+//   res.send(student.nama)
+
+// });
+
+// app.get('/contohparam/:username/', (req, res) => {
+//   //const username = req.params.username;
+//    //const test = req.params.test;
+//     //const id = req.params.id;
+
+//     //deconstructor
+//     // const {username, test, id} = req.params;
+//     const { sort } = req.query;
+//     res.send(req.query.sort ?? 'desc');
+
+// });
+
+
+// app.get('/home', handler);
+// app.get("/about", handlerabout);
+// app.get("/contact", handlercontact);
+// app.get("/services", handlerservices);
+// app.get("/portofolio", handlerportofolio);
+
+
+//
