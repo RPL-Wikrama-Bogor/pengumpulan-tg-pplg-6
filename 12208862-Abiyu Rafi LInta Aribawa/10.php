@@ -33,10 +33,8 @@ $rata = 0;
                 <td>DPK</td>
                 <td>:</td>
                 <td><input type="text" name="dpk"></td>
-            </tr>
-            <tr>
+            </tr>   
                 <td><input type="submit" name="submit" value="submit"></td>
-            </tr>
         </table>
     </form>
 </body>

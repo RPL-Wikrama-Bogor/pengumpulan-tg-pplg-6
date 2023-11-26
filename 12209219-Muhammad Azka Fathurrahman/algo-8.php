@@ -15,7 +15,7 @@
         $bilangan = $_POST["bilangan"];
 
         if (is_numeric($bilangan)) {
-            $2 = strlen($bilangan);
+            $ = strlen($bilangan);
 
             if ($length > 0) {
                 $satuan = $bilangan[$length - 1];
