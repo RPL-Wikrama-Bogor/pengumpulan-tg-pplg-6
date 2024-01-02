@@ -1,0 +1,8 @@
+C:\Users\NOVWAL\source\repos\nomor17\nomor17\bin\Debug\nomor17.exe.config
+C:\Users\NOVWAL\source\repos\nomor17\nomor17\bin\Debug\nomor17.exe
+C:\Users\NOVWAL\source\repos\nomor17\nomor17\bin\Debug\nomor17.pdb
+C:\Users\NOVWAL\source\repos\nomor17\nomor17\obj\Debug\nomor17.csproj.AssemblyReference.cache
+C:\Users\NOVWAL\source\repos\nomor17\nomor17\obj\Debug\nomor17.csproj.SuggestedBindingRedirects.cache
+C:\Users\NOVWAL\source\repos\nomor17\nomor17\obj\Debug\nomor17.csproj.CoreCompileInputs.cache
+C:\Users\NOVWAL\source\repos\nomor17\nomor17\obj\Debug\nomor17.exe
+C:\Users\NOVWAL\source\repos\nomor17\nomor17\obj\Debug\nomor17.pdb

@@ -3,6 +3,7 @@
 <form id="addBook">
     <h5>Add Book</h5>
     <input type="text" id="id" name="id" placeholder="id" required >
+<<<<<<< HEAD
     <input type="text" id="name" name="name" placeholder="name" required >
     <input type="text" id="author" name="author" placeholder="author" required >
     <input type="text" id="year" name="year" placeholder="year" required >
@@ -12,6 +13,17 @@
 </form>
 
 <form id="editBook">
+=======
+    <input type="text" id="nama" name="nama" placeholder="nama" required >
+    <input type="text" id="penulis" name="penulis" placeholder="penulis" required >
+    <input type="text" id="penerbit" name="penerbit" placeholder="penerbit" required >
+    <input type="number" id="tahun" name="tahun" placeholder="tahun" required >
+    <input type="text" id="halaman" name="halaman" placeholder="halaman" required >
+    <input type="submit" value="Kirim">
+</form>
+
+<!-- <form id="editBook">
+>>>>>>> 12ef81be3b21d899b30db1ea578c9cc4212da555
     <h5>Edit Book</h5>
     <input type="text" id="id" name="id" placeholder="id" required >
     <input type="text" id="name" name="name" placeholder="name" required >
@@ -26,13 +38,18 @@
     <h5>Delete Book</h5>
     <input type="text" id="id" name="id" placeholder="id" required >
     <input type="submit" value="Kirim">
+<<<<<<< HEAD
 </form>
+=======
+</form> -->
+>>>>>>> 12ef81be3b21d899b30db1ea578c9cc4212da555
 
 
 
 <script>
     const url= "http://localhost:3000"
 
+<<<<<<< HEAD
     const elm_dataBuku = document.getElemenById("getBooks");
     async function getBooks (){
         const api = await fetch(url);
@@ -68,6 +85,43 @@ async function postData(url = "", data = {}){
         throw new Error("terjadi kesalahan:", error.message);
     }
 }
+=======
+//     const elm_dataBuku = document.getElemenById("getBooks");
+//     async function getBooks (){
+//         const api = await fetch(url);
+//         const { data } = await api.json();
+//         data.forEach((data)=> {
+//             const element_buku = document.createElement("div");
+//             element_buku.innerHTML = `Id : ${data.id},
+//                                       nama : ${data.nama},
+//                                       penulis : ${data.penulis},
+//                                       tahun: ${data.tahun},
+//                                       halaman : ${data.halaman}`
+
+//             elm_dataBuku.appendChild(element_buku);
+//         });
+//     }
+// // getBooks();
+
+// async function postData(url = "", data = {}){
+//     try{
+//         const response = await fetch (url, {
+//             method: "POST",
+//             headers: {
+//                 "Content-Type": "application/json",
+//             },
+//             body: JSON.stringify(data),
+//         });
+
+//         if(!response.ok){
+//             throw new Error("terjadi kesalahan pada server.");
+//         }
+//         return await response.json();
+//     } catch (error){
+//         throw new Error("terjadi kesalahan:", error.message);
+//     }
+// }
+>>>>>>> 12ef81be3b21d899b30db1ea578c9cc4212da555
 
 document.getElementById("addBook").addEventListener("submit", async function(e){
     const formData = new FormData (this);
