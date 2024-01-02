@@ -1,0 +1,51 @@
+    .container {
+        font-family: 'Arial', sans-serif;
+        margin: 20px;
+        padding: 20px;
+        border: 2px solid #2196F3; /* Ubah warna border menjadi biru */
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+        
+        input[type="text"] {
+            padding: 8px;
+            margin: 5px 0 15px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        
+        button {
+            background-color: #2196F3; /* Ubah warna tombol menjadi biru */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        button:hover {
+            background-color: #1976D2; /* Ubah warna tombol saat digulirkan menjadi biru yang lebih gelap */
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #2196F3; /* Ubah warna latar belakang header tabel menjadi biru */
+            color: white;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        
