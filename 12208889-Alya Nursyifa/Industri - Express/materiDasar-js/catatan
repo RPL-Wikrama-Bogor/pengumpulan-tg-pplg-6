@@ -1,0 +1,20 @@
+const = nilai tidakbisa di ubah
+var, let = bisa di ubah
+var = cakupan global bisa di akses di luar function
+let = cakupan blok hanya bisa di dalam function
+
+splice digunakan untuk memodifikasi array 
+splice bisa untuk menambah,menghapus, mengubah item
+
+slice digunakan untuk membuat salinan sebagian dari array tanpa mengubah array asli
+slice akan mengembalikan array baru yang berisi elemen-elemen dari indeks awal hingga sebelum indeks akhir.
+
+map = menghasilkan array baru & jumlahnya tetep sama
+menghasilkan versi terbaru
+filter = menghasilkan array baru & jumlah nya berubah tergantung filternya berapa
+berdasarkan kondisi tertentu
+
+json web token atau disingkat jwt adalah salah satu cara standar yg ringkas dan self-contained untuk mengirim informasi antar pihak dengan format json. jwt berstandar rfc 7519.
+
+jwt biasanya dipakai untuk otentikasi karena isinya dienkripsi
+

@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        h1{
+          color: #016A70;
+          font-family: Arial, Helvetica, sans-serif;
+          text-align: center;
+        }
+
+        body{
+          background-color: #FAF1E4;
+        }
+
+        li {
+          font-family: Arial, Helvetica, sans-serif;
+        }
+
+        a{
+          background-color: #FFE5E5;
+          float: right;
+          text-decoration: none;
+          border-radius: 50px;          
+          padding: 15px;
+          color: black;
+          font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        a:hover {
+          background-color: #FFBFBF;
+          transition: 0.3s;
+        }
+
+        text{
+          float: left;
+          width: 50%;
+        }
+
+        .gambar{
+          width: 40%;
+          margin: 100px  1px 10px 1px;
+          float: right;
+          padding-right: -200px;
+          clear: left ;
+        }
+      
+        img{
+          width:550%;
+          max-width: 100%;
+          margin-left : 115px;
+          border-radius: 15px;
+          margin-top: 20px;
+        }
+
+        .text{
+          font-size: 25px;
+          color: #016A70;
+        }
+
+        .baris{
+          box-sizing: border-box;
+          padding: 20px;
+          color: #F1F6F9;
+        }
+
+        .kolom{
+          width: 295px;
+          height: 120px;
+          background-color: #5C4B99;
+          margin: 3px;
+          box-sizing: border-box;
+          padding: 10px;
+        }
+
+        .kolom1,.kolom2, .kolom3, .kolom4{
+          float: left;
+          text-align: center;
+          padding-top: 3rem;
+          border-radius: 15px;
+          font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .kolom:hover {
+          background-color: #9F91CC;
+          transition: 0.3s;
+        }
+
+        button {
+          float: right;
+          background-color: #EFB495;
+          color: white;
+          padding: 10px 20px;
+          font-size: 16px;
+          border-radius: 10px;
+          cursor: pointer;
+        }
+
+        button:hover{
+          background-color: #FF9B50;
+          transition: 0.3s;
+        }
+        
+        .pengaduan {
+          height: 200px;
+        }
+
+        label {
+          font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .rincian {
+          flex: 2;
+          padding: 10px;
+          background-color: #f2f2f2;
+          border: 1px solid #ddd;
+          border-radius: 10px;
+          box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+          float: right;
+        }
+
+        .rincian p {
+          margin: 0;
+          padding: 10px;
+        }
+        .kotak-persegi-panjang {
+          background-color: #8CABFF;
+          padding: 20px;
+          border: 1px solid #241468;
+          border-radius: 10px;
+          box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+          display: flex;
+          margin-bottom: 10px;
+        }
+        .laporan{
+          flex: 1; 
+          padding: 20px;
+        }
+
+        .laporan h2{
+          font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .gambar1 img {
+          max-width: 100%;
+          border-radius: 10px;
+          width: 80%;
+          float: left;
+          margin-left: 5px;
+        }
+        .gambar1 {
+          flex: 1;
+          padding: 5px;
+          float: left;
+        }
+        .formm{
+          height: 100vh; 
+          display: flex; 
+          margin: 20px;
+        }
+        .form {
+          width: 500px;
+          border-radius: 1rem;
+          background-color: #FFBA86;
+          padding: 2rem;
+          border-radius: 15px;
+        }
+
+        .form h2{
+          text-align: center;
+          font-family: Arial, Helvetica, sans-serif;
+        }
+
+
+        @media (max-width: 768px) {
+            .gambar {
+                float: none;
+                width: 100%;
+                text-align: center;
+                margin: 20px 0;
+            }
+
+            img {
+                width: 100%;
+                margin-left: 0;
+            }
+
+            .text {
+                float: none;
+                width: 100%;
+                font-size: 20px;
+            }
+
+            .baris {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .kolom {
+                float: none;
+                width: 100%;
+                text-align: center;
+                margin: 10px 0;
+            }
+
+            .formm {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .form {
+                width: 78%;
+                padding: 15px;
+            }
+            .form textarea {
+                width: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+  <a class="admin" href="login.html">Administrator</a>
+  <div class="gambar">
+      <img src="hero-15237-712093265.jpg" alt="">
+      </div>
+      <br><br>
+    <h1>BOY PABLO</h1>
+    <div class="text">
+      <ol>
+        <li>Boy Pablo adalah band indie pop dan indie rock asal Bergen, Norwegia. Band ini dikenal lewat single nya yang berjudul "Everytime" dan "Losing You".</li>
+        <br>
+        <li>Nicolas Pablo Rivera Muñoz adalah keturunan Chili dan tinggal di Bergen. Ia bersekolah di Kongshaug Musikkgymnas.</li>
+        <br>
+        <li>Muñoz membuktikan diri dengan membawa Boy Pablo agar dikenal secara luas lewat video klip lagu mereka yang berjudul "Everytime".</li>
+        <br>
+      </ol>
+    </div>
+    <section class="baris">
+      <div class="kolom kolom1">SOY PABLO</div>
+      <div class="kolom kolom2">WACHITO RICO</div>
+      <div class="kolom kolom3">ROY PABLO</div>
+      <div class="kolom kolom3">HONEY</div>
+    </section>
+    <br><br><br><br><br><br><br><br>
+    <section class="formm">
+      <div class="form">
+        <form action="" textare>
+          <h2>Hasil Pengaduan</h2>
+          <label for="">Nik : </label>
+          <br>
+          <textarea name="" id="" cols="55" rows="0"></textarea>
+          <br>
+          <label for="">Nama Lengkap : </label>
+          <br>
+          <textarea name="" id="" cols="55" rows="0"></textarea>
+          <br>
+          <label for="">No telp : </label>
+          <br>
+          <textarea name="" id="" cols="55" rows="0"></textarea>
+          <br>
+          <label for="">Pengaduan : </label>
+          <br>
+          <textarea name="" id="" cols="55" rows="10"></textarea>
+          <br><br>
+          <label for="">Upload Gambar Terkait : </label>
+          <br><br>
+          <input type="file">
+          <br><br>
+          <button class="button">Kirim</button>
+        </form>
+      </div>
+      <div class="laporan">
+        <h2>Laporan</h2>
+        <div class="kotak-persegi-panjang">
+          <div class="rincian">
+            <p>SOY PABLO</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab, ullam debitis quidem quasi, unde placeat velit sed amet modi veniam dolore ipsa quis facere similique nihil voluptates earum? Reprehenderit, assumenda.</p>
+          </div>
+          <div class="gambar1">
+            <img src="album1.jpeg" alt="Gambar Terkait">
+          </div>
+        </div>
+        <div class="kotak-persegi-panjang">
+          <div class="rincian">
+            <p>ROY PABLO</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est quibusdam tempore, temporibus eaque ea ipsum. Porro accusamus sit pariatur architecto non labore ea doloribus nam saepe. Enim magni quisquam in?</p>
+          </div>
+          <div class="gambar1">
+            <img src="album2.jpeg" alt="Gambar Terkait">
+          </div>
+        </div>
+      </div>
+    </section>
+    <br>
+</body>
+</html>

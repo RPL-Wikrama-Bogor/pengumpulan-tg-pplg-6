@@ -1,0 +1,298 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.but {
+    float: right;
+    margin-right: 20px;
+    text-decoration: none;
+    background-color: #FFC436;
+    color: #000;
+    border-radius: 50px;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    margin-top: 10px;
+}
+
+.but:hover {
+    background: #ced4da;
+}
+
+.container {
+    clear: both;
+    margin: 0 auto;
+}
+
+.text h2 {
+    margin-left: 15px;
+}
+
+.text ul li {
+    font-size: 17px;
+    margin: 10px;
+    list-style-type: none;
+}
+
+.img {
+    float: right;
+    clear: both;
+    margin-right: 20px;
+    width: 50%;
+}
+
+img {
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.baris {
+    display: inline-flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.col {
+    margin: 400px 100px;
+    margin-bottom: 100px;
+    width: 304px;
+    max-width: 100%;
+    height: 120px;
+    background-color: #FFC436;
+    margin: 3px;
+    color: #eee;
+    font-size: 20px;
+    box-sizing: border-box;
+    padding: 10px;
+    float: left;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+input[type=text],
+[type=number] {
+    margin-top: 12px;
+    margin-bottom: 10px;
+    width: 500px;
+    height: 25px;
+}
+
+textarea {
+    margin-top: 12px;
+    margin-bottom: 10px;
+}
+
+.form h1 {
+    margin-top: 90px;
+}
+
+form {
+    position: relative;
+    margin-left: 20px;
+    margin-top: 10px;
+    background-color: #dee2e6;
+    width: 500px;
+    padding: 40px;
+}
+
+input[type=submit] {
+    float: right;
+    background-color: #FFC436;
+    color: #fff;
+    border-radius: 50px;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+
+.kotak {
+    float: right;
+    margin-top: 10px;
+    width: 600px;
+    height: 200px;
+    margin-right: 20px;
+    border: 2px solid black;
+}
+
+.kotak b {
+    float: right;
+    margin-top: 30px;
+    margin-right: 20px;
+}
+
+.kotak .txt {
+    margin-left: 20px;
+    margin-top: 45px;
+}
+
+.kotak img {
+    margin-left: 410px;
+    width: 180px;
+    margin-top: -40px;
+}
+.kotak2 {
+float: right;
+margin-top: 40px;
+width: 600px;
+height: 200px;
+margin-right: 20px;
+justify-content: baseline;
+margin-left: 41px;
+border: 2px solid black;
+}
+
+.kotak2 b {
+    float: right;
+    margin-top: 30px;
+    margin-right: 20px;
+}
+
+.kotak2 .txt {
+    margin-left: 20px;
+    margin-top: 45px;
+}
+
+.kotak2 img {
+    margin-left: 410px;
+    width: 180px;
+    margin-top: -40px;
+}
+
+footer {
+    text-align: center;
+    background-color: #FFC436;
+    fill: solid;
+    margin-top: 50px;
+    width: 99%;
+    color: #fff;
+    padding: 5px;
+}
+
+iframe {
+    margin-left: 640px;
+    margin-bottom: -550px;
+}
+
+@media screen and (max-width: 360px){
+    body, h1, h2, ul, li, p {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.but {
+    float: right;
+    margin-right: 10px;
+    text-decoration: none;
+    background-color: #FFC436;
+    color: #000;
+    border-radius: 50px;
+    padding: 5px 10px;
+    margin-top: 10px;
+}
+
+.but:hover {
+    background: #ced4da;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 360px;
+}
+
+.text h2 {
+    margin-left: 1rem;
+    font-size: 19px;
+}
+
+.text ul li {
+    font-size: 17px;
+    margin: 10px;
+    list-style-type: none;
+}
+
+.img {
+    float: right;
+    clear: both;
+    margin-right: 20px;
+    width: 89%;
+}
+
+.baris {
+    display: block;
+    padding: 20px;
+}
+
+.kotak {
+    
+    margin-top: 10px;
+    width: 295px;
+    margin-right: 20rem;
+    border: 2px solid black;
+    margin: 2rem;
+    padding: -37rem;
+}
+
+.kotak b {
+    float: right;
+    margin-top: 17px;
+    margin-right: 20px;
+}
+
+.kotak img {
+    margin-left: 9rem;
+    width: 147px;
+    margin-top: 8px;
+}
+
+.kotak2 {
+    
+    margin-top: 10px;
+    width: 295px;
+    margin-right: 20rem;
+    border: 2px solid black;
+    margin: 2rem;
+    padding: -37rem;
+}
+
+.kotak2 b {
+    float: right;
+    margin-top: 17px;
+    margin-right: 20px;
+}
+
+.kotak2 img {
+    margin-left: 9rem;
+    width: 147px;
+    margin-top: 8px;
+}
+
+.form h1 {
+    font-size: x-large;
+}
+form {
+    margin-top: 34rem;
+    background-color: #dee2e6;
+    padding: -22rem;
+    width: 15rem;
+}
+
+input[type=text], [type=number] {
+    margin-top: 11px;
+    margin-bottom: 8px;
+    width: 247px;
+    height: 23px;
+}
+
+textarea {
+    margin-top: 13px;
+    margin-bottom: 7px;
+    width: inherit;
+}  
+} 

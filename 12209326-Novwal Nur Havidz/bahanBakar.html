@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program Pengisian Bahan Bakar</title>
+</head>
+<body>
+    <h1>Program Pengisian Bahan Bakar</h1>
+    <form id="bahanBakarForm">
+        <label for="jenisBahanBakar">Pilih Jenis Bahan Bakar:</label>
+        <select id="jenisBahanBakar">
+            <option value="Shell Super">Shell Super</option>
+            <option value="Shell V-Power">Shell V-Power</option>
+            <option value="Shell V-Power Diesel">Shell V-Power Diesel</option>
+            <option value="Shell V-Power Nitro">Shell V-Power Nitro</option>
+        </select><br>
+
+        <label for="jumlahLiter">Masukkan Jumlah Liter:</label>
+        <input type="number" id="jumlahLiter" min="0"><br>
+
+        <button type="button" id="hitungButton">Hitung Total Harga</button>
+    </form>
+
+    <div id="hasilTransaksi">
+        <h2>Hasil Transaksi:</h2>
+        <p id="transaksiInfo"></p>
+    </div>
+
+    <script>
+        class Shell 
+        {
+            constructor(jenis, harga) 
+            {
+                this.jenis = jenis;
+                this.harga = harga;
+                this.jumlah = 0;
+                this.ppn = 0.1;
+            }
+
+            hitungTotal() 
+            {
+                const totalHarga = this.harga * this.jumlah;
+                const totalPPN = totalHarga * this.ppn;
+                return totalHarga + totalPPN;
+            }
+        }
+
+        class Beli extends Shell 
+        {
+            constructor(jenis, harga) 
+            {
+                super(jenis, harga);
+            }
+
+            setJumlahLiter(jumlah) 
+            {
+                this.jumlah = jumlah;
+            }
+
+            cetakBuktiTransaksi() 
+            {
+                const total = this.hitungTotal();
+                const transaksiInfo = `
+                    Jenis Bahan Bakar: ${this.jenis}<br>
+                    Harga per Liter: Rp. ${this.harga.toFixed(2)}<br>
+                    Jumlah Liter: ${this.jumlah}<br>
+                    Total Harga: Rp. ${total.toFixed(2)}
+                `;
+                document.getElementById("transaksiInfo").innerHTML = transaksiInfo;
+            }
+        }
+
+        document.getElementById("hitungButton").addEventListener("click", function () 
+        {
+            const jenisPilihan = document.getElementById("jenisBahanBakar").value;
+            const jumlahLiter = parseFloat(document.getElementById("jumlahLiter").value);
+            const jenisBahanBakar = 
+            {
+                "Shell Super": 15420.0,
+                "Shell V-Power": 16130.0,
+                "Shell V-Power Diesel": 18310.0,
+                "Shell V-Power Nitro": 16510.0,
+            };
+
+            if (jenisBahanBakar.hasOwnProperty(jenisPilihan)) 
+            {
+                const hargaBahanBakar = jenisBahanBakar[jenisPilihan];
+                const pembelian = new Beli(jenisPilihan, hargaBahanBakar);
+                pembelian.setJumlahLiter(jumlahLiter);
+                pembelian.cetakBuktiTransaksi();
+            } else {
+                alert("Jenis bahan bakar tidak valid");
+            }
+        });
+    </script>
+</body>
+</html>

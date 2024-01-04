@@ -1,0 +1,33 @@
+.content {
+    background-color:chartreuse;
+}
+p {
+    color: blue;
+}
+#main {
+    font-weight: bold;
+}
+img {
+    width: 550px;
+    max-width: 100%;
+}
+.baris {
+    box-sizing: border-box;
+    padding: 20px;
+}
+.kolom {
+    width: 250px;
+    height: 120px;
+    background-color: aquamarine;
+    margin: 3px;
+    box-sizing: border-box;
+    padding: 10px;
+}
+.kolom1,.kolom2, .kolom3{
+    float: left;
+  }
+  .kolom4{
+    clear: left;
+    width: 100%;
+    background-color: aqua;
+  }
