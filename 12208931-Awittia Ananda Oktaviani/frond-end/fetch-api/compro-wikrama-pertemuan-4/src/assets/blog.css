@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .blog {
     margin-top: 10px;
 }
@@ -28,3 +29,35 @@
         grid-gap: 10px;
     }
 }
+=======
+.blog {
+    margin-top: 10px;
+}
+.blog-section{
+    margin-top: 80px !important;
+}
+.blog h3 {
+    margin: auto;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 900;
+    font-size: 48px;
+    line-height: 70px;
+    color: #042181;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.row-blog {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+}
+
+@media screen and (max-width: 600px) {
+    .row-blog {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 10px;
+    }
+}
+>>>>>>> bdde0b02df05d1389d7945c78e501d2f46604574
