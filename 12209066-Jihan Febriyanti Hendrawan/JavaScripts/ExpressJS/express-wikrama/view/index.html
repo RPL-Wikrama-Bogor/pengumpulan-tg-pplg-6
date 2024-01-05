@@ -3,8 +3,6 @@
 <form id="addBook">
     <h5>Add Book</h5>
     <input type="text" id="id" name="id" placeholder="id" required >
-<<<<<<< HEAD
-<<<<<<< HEAD
     <input type="text" id="name" name="name" placeholder="name" required >
     <input type="text" id="author" name="author" placeholder="author" required >
     <input type="text" id="year" name="year" placeholder="year" required >
@@ -14,9 +12,6 @@
 </form>
 
 <form id="editBook">
-=======
-=======
->>>>>>> bdde0b02df05d1389d7945c78e501d2f46604574
     <input type="text" id="nama" name="nama" placeholder="nama" required >
     <input type="text" id="penulis" name="penulis" placeholder="penulis" required >
     <input type="text" id="penerbit" name="penerbit" placeholder="penerbit" required >
@@ -58,9 +53,6 @@
 
 <script>
     const url= "http://localhost:3000"
-
-<<<<<<< HEAD
-<<<<<<< HEAD
     const elm_dataBuku = document.getElemenById("getBooks");
     async function getBooks (){
         const api = await fetch(url);
@@ -96,9 +88,6 @@ async function postData(url = "", data = {}){
         throw new Error("terjadi kesalahan:", error.message);
     }
 }
-=======
-=======
->>>>>>> bdde0b02df05d1389d7945c78e501d2f46604574
 //     const elm_dataBuku = document.getElemenById("getBooks");
 //     async function getBooks (){
 //         const api = await fetch(url);
@@ -134,10 +123,6 @@ async function postData(url = "", data = {}){
 //         throw new Error("terjadi kesalahan:", error.message);
 //     }
 // }
-<<<<<<< HEAD
->>>>>>> 12ef81be3b21d899b30db1ea578c9cc4212da555
-=======
->>>>>>> bdde0b02df05d1389d7945c78e501d2f46604574
 
 document.getElementById("addBook").addEventListener("submit", async function(e){
     const formData = new FormData (this);
