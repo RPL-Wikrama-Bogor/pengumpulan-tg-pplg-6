@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
   "name": "company-profile",
   "version": "0.0.0",
@@ -16,3 +17,23 @@
     "vite": "^4.4.9"
   }
 }
+=======
+{
+  "name": "company-profile",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "vue": "^3.3.4",
+    "vue-router": "^4.2.5"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.3.4",
+    "vite": "^4.4.9"
+  }
+}
+>>>>>>> bdde0b02df05d1389d7945c78e501d2f46604574

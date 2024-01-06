@@ -3,6 +3,15 @@
 <form id="addBook">
     <h5>Add Book</h5>
     <input type="text" id="id" name="id" placeholder="id" required >
+    <input type="text" id="name" name="name" placeholder="name" required >
+    <input type="text" id="author" name="author" placeholder="author" required >
+    <input type="text" id="year" name="year" placeholder="year" required >
+    <input type="number" id="page_count" name="page_count" placeholder="page_count" required >
+    <input type="text" id="publisher" name="publisher" placeholder="publisher" required >
+    <input type="submit" value="Kirim">
+</form>
+
+<form id="editBook">
     <input type="text" id="nama" name="nama" placeholder="nama" required >
     <input type="text" id="penulis" name="penulis" placeholder="penulis" required >
     <input type="text" id="penerbit" name="penerbit" placeholder="penerbit" required >
@@ -12,6 +21,10 @@
 </form>
 
 <!-- <form id="editBook">
+<<<<<<< HEAD
+>>>>>>> 12ef81be3b21d899b30db1ea578c9cc4212da555
+=======
+>>>>>>> bdde0b02df05d1389d7945c78e501d2f46604574
     <h5>Edit Book</h5>
     <input type="text" id="id" name="id" placeholder="id" required >
     <input type="text" id="name" name="name" placeholder="name" required >
@@ -26,13 +39,55 @@
     <h5>Delete Book</h5>
     <input type="text" id="id" name="id" placeholder="id" required >
     <input type="submit" value="Kirim">
+<<<<<<< HEAD
+<<<<<<< HEAD
+</form>
+=======
 </form> -->
+>>>>>>> 12ef81be3b21d899b30db1ea578c9cc4212da555
+=======
+</form> -->
+>>>>>>> bdde0b02df05d1389d7945c78e501d2f46604574
 
 
 
 <script>
     const url= "http://localhost:3000"
+    const elm_dataBuku = document.getElemenById("getBooks");
+    async function getBooks (){
+        const api = await fetch(url);
+        const { data } = await api.json();
+        data.forEach((data)=> {
+            const element_buku = document.createElement("div");
+            element_buku.innerHTML = `Id : ${data.id},
+                                      Nama Buku : ${data.nama},
+                                      publisher : ${data.publisher},
+                                      year: ${data.year},
+                                      page count : ${data.page_count}`
 
+            elm_dataBuku.appendChild(element_buku);
+        });
+    }
+// getBooks();
+
+async function postData(url = "", data = {}){
+    try{
+        const response = await fetch (url, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(data),
+        });
+
+        if(!response.ok){
+            throw new Error("terjadi kesalahan pada server.");
+        }
+        return await response.json();
+    } catch (error){
+        throw new Error("terjadi kesalahan:", error.message);
+    }
+}
 //     const elm_dataBuku = document.getElemenById("getBooks");
 //     async function getBooks (){
 //         const api = await fetch(url);
