@@ -2,20 +2,19 @@
     <form id="addBook">
         <h5>Add Book</h5>
         <input type="text" id="name" name="name" placeholder="name" required>
-        <input type="text" id="author" name="author" placeholder="author" required>
-        <input type="text" id="year" name="year" placeholder="year" required>
-        <input type="number" id="page_count" name="page_count" placeholder="page_count" required>
-        <input type="text" id="publisher" name="publisher" placeholder="publisher" required>
+        <input type="text" id="penulis" name="penulis" placeholder="penulis" required>
+        <input type="text" id="penerbit" name="penerbit" placeholder="penerbit" required>
+        <input type="number" id="tahun" name="tahun" placeholder="tahun" required>
+        <input type="number" id="halaman" name="halaman" placeholder="halaman" required>
         <input type="submit" value="Kirim">
     </form>
     <form id="editBook">
         <h5>Edit Book</h5>
-        <input type="text" id="id" name="id" placeholder="id" required>
         <input type="text" id="name" name="name" placeholder="name" required>
-        <input type="text" id="author" name="author" placeholder="author" required>
-        <input type="text" id="year" name="year" placeholder="year" required>
-        <input type="number" id="page_count" name="page_count" placeholder="page_count" required>
-        <input type="text" id="publisher" name="publisher" placeholder="publisher" required>
+        <input type="text" id="penulis" name="penulis" placeholder="penulis" required>
+        <input type="text" id="penerbit" name="penerbit" placeholder="penerbit" required>
+        <input type="number" id="tahun" name="tahun" placeholder="tahun" required>
+        <input type="number" id="halaman" name="halaman" placeholder="halaman" required>
         <input type="submit" value="Kirim">
     </form>
     <form id="deleteBook">
@@ -34,10 +33,11 @@
         data.forEach((data) => {
             const element_buku = document.createElement("div");
             element_buku.innerHTML = `Id: ${data.id},
-                                      Nama Buku: ${data.name},
-                                      publisher: ${data.publisher},
-                                      year: ${data.year},
-                                      page count: ${data.page_count}`
+                                      Nama: ${data.name},
+                                      Penulis: ${data.penulis},
+                                      Penerbit: ${data.penerbit},
+                                      Tahun: ${data.tahun},
+                                      Halaman: ${data.halaman}`,
 
             elm_dataBuku.eppendChild(element_buku);
         });
