@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Konversi Detik ke Jam-Menit-Detik</title>
-</head>
+</head> 
 <body>
     <h1>Konversi Detik ke Jam-Menit-Detik</h1>
 
